@@ -1,5 +1,31 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AppLayout from "./ui/AppLayout";
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+:root{
+  --color-background: #f2f2f2;
+  --color-main: #3076f1;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+`;
+
 function App() {
-  return <div>hola</div>;
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route index path="/" element={<AppLayout />} />
+        </Routes>
+      </BrowserRouter>
+      <GlobalStyle />
+    </>
+  );
 }
 
 export default App;
