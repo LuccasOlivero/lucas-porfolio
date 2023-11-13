@@ -26,28 +26,39 @@ const Header = styled.h1`
     props.type === "margin" &&
     css`
       position: relative;
-      left: -0.5rem;
+      left: -0.6rem;
     `}
 
   display: flex;
-  width: 100%;
   justify-content: space-between;
-  font-size: 16rem;
-  line-height: 14rem;
-  font-weight: bold;
+  font-size: 13vw;
+  width: 100%;
+  line-height: 0.9;
+  font-weight: 900;
+  -webkit-text-size-adjust: 100%;
 
   color: var(--color-main);
 `;
 
 const Container = styled.div`
   position: relative;
-  width: 90%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
-  /* outline: 5px solid red; */
+  align-items: center;
+  height: 100%;
+  width: 100%;
+`;
+
+const TextContainer = styled.div`
+  width: 55vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1em;
+  line-height: 1.3;
+  max-width: 1600px;
 `;
 
 function AppLayout() {
@@ -55,12 +66,15 @@ function AppLayout() {
     <StyledAppLayout>
       <Main>
         <Navbar />
+
         <Container>
-          <Header type="margin">
-            Lucas
-            <Logo size="bigger" />
-          </Header>
-          <Header>WebDev</Header>
+          <TextContainer>
+            <Header type="margin">
+              Lucas
+              <Logo size="bigger" />
+            </Header>
+            <Header as="h2">WebDev</Header>
+          </TextContainer>
         </Container>
       </Main>
     </StyledAppLayout>
