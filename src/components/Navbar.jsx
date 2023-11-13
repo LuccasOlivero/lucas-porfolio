@@ -1,23 +1,22 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBurger } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
+import { Logo } from "../ui/Logo";
 
 const StyledNav = styled.nav`
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* position: fixed; */
   width: 100%;
+  z-index: 100;
   height: 3.6rem;
   padding: 0 3.6rem;
 
-  backdrop-filter: blur(1rem);
   background-color: var(--color-background);
   outline: 2px solid var(--color-main);
-`;
-
-const Logo = styled.img`
-  width: 2.3rem;
-  height: 2.6rem;
 `;
 
 const Header = styled.h2`
@@ -30,7 +29,7 @@ const Header = styled.h2`
 function Navbar() {
   return (
     <StyledNav>
-      <Logo src="/logo.svg" alt="" />
+      <Logo />
       <Header>since 2022</Header>
       <FontAwesomeIcon icon={faBurger} size="xl" color="#3076f1" />
     </StyledNav>
