@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import styled, { css } from "styled-components";
 import { Logo } from "./Logo";
+import SpinningText from "./SpinningText";
 
 const StyledAppLayout = styled.div`
   width: 100%;
@@ -61,6 +62,43 @@ const TextContainer = styled.div`
   max-width: 1600px;
 `;
 
+const Circle = styled.div`
+  ${(props) =>
+    props.position === "top" &&
+    css`
+      right: -3rem;
+      top: 0;
+    `}
+
+  ${(props) =>
+    props.position === "bottom" &&
+    css`
+      bottom: -5rem;
+      right: 10rem;
+    `}
+    
+  position: absolute;
+  width: 9vw;
+  height: 9vw;
+  border-radius: 100%;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--color-main);
+  background-color: #f2f2f232;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3077f1;
+  font-size: 1.5rem;
+`;
+
+const Test = styled.div`
+  width: 90%;
+  height: 90%;
+  border-radius: 100%;
+  background-color: blue;
+`;
+
 function AppLayout() {
   return (
     <StyledAppLayout>
@@ -74,9 +112,15 @@ function AppLayout() {
               <Logo size="bigger" />
             </Header>
             <Header as="h2">WebDev</Header>
+            <Circle position="top">about me</Circle>
+            <Circle position="bottom">work</Circle>
           </TextContainer>
         </Container>
       </Main>
+
+      <SpinningText text=" test test test test test test ">
+        <Test />
+      </SpinningText>
     </StyledAppLayout>
   );
 }
