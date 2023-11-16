@@ -11,8 +11,8 @@ const spin = keyframes`
 
 const Container = styled.div`
   position: fixed;
-  width: 13rem;
-  height: 13rem;
+  width: 9rem;
+  height: 9rem;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -44,9 +44,10 @@ const TextWrapper = styled.div`
 
 const Text = styled.span`
   position: absolute;
+  font-size: 1.2rem;
   top: 0;
-  left: 50%;
-  transform-origin: 0 7rem;
+  left: 53%;
+  transform-origin: 0 5rem;
 `;
 
 function SpinningText({ text, children }) {

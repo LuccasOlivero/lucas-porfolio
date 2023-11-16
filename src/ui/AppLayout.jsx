@@ -104,6 +104,11 @@ const Circle = styled.div`
   background-color: #3077f145;
   color: #3077f1;
   font-size: 1.2rem;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    background-color: #3077f1;
+  }
 `;
 
 const Test = styled.div`
