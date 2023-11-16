@@ -17,6 +17,7 @@ const Main = styled.main`
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   background-color: var(--color-background);
   border: 2px solid var(--color-main);
@@ -66,35 +67,48 @@ const Circle = styled.div`
   ${(props) =>
     props.position === "top" &&
     css`
-      right: -3rem;
-      top: 0;
+      right: -4rem;
+      top: -2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     `}
 
   ${(props) =>
+    props.position === "middle" &&
+    css`
+      bottom: -4rem;
+      right: 6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    `}
+
+    ${(props) =>
     props.position === "bottom" &&
     css`
-      bottom: -5rem;
-      right: 10rem;
+      bottom: -4.5rem;
+      padding-top: 1rem;
+      display: flex;
+      align-items: start;
+      justify-content: center;
     `}
     
   position: absolute;
-  width: 9vw;
-  height: 9vw;
+  width: 10vw;
+  height: 10vw;
   border-radius: 100%;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--color-main);
-  background-color: #f2f2f232;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #3077f145;
   color: #3077f1;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 `;
 
 const Test = styled.div`
-  width: 90%;
-  height: 90%;
+  width: 60%;
+  height: 60%;
   border-radius: 100%;
   background-color: blue;
 `;
@@ -113,8 +127,11 @@ function AppLayout() {
             </Header>
             <Header as="h2">WebDev</Header>
             <Circle position="top">about me</Circle>
-            <Circle position="bottom">work</Circle>
+            <Circle position="middle">work</Circle>
           </TextContainer>
+          <Circle position="bottom">
+            find out <br /> more ¡
+          </Circle>
         </Container>
       </Main>
 

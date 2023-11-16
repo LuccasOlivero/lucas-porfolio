@@ -14,10 +14,8 @@ export const Logo = styled.div`
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  width: 2.3rem;
-  height: 2.6rem;
-
-  animation: ${test} 35s steps(25) infinite;
+  width: 2rem;
+  height: 2rem;
 
   ${(props) =>
     props.size === "bigger" &&
@@ -26,5 +24,6 @@ export const Logo = styled.div`
       width: 9vw;
       height: 9vw;
       right: 2rem;
+      animation: ${test} 35s steps(25) infinite;
     `}
 `;

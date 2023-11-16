@@ -13,9 +13,9 @@ const StyledNav = styled.nav`
   width: 100%;
   z-index: 100;
   height: 3.6rem;
-  padding: 0 3.6rem;
+  padding: 0 3rem;
 
-  background-color: var(--color-background);
+  box-shadow: 0px -10px 30px var(--color-main);
   outline: 2px solid var(--color-main);
 `;
 

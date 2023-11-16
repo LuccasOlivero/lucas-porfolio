@@ -10,7 +10,7 @@ const spin = keyframes`
 `;
 
 const Container = styled.div`
-  position: absolute;
+  position: fixed;
   width: 13rem;
   height: 13rem;
   border-radius: 50%;
@@ -20,9 +20,15 @@ const Container = styled.div`
   font-weight: bold;
   left: 5rem;
   bottom: 5rem;
+  transition: all 0.1s ease-in;
 
   @media (max-width: 400px) {
     display: none;
+  }
+
+  &:hover {
+    transition: all 0.1s ease-in;
+    transform: scale(1.1);
   }
 `;
 
@@ -30,7 +36,7 @@ const TextWrapper = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  animation: ${spin} 50s linear infinite;
+  animation: ${spin} 80s linear infinite;
   color: black;
   text-transform: uppercase;
   top: -0.5rem;
