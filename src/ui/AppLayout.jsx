@@ -2,10 +2,13 @@ import Navbar from "../components/Navbar";
 import styled, { css } from "styled-components";
 import { Logo } from "./Logo";
 import SpinningText from "./SpinningText";
+import { Circle } from "./Circle";
+import { motion } from "framer-motion";
 
 const StyledAppLayout = styled.div`
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 
   background-color: var(--color-background);
 `;
@@ -63,71 +66,6 @@ const TextContainer = styled.div`
   max-width: 1600px;
 `;
 
-const Circle = styled.div`
-  ${(props) =>
-    props.position === "top" &&
-    css`
-      right: -4rem;
-      top: -2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    `}
-
-  ${(props) =>
-    props.position === "middle" &&
-    css`
-      bottom: -4rem;
-      right: 6rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    `}
-
-    ${(props) =>
-    props.position === "bottom" &&
-    css`
-      bottom: -5vw;
-      padding-top: 1.5rem;
-      display: flex;
-      justify-content: center;
-    `}
-    
-  position: absolute;
-  width: 10vw;
-  height: 10vw;
-  color: #3077f1;
-  font-size: 1.2rem;
-
-  border-radius: 100%;
-  border: 1px solid var(--color-main);
-  background-color: #494f9665;
-  transition: all 0.3s ease-in;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: #495096;
-    clip-path: circle(0% at 49% 0);
-    transition: clip-path 0.3s ease-in;
-    z-index: -1;
-  }
-
-  &:hover::before {
-    clip-path: circle(100.4% at 51% 0);
-  }
-
-  &:hover {
-    color: white;
-  }
-`;
-
 const Test = styled.div`
   width: 60%;
   height: 60%;
@@ -148,8 +86,20 @@ function AppLayout() {
               <Logo size="bigger" />
             </Header>
             <Header as="h2">WebDev</Header>
-            <Circle position="top">about me</Circle>
-            <Circle position="middle">work</Circle>
+            <Circle
+              position="top"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: -1 }}
+            >
+              about me
+            </Circle>
+            <Circle
+              position="middle"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: -1 }}
+            >
+              work
+            </Circle>
           </TextContainer>
           <Circle position="bottom">
             find out <br /> more ¡

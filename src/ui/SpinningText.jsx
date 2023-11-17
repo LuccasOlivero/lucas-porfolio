@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { motion } from "framer-motion";
 
 const spin = keyframes`
 0% {
@@ -18,17 +19,12 @@ const Container = styled.div`
   place-items: center;
   font-size: 1.5rem;
   font-weight: bold;
-  left: 5rem;
+  left: 6vw;
   bottom: 5rem;
-  transition: all 0.1s ease-in;
+  cursor: pointer;
 
   @media (max-width: 400px) {
     display: none;
-  }
-
-  &:hover {
-    transition: all 0.1s ease-in;
-    transform: scale(1.1);
   }
 `;
 
@@ -55,18 +51,24 @@ function SpinningText({ text, children }) {
   const deg = 360 / length;
 
   return (
-    <Container>
-      <TextWrapper>
-        <p>
-          {text.split("").map((letter, i) => (
-            <Text key={i} style={{ transform: `rotate(${deg * i}deg)` }}>
-              {letter}
-            </Text>
-          ))}
-        </p>
-      </TextWrapper>
-      {children}
-    </Container>
+    <motion.div
+    // whileHover={{ scale: 1.05 }}
+    // whileTap={{ scale: 1 }}
+    // transition={{ type: "spring", stiffness: 350, damping: 10 }}
+    >
+      <Container>
+        <TextWrapper>
+          <p>
+            {text.split("").map((letter, i) => (
+              <Text key={i} style={{ transform: `rotate(${deg * i}deg)` }}>
+                {letter}
+              </Text>
+            ))}
+          </p>
+        </TextWrapper>
+        {children}
+      </Container>
+    </motion.div>
   );
 }
 
