@@ -7,6 +7,8 @@ const GlobalStyle = createGlobalStyle`
 :root{
   --color-background: #fdfdfd;
   --color-main: #3076f1;
+  --color-main-gradient: linear-gradient(90deg, rgba(73,79,150,1) 7%, rgba(48,118,241,1) 100%);
+
 }
 
 *{

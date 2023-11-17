@@ -87,27 +87,44 @@ const Circle = styled.div`
     ${(props) =>
     props.position === "bottom" &&
     css`
-      bottom: -4.5rem;
-      padding-top: 1rem;
+      bottom: -5vw;
+      padding-top: 1.5rem;
       display: flex;
-      align-items: start;
       justify-content: center;
     `}
     
   position: absolute;
   width: 10vw;
   height: 10vw;
-  border-radius: 100%;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid var(--color-main);
-  background-color: #3077f145;
   color: #3077f1;
   font-size: 1.2rem;
-  transition: all 0.2s ease-in;
+
+  border-radius: 100%;
+  border: 1px solid var(--color-main);
+  background-color: #494f9665;
+  transition: all 0.3s ease-in;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #495096;
+    clip-path: circle(0% at 49% 0);
+    transition: clip-path 0.3s ease-in;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    clip-path: circle(100.4% at 51% 0);
+  }
 
   &:hover {
-    background-color: #3077f1;
+    color: white;
   }
 `;
 
@@ -140,7 +157,7 @@ function AppLayout() {
         </Container>
       </Main>
 
-      <SpinningText text=" test test test test test test ">
+      <SpinningText text="- contact me - contact me - contact me ">
         <Test />
       </SpinningText>
     </StyledAppLayout>

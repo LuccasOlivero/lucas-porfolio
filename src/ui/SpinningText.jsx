@@ -44,7 +44,7 @@ const TextWrapper = styled.div`
 
 const Text = styled.span`
   position: absolute;
-  font-size: 1.2rem;
+  font-size: 1rem;
   top: 0;
   left: 53%;
   transform-origin: 0 5rem;
