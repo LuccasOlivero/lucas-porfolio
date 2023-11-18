@@ -52,22 +52,11 @@ function SpinningText({ text, children }) {
 
   return (
     <motion.div
-    // whileHover={{ scale: 1.05 }}
-    // whileTap={{ scale: 1 }}
-    // transition={{ type: "spring", stiffness: 350, damping: 10 }}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 1 }}
+      transition={{ type: "spring", stiffness: 350, damping: 10 }}
     >
-      <Container>
-        <TextWrapper>
-          <p>
-            {text.split("").map((letter, i) => (
-              <Text key={i} style={{ transform: `rotate(${deg * i}deg)` }}>
-                {letter}
-              </Text>
-            ))}
-          </p>
-        </TextWrapper>
-        {children}
-      </Container>
+      <Container></Container>
     </motion.div>
   );
 }
