@@ -3,7 +3,8 @@ import styled, { css } from "styled-components";
 import { Logo } from "./Logo";
 import SpinningText from "./SpinningText";
 import { Circle } from "./Circle";
-import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
 
 const StyledAppLayout = styled.div`
   width: 100%;
@@ -66,11 +67,21 @@ const TextContainer = styled.div`
   max-width: 1600px;
 `;
 
-const Test = styled.div`
-  width: 60%;
-  height: 60%;
+const Face = styled.div`
+  position: relative;
+  width: 65%;
+  height: 65%;
   border-radius: 100%;
-  background-color: blue;
+  background-color: black;
+  background-image: url(/face.png);
+  background-size: 60% 75%;
+  background-repeat: no-repeat;
+  background-position: center;
+`;
+
+const Span = styled.span`
+  position: relative;
+  margin-left: 0.4rem;
 `;
 
 function AppLayout() {
@@ -102,13 +113,16 @@ function AppLayout() {
             </Circle>
           </TextContainer>
           <Circle position="bottom">
-            find out <br /> more ¡
+            find out <br /> more
+            <Span>
+              <FontAwesomeIcon icon={faArrowDownLong} />
+            </Span>
           </Circle>
         </Container>
       </Main>
 
-      <SpinningText text="- contact me - contact me - contact me ">
-        <Test />
+      <SpinningText text="✈️ contact me ✈️ contact me ✈️ contact me ">
+        <Face />
       </SpinningText>
     </StyledAppLayout>
   );

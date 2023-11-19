@@ -12,13 +12,12 @@ const spin = keyframes`
 
 const Container = styled.div`
   position: fixed;
-  width: 9rem;
-  height: 9rem;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 1.5rem;
-  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   left: 6vw;
   bottom: 5rem;
   cursor: pointer;
@@ -29,21 +28,21 @@ const Container = styled.div`
 `;
 
 const TextWrapper = styled.div`
-  position: absolute;
   width: 100%;
   height: 100%;
-  animation: ${spin} 80s linear infinite;
+  position: absolute;
+  animation: ${spin} 45s linear infinite;
   color: black;
   text-transform: uppercase;
-  top: -0.5rem;
 `;
 
 const Text = styled.span`
   position: absolute;
   font-size: 1rem;
-  top: 0;
-  left: 53%;
-  transform-origin: 0 5rem;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  transform-origin: 0 100px;
 `;
 
 function SpinningText({ text, children }) {

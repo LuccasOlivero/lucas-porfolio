@@ -16,6 +16,11 @@ export const Logo = styled.div`
   background-repeat: no-repeat;
   width: 2rem;
   height: 2rem;
+  transition: all 0.1s ease-in;
+
+  &:hover {
+    rotate: 24deg;
+  }
 
   ${(props) =>
     props.size === "bigger" &&

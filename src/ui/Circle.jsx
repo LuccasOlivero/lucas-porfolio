@@ -26,19 +26,22 @@ export const Circle = styled(motion.div)`
     props.position === "bottom" &&
     css`
       bottom: -5vw;
-      padding-top: 1.5rem;
-      display: flex;
-      justify-content: center;
+      padding-top: 1rem;
+      text-align: center;
+      /* display: grid; */
+      display: inline-block;
     `}
   
   position: absolute;
   width: 10vw;
   height: 10vw;
+  min-width: 128px;
+  min-height: 128px;
   color: #494f96;
-  font-size: 1.2rem;
+  font-size: 1rem;
 
   border-radius: 100%;
-  border: 1px solid var(--color-main);
+  border: 1px solid var(--color-secondary);
   background-color: #494f9665;
   transition: all 0.3s ease-in;
   backdrop-filter: blur(10px);
@@ -48,10 +51,11 @@ export const Circle = styled(motion.div)`
     content: "";
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: #495096;
+    background-color: var(--color-secondary);
     clip-path: circle(0% at 49% 0);
     transition: clip-path 0.3s ease-in;
     z-index: -1;
