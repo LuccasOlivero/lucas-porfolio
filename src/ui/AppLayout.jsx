@@ -16,7 +16,7 @@ const StyledAppLayout = styled.div`
 `;
 
 const Main = styled.main`
-  height: 100vh;
+  height: 90vh;
   width: 75vw;
   margin: 0 auto;
   position: relative;
@@ -85,6 +85,24 @@ const Span = styled.span`
   margin-left: 0.4rem;
 `;
 
+const StyledSection = styled.div`
+  outline: 2px solid var(--color-main);
+  height: 75vh;
+  width: 75vw;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 6rem;
+`;
+
+const Test = styled.div`
+  border: 2px solid blue;
+  border-radius: 50%;
+  width: 800px;
+  height: 600px;
+`;
+
 function AppLayout() {
   return (
     <>
@@ -127,6 +145,24 @@ function AppLayout() {
         </Main>
 
         <TextCarousel />
+
+        <StyledSection>
+          <TextContainer>
+            <Logo />
+            about me
+            <span>
+              Hi 👋 Im Lucas de Oliveira from Brazil. Experienced Webflow &
+              WordPress Developer with 5 years of expertise, dedicated to
+              delivering high-quality solutions. Strong leadership skills,
+              ensuring timely and successful project completion. Passionate
+              about creating exceptional websites that exceed client
+              expectations. Committed to providing an outstanding user
+              experience.
+            </span>
+          </TextContainer>
+
+          <Test />
+        </StyledSection>
       </StyledAppLayout>
     </>
   );
