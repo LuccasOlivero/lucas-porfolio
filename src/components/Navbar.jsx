@@ -17,6 +17,7 @@ const StyledNav = styled.nav`
 
   box-shadow: 0px -10px 30px var(--color-main);
   outline: 2px solid var(--color-main);
+  border-top: 2px solid var(--color-main);
 `;
 
 const Header = styled.h2`

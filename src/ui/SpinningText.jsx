@@ -1,5 +1,4 @@
 import styled, { keyframes } from "styled-components";
-import { motion } from "framer-motion";
 
 const spin = keyframes`
 0% {
@@ -21,6 +20,7 @@ const Container = styled.div`
   left: 6vw;
   bottom: 5rem;
   cursor: pointer;
+  z-index: 1000;
 
   @media (max-width: 400px) {
     display: none;
@@ -50,24 +50,18 @@ function SpinningText({ text, children }) {
   const deg = 360 / length;
 
   return (
-    <motion.div
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 1 }}
-      transition={{ type: "spring", stiffness: 350, damping: 10 }}
-    >
-      <Container>
-        <TextWrapper>
-          <p>
-            {text.split("").map((letter, i) => (
-              <Text key={i} style={{ transform: `rotate(${deg * i}deg)` }}>
-                {letter}
-              </Text>
-            ))}
-          </p>
-        </TextWrapper>
-        {children}
-      </Container>
-    </motion.div>
+    <Container>
+      <TextWrapper>
+        <p>
+          {text.split("").map((letter, i) => (
+            <Text key={i} style={{ transform: `rotate(${deg * i}deg)` }}>
+              {letter}
+            </Text>
+          ))}
+        </p>
+      </TextWrapper>
+      {children}
+    </Container>
   );
 }
 

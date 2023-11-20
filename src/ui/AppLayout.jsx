@@ -5,11 +5,12 @@ import SpinningText from "./SpinningText";
 import { Circle } from "./Circle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
+import TextCarousel from "./TextCarousel";
 
 const StyledAppLayout = styled.div`
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 
   background-color: var(--color-background);
 `;
@@ -23,8 +24,8 @@ const Main = styled.main`
   flex-direction: column;
   overflow: hidden;
 
-  background-color: var(--color-background);
-  border: 2px solid var(--color-main);
+  /* background-color: var(--color-background); */
+  outline: 2px solid var(--color-main);
 `;
 
 const Header = styled.h1`
@@ -86,45 +87,48 @@ const Span = styled.span`
 
 function AppLayout() {
   return (
-    <StyledAppLayout>
-      <Main>
-        <Navbar />
+    <>
+      <StyledAppLayout>
+        <SpinningText text="✈️ contact me ✈️ contact me ✈️ contact me ">
+          <Face />
+        </SpinningText>
+        <Main>
+          <Navbar />
 
-        <Container>
-          <TextContainer>
-            <Header type="margin">
-              Lucas
-              <Logo size="bigger" />
-            </Header>
-            <Header as="h2">WebDev</Header>
-            <Circle
-              position="top"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: -1 }}
-            >
-              about me
+          <Container>
+            <TextContainer>
+              <Header type="margin">
+                Lucas
+                <Logo size="bigger" />
+              </Header>
+              <Header as="h2">WebDev</Header>
+              <Circle
+                position="top"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: -1 }}
+              >
+                about me
+              </Circle>
+              <Circle
+                position="middle"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: -1 }}
+              >
+                work
+              </Circle>
+            </TextContainer>
+            <Circle position="bottom">
+              find out <br /> more
+              <Span>
+                <FontAwesomeIcon icon={faArrowDownLong} />
+              </Span>
             </Circle>
-            <Circle
-              position="middle"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: -1 }}
-            >
-              work
-            </Circle>
-          </TextContainer>
-          <Circle position="bottom">
-            find out <br /> more
-            <Span>
-              <FontAwesomeIcon icon={faArrowDownLong} />
-            </Span>
-          </Circle>
-        </Container>
-      </Main>
+          </Container>
+        </Main>
 
-      <SpinningText text="✈️ contact me ✈️ contact me ✈️ contact me ">
-        <Face />
-      </SpinningText>
-    </StyledAppLayout>
+        <TextCarousel />
+      </StyledAppLayout>
+    </>
   );
 }
 
