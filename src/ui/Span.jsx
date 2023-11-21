@@ -14,7 +14,17 @@ export const Span = styled.span`
     css`
       align-items: center;
       color: var(--color-main);
-      font-size: 2rem;
-      letter-spacing: 0.5rem;
+      font-size: 1.5rem;
+      letter-spacing: 0.3rem;
+      text-transform: uppercase;
+    `}
+
+    
+  ${(props) =>
+    props.type === "text2" &&
+    css`
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
     `}
 `;

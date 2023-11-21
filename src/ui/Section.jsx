@@ -1,13 +1,19 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Section = styled.div`
-  outline: 2px solid var(--color-main);
-  height: 75vh;
+  border-left: 2px solid var(--color-main);
+  border-right: 2px solid var(--color-main);
   width: 75vw;
   margin: 0 auto;
   position: relative;
-  display: flex;
-  align-items: center;
-  padding: 0 6rem;
-  justify-content: space-between;
+
+  ${(props) =>
+    props.type === "primary" &&
+    css`
+      height: 75vh;
+      display: flex;
+      padding: 0 6rem;
+      align-items: center;
+      justify-content: space-between;
+    `}
 `;

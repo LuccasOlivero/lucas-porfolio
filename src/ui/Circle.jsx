@@ -28,8 +28,20 @@ export const Circle = styled(motion.div)`
       bottom: -5vw;
       padding-top: 1rem;
       text-align: center;
-      /* display: grid; */
       display: inline-block;
+    `}
+
+    ${(props) =>
+    props.position === "bottom2" &&
+    css`
+      top: -4rem;
+      padding-top: 4.5rem;
+      text-align: center;
+      display: inline-block;
+      text-transform: none;
+      z-index: -1;
+      font-weight: 400;
+      letter-spacing: 0.3px;
     `}
   
   position: absolute;

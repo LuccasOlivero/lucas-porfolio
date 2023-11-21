@@ -13,6 +13,7 @@ import { Section } from "./Section";
 import { Img } from "./Img";
 import { Span } from "./Span";
 import { Paragraph } from "./Paragraph";
+import { Row } from "./Row";
 
 const StyledAppLayout = styled.div`
   width: 100%;
@@ -98,7 +99,7 @@ function AppLayout() {
 
         <TextCarousel />
 
-        <Section>
+        <Section type="primary">
           <TextContainer type="width">
             <Span type="text">
               <Logo />
@@ -118,8 +119,57 @@ function AppLayout() {
           <Img />
         </Section>
 
-        <Works />
-        <Section></Section>
+        <Section>
+          <Row type="borderTop">
+            <Span>
+              <Logo />
+              Selected Work & projects
+            </Span>
+          </Row>
+
+          <Row type="bigger">
+            Oslo Bank
+            <Span type="text2">project</Span>
+          </Row>
+
+          <Row type="bigger">
+            Oslo Bank
+            <Span type="text2">project</Span>
+          </Row>
+
+          <Row type="bigger">
+            Oslo Bank
+            <Span type="text2">project</Span>
+          </Row>
+
+          <Row type="bigger">
+            Oslo Bank
+            <Span type="text2">project</Span>
+          </Row>
+
+          <Row type="bigger">
+            Oslo Bank
+            <Span type="text2">project</Span>
+          </Row>
+
+          <Row type="bigger">
+            Oslo Bank
+            <Span type="text2">project</Span>
+          </Row>
+
+          <Row type="bigger2">
+            <Circle position="bottom2">
+              find out <br /> more
+              <SpanLeft>
+                <FontAwesomeIcon icon={faArrowDownLong} />
+              </SpanLeft>
+            </Circle>
+          </Row>
+        </Section>
+
+        <TextCarousel />
+
+        <Section type="primary" />
       </StyledAppLayout>
     </>
   );
