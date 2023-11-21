@@ -1,15 +1,15 @@
 import styled, { css, keyframes } from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { Span } from "./Span";
 
-const slide = keyframes`
-from {
-    transform: translateX(0);
-}
-
-to{
-    transform: translateX(-100%);
-}
+const progressGrow = keyframes`
+  from{
+    transform: translateX(calc(-100% + 100vw));
+  }
+  to{
+    transform: translateX(calc(100% - 100vw));
+    }
 `;
 
 const Slide = styled.div`
@@ -25,7 +25,8 @@ const Slide = styled.div`
 
 const TextSlide = styled.div`
   display: flex;
-  animation: 45s ${slide} infinite linear;
+  animation: ${progressGrow} auto linear;
+  animation-timeline: scroll(root block);
 `;
 
 const Text = styled.p`
@@ -36,15 +37,6 @@ const Text = styled.p`
   line-height: 1.4rem;
 `;
 
-const Span = styled.span`
-  display: flex;
-
-  ${(props) =>
-    props.type === "mTop" &&
-    css`
-      margin-left: 0.3rem;
-    `}
-`;
 function TextCarousel() {
   return (
     <Slide>
@@ -52,162 +44,140 @@ function TextCarousel() {
         <Text>
           keep
           <Span>
-            <FontAwesomeIcon icon={faCaretDown} />{" "}
-            <Span type="mTop">going</Span>
+            <FontAwesomeIcon icon={faCaretDown} /> <Span type="mt">going</Span>
           </Span>
         </Text>
 
         <Text>
           keep
           <Span>
-            <FontAwesomeIcon icon={faCaretDown} />{" "}
-            <Span type="mTop">going</Span>
+            <FontAwesomeIcon icon={faCaretDown} /> <Span type="mt">going</Span>
           </Span>
         </Text>
 
         <Text>
           keep
           <Span>
-            <FontAwesomeIcon icon={faCaretDown} />{" "}
-            <Span type="mTop">going</Span>
+            <FontAwesomeIcon icon={faCaretDown} /> <Span type="mt">going</Span>
           </Span>
         </Text>
 
         <Text>
           keep
           <Span>
-            <FontAwesomeIcon icon={faCaretDown} />{" "}
-            <Span type="mTop">going</Span>
+            <FontAwesomeIcon icon={faCaretDown} /> <Span type="mt">going</Span>
           </Span>
         </Text>
 
         <Text>
           keep
           <Span>
-            <FontAwesomeIcon icon={faCaretDown} />{" "}
-            <Span type="mTop">going</Span>
+            <FontAwesomeIcon icon={faCaretDown} /> <Span type="mt">going</Span>
           </Span>
         </Text>
 
         <Text>
           keep
           <Span>
-            <FontAwesomeIcon icon={faCaretDown} />{" "}
-            <Span type="mTop">going</Span>
+            <FontAwesomeIcon icon={faCaretDown} /> <Span type="mt">going</Span>
           </Span>
         </Text>
 
         <Text>
           keep
           <Span>
-            <FontAwesomeIcon icon={faCaretDown} />{" "}
-            <Span type="mTop">going</Span>
+            <FontAwesomeIcon icon={faCaretDown} /> <Span type="mt">going</Span>
           </Span>
         </Text>
 
         <Text>
           keep
           <Span>
-            <FontAwesomeIcon icon={faCaretDown} />{" "}
-            <Span type="mTop">going</Span>
+            <FontAwesomeIcon icon={faCaretDown} /> <Span type="mt">going</Span>
           </Span>
         </Text>
 
         <Text>
           keep
           <Span>
-            <FontAwesomeIcon icon={faCaretDown} />{" "}
-            <Span type="mTop">going</Span>
+            <FontAwesomeIcon icon={faCaretDown} /> <Span type="mt">going</Span>
           </Span>
         </Text>
 
         <Text>
           keep
           <Span>
-            <FontAwesomeIcon icon={faCaretDown} />{" "}
-            <Span type="mTop">going</Span>
-          </Span>
-        </Text>
-      </TextSlide>
-
-      <TextSlide>
-        <Text>
-          keep
-          <Span>
-            <FontAwesomeIcon icon={faCaretDown} />{" "}
-            <Span type="mTop">going</Span>
+            <FontAwesomeIcon icon={faCaretDown} /> <Span type="mt">going</Span>
           </Span>
         </Text>
 
         <Text>
           keep
           <Span>
-            <FontAwesomeIcon icon={faCaretDown} />{" "}
-            <Span type="mTop">going</Span>
+            <FontAwesomeIcon icon={faCaretDown} /> <Span type="mt">going</Span>
           </Span>
         </Text>
 
         <Text>
           keep
           <Span>
-            <FontAwesomeIcon icon={faCaretDown} />{" "}
-            <Span type="mTop">going</Span>
+            <FontAwesomeIcon icon={faCaretDown} /> <Span type="mt">going</Span>
           </Span>
         </Text>
 
         <Text>
           keep
           <Span>
-            <FontAwesomeIcon icon={faCaretDown} />{" "}
-            <Span type="mTop">going</Span>
+            <FontAwesomeIcon icon={faCaretDown} /> <Span type="mt">going</Span>
           </Span>
         </Text>
 
         <Text>
           keep
           <Span>
-            <FontAwesomeIcon icon={faCaretDown} />{" "}
-            <Span type="mTop">going</Span>
+            <FontAwesomeIcon icon={faCaretDown} /> <Span type="mt">going</Span>
           </Span>
         </Text>
 
         <Text>
           keep
           <Span>
-            <FontAwesomeIcon icon={faCaretDown} />{" "}
-            <Span type="mTop">going</Span>
+            <FontAwesomeIcon icon={faCaretDown} /> <Span type="mt">going</Span>
           </Span>
         </Text>
 
         <Text>
           keep
           <Span>
-            <FontAwesomeIcon icon={faCaretDown} />{" "}
-            <Span type="mTop">going</Span>
+            <FontAwesomeIcon icon={faCaretDown} /> <Span type="mt">going</Span>
           </Span>
         </Text>
 
         <Text>
           keep
           <Span>
-            <FontAwesomeIcon icon={faCaretDown} />{" "}
-            <Span type="mTop">going</Span>
+            <FontAwesomeIcon icon={faCaretDown} /> <Span type="mt">going</Span>
           </Span>
         </Text>
 
         <Text>
           keep
           <Span>
-            <FontAwesomeIcon icon={faCaretDown} />{" "}
-            <Span type="mTop">going</Span>
+            <FontAwesomeIcon icon={faCaretDown} /> <Span type="mt">going</Span>
           </Span>
         </Text>
 
         <Text>
           keep
           <Span>
-            <FontAwesomeIcon icon={faCaretDown} />{" "}
-            <Span type="mTop">going</Span>
+            <FontAwesomeIcon icon={faCaretDown} /> <Span type="mt">going</Span>
+          </Span>
+        </Text>
+
+        <Text>
+          keep
+          <Span>
+            <FontAwesomeIcon icon={faCaretDown} /> <Span type="mt">going</Span>
           </Span>
         </Text>
       </TextSlide>

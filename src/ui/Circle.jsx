@@ -43,7 +43,7 @@ export const Circle = styled(motion.div)`
   border-radius: 100%;
   border: 1px solid var(--color-secondary);
   background-color: #494f9665;
-  transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in-out;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 
