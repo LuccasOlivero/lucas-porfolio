@@ -10,6 +10,9 @@ export const Circle = styled(motion.div)`
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 10vw;
+      border: 1px solid var(--color-secondary);
+      height: 10vw;
     `}
 
   ${(props) =>
@@ -20,6 +23,9 @@ export const Circle = styled(motion.div)`
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 10vw;
+      border: 1px solid var(--color-secondary);
+      height: 10vw;
     `}
 
   ${(props) =>
@@ -29,31 +35,53 @@ export const Circle = styled(motion.div)`
       padding-top: 1rem;
       text-align: center;
       display: inline-block;
+      width: 10vw;
+      border: 1px solid var(--color-secondary);
+      height: 10vw;
     `}
 
     ${(props) =>
     props.position === "bottom2" &&
     css`
-      top: -4rem;
-      padding-top: 4.5rem;
+      bottom: -6rem;
+      padding-top: 1rem;
       text-align: center;
       display: inline-block;
       text-transform: none;
-      z-index: -1;
       font-weight: 400;
       letter-spacing: 0.3px;
+      width: 8vw;
+      height: 8vw;
+      border: 1px solid var(--color-secondary);
+    `}
+
+    
+    ${(props) =>
+    props.type === "bigger" &&
+    css`
+      left: -28rem;
+      width: 800px;
+      height: 800px;
+      display: block;
+    `}
+
+    ${(props) =>
+    props.type === "bigger2" &&
+    css`
+      bottom: -105rem;
+      right: -32rem;
+      width: 800px;
+      height: 800px;
+      display: block;
     `}
   
   position: absolute;
-  width: 10vw;
-  height: 10vw;
   min-width: 128px;
   min-height: 128px;
   color: #494f96;
   font-size: 1rem;
 
   border-radius: 100%;
-  border: 1px solid var(--color-secondary);
   background-color: #494f9665;
   transition: all 0.3s ease-in-out;
   backdrop-filter: blur(10px);

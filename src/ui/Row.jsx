@@ -9,7 +9,7 @@ export const Row = styled.div`
   font-weight: 550;
   letter-spacing: 0.3rem;
   position: relative;
-
+  overflow: hidden;
   display: flex;
   align-items: center;
 

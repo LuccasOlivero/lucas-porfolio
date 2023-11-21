@@ -24,6 +24,7 @@ const Slide = styled.div`
 `;
 
 const TextSlide = styled.div`
+  position: absolute;
   display: flex;
   animation: ${progressGrow} auto linear;
   animation-timeline: scroll(root block);

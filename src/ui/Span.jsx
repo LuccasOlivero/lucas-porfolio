@@ -27,4 +27,21 @@ export const Span = styled.span`
       text-transform: uppercase;
       letter-spacing: 3px;
     `}
+
+       
+  ${(props) =>
+    props.type === "text3" &&
+    css`
+      flex-direction: column;
+    `}
+
+
+    ${(props) =>
+    props.type === "text4" &&
+    css`
+      font-size: 0.8rem;
+      font-weight: 500;
+      align-items: end;
+      padding-left: 0.2rem;
+    `}
 `;

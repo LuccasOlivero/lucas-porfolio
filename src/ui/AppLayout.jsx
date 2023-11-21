@@ -18,6 +18,8 @@ import { Row } from "./Row";
 const StyledAppLayout = styled.div`
   width: 100%;
   height: 100vh;
+  position: relative;
+  /* overflow-x: hidden; */
 
   background-color: var(--color-background);
 `;
@@ -119,6 +121,9 @@ function AppLayout() {
           <Img />
         </Section>
 
+        <Circle type="bigger" />
+        {/* <Circle type="bigger2" /> */}
+
         <Section>
           <Row type="borderTop">
             <Span>
@@ -128,32 +133,66 @@ function AppLayout() {
           </Row>
 
           <Row type="bigger">
-            Oslo Bank
+            <Span type="text3">
+              <Header as="h2" type="medium">
+                Oslo Bank
+              </Header>
+              <Span type="text4">React, Tailwind CSS.</Span>
+            </Span>
             <Span type="text2">project</Span>
           </Row>
 
           <Row type="bigger">
-            Oslo Bank
+            <Span type="text3">
+              <Header as="h2" type="medium">
+                South Studio
+              </Header>
+              <Span type="text4">React, Styled Components, Framer Motion.</Span>
+            </Span>
             <Span type="text2">project</Span>
           </Row>
 
           <Row type="bigger">
-            Oslo Bank
+            <Span type="text3">
+              <Header as="h2" type="medium">
+                New Body Gym
+              </Header>
+              <Span type="text4">React, Tailwind CSS.</Span>
+            </Span>
             <Span type="text2">project</Span>
           </Row>
 
           <Row type="bigger">
-            Oslo Bank
+            <Span type="text3">
+              <Header as="h2" type="medium">
+                3xBet
+              </Header>
+              <Span type="text4">
+                React, TypeScript, Tailwind CSS, Framer Motion.
+              </Span>
+            </Span>
             <Span type="text2">project</Span>
           </Row>
 
           <Row type="bigger">
-            Oslo Bank
+            <Span type="text3">
+              <Header as="h2" type="medium">
+                Another
+              </Header>
+              <Span type="text4">
+                React, Tailwind CSS, TypeScript, Framer Motion.
+              </Span>
+            </Span>
             <Span type="text2">project</Span>
           </Row>
 
           <Row type="bigger">
-            Oslo Bank
+            <Span type="text3">
+              <Header as="h2" type="medium">
+                Ushuaia Visión
+              </Header>
+              <Span type="text4">React, TypeScript, Styled Components.</Span>
+            </Span>
             <Span type="text2">project</Span>
           </Row>
 
