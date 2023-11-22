@@ -20,7 +20,7 @@ export const Logo = styled.div`
   margin-right: 1rem;
 
   &:hover {
-    rotate: 24deg;
+    rotate: 24.5deg;
   }
 
   ${(props) =>
