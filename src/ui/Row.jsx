@@ -76,5 +76,6 @@ export const Row = styled.div`
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       font-size: 1rem;
+      gap: 2rem;
     `}
 `;

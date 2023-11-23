@@ -5,7 +5,6 @@ export const Header = styled.h1`
   display: flex;
   justify-content: space-between;
   font-size: 13vw;
-  /* width: 100%; */
   line-height: 0.9;
   font-weight: 900;
 
@@ -22,5 +21,15 @@ export const Header = styled.h1`
     props.type === "medium" &&
     css`
       font-size: 3rem;
+    `}
+
+    ${(props) =>
+    props.type === "min" &&
+    css`
+      font-size: 1.3rem;
+      letter-spacing: 8px;
+      padding-bottom: 0.5rem;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--color-main);
     `}
 `;

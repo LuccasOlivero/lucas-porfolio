@@ -210,6 +210,29 @@ function AppLayout() {
         </Section>
 
         <TextCarousel />
+
+        <Section>
+          <Row type="bigger3">
+            <Box>
+              <Header type="min" as="p">
+                lenguajes
+                <Span type="text4">.01</Span>
+              </Header>
+            </Box>
+            <Box>
+              <Header type="min" as="p">
+                tecnologies
+                <Span type="text4">.02</Span>
+              </Header>
+            </Box>
+            <Box>
+              <Header type="min" as="p">
+                frameworks
+                <Span type="text4">.03</Span>
+              </Header>
+            </Box>
+          </Row>
+        </Section>
       </StyledAppLayout>
     </>
   );
