@@ -44,4 +44,21 @@ export const Span = styled.span`
       align-items: end;
       padding-left: 0.2rem;
     `}
+
+    ${(props) =>
+    props.type === "text5" &&
+    css`
+      font-size: 1.3rem;
+      padding-top: 1.5rem;
+      letter-spacing: 3px;
+    `}
+
+    ${(props) =>
+    props.type === "text6" &&
+    css`
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      margin-left: 1rem;
+    `}
 `;

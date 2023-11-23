@@ -15,6 +15,8 @@ import { Span } from "./Span";
 import { Paragraph } from "./Paragraph";
 import { Row } from "./Row";
 import { Box } from "./Box";
+import { Buttom } from "./Buttom";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 const StyledAppLayout = styled.div`
   width: 100%;
@@ -57,6 +59,23 @@ const TextContainer = styled.div`
 const SpanLeft = styled.span`
   position: relative;
   margin-left: 0.4rem;
+`;
+
+const Test = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 65vh;
+  background-color: var(--color-main);
+  background-image: url(./background.jpg);
+  background-size: cover;
+  background-position: center;
+`;
+
+const Test2 = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #3077f1c5;
 `;
 
 function AppLayout() {
@@ -218,21 +237,44 @@ function AppLayout() {
                 lenguajes
                 <Span type="text4">.01</Span>
               </Header>
+              <Span type="text5">
+                Java, HTML5, CSS3 and JavaScript, TypeScript
+              </Span>
             </Box>
             <Box>
               <Header type="min" as="p">
                 tecnologies
                 <Span type="text4">.02</Span>
               </Header>
+              <Span type="text5">
+                Git, SQL, Supabase, Framer Motion Supabase, Framer Motion
+              </Span>
             </Box>
             <Box>
               <Header type="min" as="p">
                 frameworks
                 <Span type="text4">.03</Span>
               </Header>
+              <Span type="text5">
+                React, MySQL, Jquery, SCSS/SASS and Bootstrap
+              </Span>
             </Box>
           </Row>
         </Section>
+
+        <Test>
+          <Test2 />
+          <Section type="secondary" as="footer">
+            <Header type="bigger">
+              let&apos;s <br />
+              talk
+              <Span type="text6">
+                <FontAwesomeIcon icon={faCaretDown} />
+              </Span>
+            </Header>
+            <Buttom>say hi!</Buttom>
+          </Section>
+        </Test>
       </StyledAppLayout>
     </>
   );

@@ -70,7 +70,7 @@ export const Row = styled.div`
     ${(props) =>
     props.type === "bigger3" &&
     css`
-      height: 14rem;
+      height: 20rem;
       font-size: 4.4rem;
       font-weight: 700;
       display: grid;

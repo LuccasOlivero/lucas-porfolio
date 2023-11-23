@@ -32,4 +32,12 @@ export const Header = styled.h1`
       text-transform: uppercase;
       border-bottom: 1px solid var(--color-main);
     `}
+
+    ${(props) =>
+    props.type === "bigger" &&
+    css`
+      font-size: 7rem;
+      color: white;
+      font-weight: 600;
+    `}
 `;

@@ -16,4 +16,17 @@ export const Section = styled.div`
       align-items: center;
       justify-content: space-between;
     `}
+
+  ${(props) =>
+    props.type === "secondary" &&
+    css`
+      height: 65vh;
+      display: flex;
+      padding: 0 6rem;
+      outline: 1px solid white;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    `}
 `;
