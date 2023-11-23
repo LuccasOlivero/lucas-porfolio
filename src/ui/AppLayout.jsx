@@ -14,6 +14,7 @@ import { Img } from "./Img";
 import { Span } from "./Span";
 import { Paragraph } from "./Paragraph";
 import { Row } from "./Row";
+import { Box } from "./Box";
 
 const StyledAppLayout = styled.div`
   width: 100%;
@@ -133,13 +134,15 @@ function AppLayout() {
           </Row>
 
           <Row type="bigger">
-            <Span type="text3">
+            <Span type="text3" as="div">
               <Header as="h2" type="medium">
                 Oslo Bank
               </Header>
               <Span type="text4">React, Tailwind CSS.</Span>
             </Span>
-            <Span type="text2">project</Span>
+            <Span type="text2" as="div">
+              project
+            </Span>
           </Row>
 
           <Row type="bigger">
@@ -208,7 +211,19 @@ function AppLayout() {
 
         <TextCarousel />
 
-        <Section type="primary" />
+        <Section>
+          <Row type="bigger3">
+            <Box>lenguajes</Box>
+            <Box>tecnologias</Box>
+            <Box>frameworks</Box>
+          </Row>
+          <Row type="borderTop">
+            <Span>
+              <Logo />
+              How i can help
+            </Span>
+          </Row>
+        </Section>
       </StyledAppLayout>
     </>
   );

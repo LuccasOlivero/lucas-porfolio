@@ -32,6 +32,30 @@ export const Row = styled.div`
       font-weight: 700;
       justify-content: space-between;
       background-color: var(--color-background);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-image: url(./face.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+        transition: clip-path 0.26s ease-in;
+      }
+
+      &:hover::before {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+      }
+
+      // BUG
+      &:hover {
+        color: red;
+      }
     `}
 
     ${(props) =>
@@ -41,5 +65,16 @@ export const Row = styled.div`
       font-size: 4.4rem;
       font-weight: 700;
       justify-content: center;
+    `}
+
+    ${(props) =>
+    props.type === "bigger3" &&
+    css`
+      height: 14rem;
+      font-size: 4.4rem;
+      font-weight: 700;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      font-size: 1rem;
     `}
 `;
