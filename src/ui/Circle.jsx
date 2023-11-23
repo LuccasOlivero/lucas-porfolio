@@ -80,10 +80,9 @@ export const Circle = styled(motion.div)`
   min-height: 128px;
   color: #494f96;
   font-size: 1rem;
-
   border-radius: 100%;
   background-color: #494f9665;
-  transition: all 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 

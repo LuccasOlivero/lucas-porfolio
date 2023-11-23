@@ -17,6 +17,8 @@ import { Row } from "./Row";
 import { Box } from "./Box";
 import { Buttom } from "./Buttom";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 const StyledAppLayout = styled.div`
   width: 100%;
@@ -76,6 +78,11 @@ const Test2 = styled.div`
   width: 100%;
   height: 100%;
   background-color: #3077f1c5;
+`;
+
+const Test3 = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 function AppLayout() {
@@ -272,7 +279,21 @@ function AppLayout() {
                 <FontAwesomeIcon icon={faCaretDown} />
               </Span>
             </Header>
-            <Buttom>say hi!</Buttom>
+
+            <Test3>
+              <Buttom type="small">lucas.dev@gmail.com</Buttom>
+              <Buttom type="small">
+                <FontAwesomeIcon icon={faLinkedinIn} />
+              </Buttom>
+              <Buttom type="small">
+                <FontAwesomeIcon icon={faGithub} />
+              </Buttom>
+
+              <Row type="borderTop2">
+                &copy; Luccas Olivero. All rights reserved{" "}
+                {new Date().getFullYear()}
+              </Row>
+            </Test3>
           </Section>
         </Test>
       </StyledAppLayout>

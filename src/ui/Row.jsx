@@ -23,6 +23,21 @@ export const Row = styled.div`
     `}
 
   ${(props) =>
+    props.type === "borderTop2" &&
+    css`
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      border-top: 2px solid white;
+      border-bottom: 2px solid white;
+      text-transform: uppercase;
+      justify-content: space-between;
+      color: white;
+      letter-spacing: 3px;
+      font-size: 1rem;
+    `}
+
+  ${(props) =>
     props.type === "bigger" &&
     css`
       border-bottom: 2px solid var(--color-main);
