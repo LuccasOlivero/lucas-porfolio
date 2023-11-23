@@ -210,20 +210,6 @@ function AppLayout() {
         </Section>
 
         <TextCarousel />
-
-        <Section>
-          <Row type="bigger3">
-            <Box>lenguajes</Box>
-            <Box>tecnologias</Box>
-            <Box>frameworks</Box>
-          </Row>
-          <Row type="borderTop">
-            <Span>
-              <Logo />
-              How i can help
-            </Span>
-          </Row>
-        </Section>
       </StyledAppLayout>
     </>
   );
