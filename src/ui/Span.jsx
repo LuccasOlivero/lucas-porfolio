@@ -26,6 +26,7 @@ export const Span = styled.span`
       font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 3px;
+      z-index: 100;
     `}
 
        
@@ -43,14 +44,18 @@ export const Span = styled.span`
       font-weight: 500;
       align-items: end;
       padding-left: 0.2rem;
+      z-index: 100;
     `}
 
     ${(props) =>
     props.type === "text5" &&
     css`
-      font-size: 1.3rem;
-      padding-top: 1.5rem;
+      font-size: 1.2rem;
+      padding-top: 0.5rem;
       letter-spacing: 3px;
+      line-height: 33px;
+      font-weight: 400;
+      color: var(--color-main);
     `}
 
     ${(props) =>

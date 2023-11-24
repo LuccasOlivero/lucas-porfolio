@@ -36,6 +36,14 @@ export const Header = styled.h1`
     `}
 
     ${(props) =>
+    props.type === "min2" &&
+    css`
+      font-size: 1.3rem;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+    `}
+
+    ${(props) =>
     props.type === "bigger" &&
     css`
       font-size: 7rem;

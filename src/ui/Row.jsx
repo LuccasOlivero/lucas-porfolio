@@ -46,6 +46,7 @@ export const Row = styled.div`
       justify-content: space-between;
       /* background-color: var(--color-background); */
       position: relative;
+      transition: color 0.2s ease-in;
 
       &::before {
         content: "";
@@ -55,7 +56,7 @@ export const Row = styled.div`
         height: 100%;
         width: 100%;
         /* background-image: url(./face.png); */
-        background-color: #3077f1;
+        background-color: #3077f155;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
