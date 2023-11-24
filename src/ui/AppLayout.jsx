@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import SpinningText from "../components/SpinningText";
 import Navbar from "../components/Navbar";
@@ -10,19 +10,15 @@ import Footer from "../components/Footer";
 
 import { Logo } from "./Logo";
 import { Circle } from "./Circle";
-import { Header } from "./Header";
 import { ContatMe } from "./ContactMe";
 import { Section } from "./Section";
 import { Span } from "./Span";
-import { Paragraph } from "./Paragraph";
 import { Row } from "./Row";
-import { Box } from "./Box";
-import { TextContainer } from "./TextContainer";
 import { Main } from "./Main";
-import { Avatar } from "./Avatar";
 import AboutMe1 from "../components/AboutMe1";
 import WorkLinks from "../components/WorkLinks";
 import Skils from "../components/Skils";
+import Cards from "../components/Cards";
 
 const StyledAppLayout = styled.div`
   width: 100%;
@@ -46,7 +42,7 @@ function AppLayout() {
           <Hero />
         </Main>
 
-        <TextCarousel />
+        <TextCarousel text1="keep" text2="going" />
 
         <Section type="primary">
           <AboutMe1 />
@@ -95,7 +91,7 @@ function AppLayout() {
           />
 
           <Row type="bigger2">
-            <Circle position="bottom2">
+            <Circle position="bottom">
               find out <br /> more
               <Span type="mleft">
                 <FontAwesomeIcon icon={faArrowDownLong} />
@@ -104,19 +100,17 @@ function AppLayout() {
           </Row>
         </Section>
 
-        <TextCarousel />
+        <TextCarousel text2="skils" type="skils" />
 
         <Section>
           <Skils />
-
           <Row type="borderTop">
             <Span>
-              <Logo type="small" />
+              <Logo />
               how i can help
             </Span>
           </Row>
-
-          <Here />
+          <Cards />
         </Section>
 
         <Footer />

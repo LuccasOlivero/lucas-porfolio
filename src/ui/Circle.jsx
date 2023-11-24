@@ -33,32 +33,17 @@ export const Circle = styled(motion.div)`
   ${(props) =>
     props.position === "bottom" &&
     css`
+      display: flex;
+      justify-content: center;
       bottom: -5vw;
       padding-top: 1rem;
-      text-align: center;
-      display: inline-block;
       width: 10vw;
       border: 1px solid var(--color-secondary);
       height: 10vw;
       background-color: #494f9665;
+      font-weight: 500;
+      letter-spacing: 2px;
     `}
-
-    ${(props) =>
-    props.position === "bottom2" &&
-    css`
-      bottom: -6rem;
-      padding-top: 1rem;
-      text-align: center;
-      display: inline-block;
-      text-transform: none;
-      font-weight: 400;
-      letter-spacing: 0.3px;
-      width: 8vw;
-      height: 8vw;
-      border: 1px solid var(--color-secondary);
-      background-color: #494f9665;
-    `}
-
     
     ${(props) =>
     props.type === "bigger" &&

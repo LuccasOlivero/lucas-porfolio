@@ -32,6 +32,7 @@ function Hero() {
           work
         </Circle>
       </TextContainer>
+
       <Circle position="bottom">
         find out <br /> more
         <Span type="mleft">

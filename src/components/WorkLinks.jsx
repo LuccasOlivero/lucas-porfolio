@@ -9,7 +9,9 @@ function WorkLinks({ name, techStack, type }) {
         <Header as="h2" type="medium">
           {name}
         </Header>
-        <Span type="text4">{techStack}</Span>
+        <Span type="text4" as="p">
+          {techStack}
+        </Span>
       </Span>
       <Span type="text2" as="div">
         {type}

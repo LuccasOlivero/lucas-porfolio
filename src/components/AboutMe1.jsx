@@ -13,12 +13,12 @@ function AboutMe1() {
           about me
         </Span>
         <Paragraph>
-          Hi 👋 Im Lucas Olivero from Brazil. Experienced Webflow & WordPress
-          Developer with 5 years of expertise, dedicated to delivering
-          high-quality solutions. Strong leadership skills, ensuring timely and
-          successful project completion. Passionate about creating exceptional
-          websites that exceed client expectations. Committed to providing an
-          outstanding user experience.
+          👋 Hi, I&apos;m Lucas Olivero, a Frontend Developer from Argentina
+          with 1 year of expertise. Specializing in React and experienced with
+          Angular, I&apos;m dedicated to delivering high-quality solutions.
+          Passionate about crafting exceptional websites that exceed client
+          expectations, I am committed to providing an outstanding user
+          experience.
         </Paragraph>
       </TextContainer>
 

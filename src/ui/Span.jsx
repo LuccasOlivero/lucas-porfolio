@@ -23,7 +23,8 @@ export const Span = styled.span`
   ${(props) =>
     props.type === "text2" &&
     css`
-      font-size: 0.7rem;
+      font-size: 1rem;
+      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 3px;
       z-index: 100;
@@ -40,8 +41,8 @@ export const Span = styled.span`
     ${(props) =>
     props.type === "text4" &&
     css`
-      font-size: 0.8rem;
-      font-weight: 500;
+      font-size: 1rem;
+      font-weight: 600;
       align-items: end;
       padding-left: 0.2rem;
       z-index: 100;
@@ -71,6 +72,7 @@ export const Span = styled.span`
     props.type === "mleft" &&
     css`
       position: relative;
-      margin-left: 0.4rem;
+      margin-left: -0.8rem;
+      margin-top: 1.9rem;
     `}
 `;
