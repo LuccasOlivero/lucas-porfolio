@@ -4,12 +4,13 @@ export const Img = styled.div`
   border-radius: 50%;
   width: 20vw;
   height: 20vw;
-  background-image: url(./perfil.jpg);
+  background-image: url(./perfil.png);
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  background-color: #252627;
+  /* background-color: #252627; */
+  background-color: var(--color-main);
 
   &::before {
     content: "";
@@ -19,6 +20,6 @@ export const Img = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #3077f128;
+    background-color: #3077f11f;
   }
 `;

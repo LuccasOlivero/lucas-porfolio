@@ -15,10 +15,7 @@ import { Span } from "./Span";
 import { Paragraph } from "./Paragraph";
 import { Row } from "./Row";
 import { Box } from "./Box";
-import { Buttom } from "./Buttom";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import Footer from "./Footer";
 
 const StyledAppLayout = styled.div`
   width: 100%;
@@ -61,28 +58,6 @@ const TextContainer = styled.div`
 const SpanLeft = styled.span`
   position: relative;
   margin-left: 0.4rem;
-`;
-
-const Test = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 65vh;
-  background-color: var(--color-main);
-  background-image: url(./background.jpg);
-  background-size: cover;
-  background-position: center;
-`;
-
-const Test2 = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #3077f1c5;
-`;
-
-const Test3 = styled.div`
-  display: flex;
-  justify-content: center;
 `;
 
 function AppLayout() {
@@ -269,33 +244,7 @@ function AppLayout() {
           </Row>
         </Section>
 
-        <Test>
-          <Test2 />
-          <Section type="secondary" as="footer">
-            <Header type="bigger">
-              let&apos;s <br />
-              talk
-              <Span type="text6">
-                <FontAwesomeIcon icon={faCaretDown} />
-              </Span>
-            </Header>
-
-            <Test3>
-              <Buttom type="small">lucas.dev@gmail.com</Buttom>
-              <Buttom type="small">
-                <FontAwesomeIcon icon={faLinkedinIn} />
-              </Buttom>
-              <Buttom type="small">
-                <FontAwesomeIcon icon={faGithub} />
-              </Buttom>
-
-              <Row type="borderTop2">
-                &copy; Luccas Olivero. All rights reserved{" "}
-                {new Date().getFullYear()}
-              </Row>
-            </Test3>
-          </Section>
-        </Test>
+        <Footer />
       </StyledAppLayout>
     </>
   );

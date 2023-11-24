@@ -21,6 +21,8 @@ export const Header = styled.h1`
     props.type === "medium" &&
     css`
       font-size: 3rem;
+      z-index: 100;
+      color: var(--color-secondary);
     `}
 
     ${(props) =>

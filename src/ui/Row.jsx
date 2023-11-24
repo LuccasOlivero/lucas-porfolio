@@ -40,12 +40,12 @@ export const Row = styled.div`
     props.type === "bigger" &&
     css`
       border-bottom: 2px solid var(--color-main);
-
       height: 7rem;
       font-size: 4.4rem;
       font-weight: 700;
       justify-content: space-between;
-      background-color: var(--color-background);
+      /* background-color: var(--color-background); */
+      position: relative;
 
       &::before {
         content: "";
@@ -54,12 +54,13 @@ export const Row = styled.div`
         left: 0;
         height: 100%;
         width: 100%;
-        background-image: url(./face.png);
+        /* background-image: url(./face.png); */
+        background-color: #3077f1;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
-        transition: clip-path 0.26s ease-in;
+        transition: clip-path 0.2s ease-in;
       }
 
       &:hover::before {
@@ -68,7 +69,7 @@ export const Row = styled.div`
 
       // BUG
       &:hover {
-        color: red;
+        color: white;
       }
     `}
 
