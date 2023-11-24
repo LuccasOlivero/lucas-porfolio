@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { Section } from "./Section";
-import { Header } from "./Header";
+import { Section } from "../ui/Section";
+import { Header } from "../ui/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
-import { Buttom } from "./Buttom";
+import { Buttom } from "../ui/Buttom";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { Span } from "./Span";
-import { Row } from "./Row";
+import { Span } from "../ui/Span";
+import { Row } from "../ui/Row";
 
 const StyledFooter = styled.footer`
   position: absolute;

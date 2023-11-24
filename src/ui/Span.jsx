@@ -66,4 +66,11 @@ export const Span = styled.span`
       justify-content: end;
       margin-left: 1rem;
     `}
+
+    ${(props) =>
+    props.type === "mleft" &&
+    css`
+      position: relative;
+      margin-left: 0.4rem;
+    `}
 `;

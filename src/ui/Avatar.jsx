@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Img = styled.div`
+export const Avatar = styled.div`
   border-radius: 50%;
   width: 20vw;
   height: 20vw;
