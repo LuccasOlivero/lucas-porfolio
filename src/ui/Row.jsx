@@ -29,7 +29,6 @@ export const Row = styled.div`
       width: 100%;
       bottom: 0;
       border-top: 2px solid white;
-      border-bottom: 2px solid white;
       text-transform: uppercase;
       justify-content: space-between;
       color: white;
