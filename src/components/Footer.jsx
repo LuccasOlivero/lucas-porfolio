@@ -1,10 +1,11 @@
-import styled from "styled-components";
-import { Section } from "../ui/Section";
-import { Header } from "../ui/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
-import { Buttom } from "../ui/Buttom";
+import styled from "styled-components";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+
+import { Section } from "../ui/Section";
+import { Header } from "../ui/Header";
+import { Buttom } from "../ui/Buttom";
 import { Span } from "../ui/Span";
 import { Row } from "../ui/Row";
 
@@ -29,6 +30,19 @@ const LogosContact = styled.div`
   justify-content: center;
 `;
 
+const Link = styled.a`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  cursor: pointer;
+`;
+
 function Footer() {
   return (
     <StyledFooter>
@@ -44,11 +58,17 @@ function Footer() {
 
         <LogosContact>
           <Buttom type="small">lucas.dev@gmail.com</Buttom>
+
           <Buttom type="small">
-            <FontAwesomeIcon icon={faLinkedinIn} />
+            <Link href="https://www.linkedin.com/in/lucas-olivero-319090264/">
+              <FontAwesomeIcon icon={faLinkedinIn} />
+            </Link>
           </Buttom>
+
           <Buttom type="small">
-            <FontAwesomeIcon icon={faGithub} />
+            <Link href="https://github.com/LuccasOlivero">
+              <FontAwesomeIcon icon={faGithub} />
+            </Link>
           </Buttom>
 
           <Row type="borderTop2">

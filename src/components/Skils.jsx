@@ -8,10 +8,10 @@ function Skils() {
     <Row type="bigger3">
       <Box>
         <Header type="min" as="p">
-          lenguajes
+          languages
           <Span type="text4">.01</Span>
         </Header>
-        <Span type="text5">Java, HTML5, CSS3 and JavaScript, TypeScript</Span>
+        <Span type="text5">HTML5, CSS3, JavaScript, TypeScript, Java.</Span>
       </Box>
       <Box>
         <Header type="min" as="p">
@@ -19,7 +19,7 @@ function Skils() {
           <Span type="text4">.02</Span>
         </Header>
         <Span type="text5">
-          Git, SQL, Supabase, Framer Motion Supabase, Framer Motion
+          Git, Supabase, Framer Motion, Redux, TanStack Query, Next.js.
         </Span>
       </Box>
       <Box>
@@ -27,7 +27,7 @@ function Skils() {
           frameworks
           <Span type="text4">.03</Span>
         </Header>
-        <Span type="text5">React, MySQL, Jquery, SCSS/SASS and Bootstrap</Span>
+        <Span type="text5">React, Angular, Spring, Tailwind CSS, Node.js.</Span>
       </Box>
     </Row>
   );

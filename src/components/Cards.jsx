@@ -13,8 +13,8 @@ const Svg = styled.figure`
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 40%;
-  height: 40%;
+  width: 100%;
+  height: 100%;
 `;
 
 const Svg2 = styled.figure`
@@ -22,8 +22,8 @@ const Svg2 = styled.figure`
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 40%;
-  height: 40%;
+  width: 100%;
+  height: 100%;
 `;
 
 const Svg3 = styled.figure`
@@ -31,8 +31,8 @@ const Svg3 = styled.figure`
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 40%;
-  height: 40%;
+  width: 100%;
+  height: 100%;
 `;
 
 function Cards() {
@@ -48,8 +48,7 @@ function Cards() {
 
       <Card
         title="WEB DEVELOPMENT"
-        text=" I use high-fidelity prototypes to get the best experience for your
-        site."
+        text="I build websites from scratch that clients can manage in the way they want."
         type="borderRight"
       >
         <Svg2 />
@@ -57,8 +56,7 @@ function Cards() {
 
       <Card
         title="WEB DESIGN "
-        text=" I use high-fidelity prototypes to get the best experience for your
-        site."
+        text="My main focus is designing pixel perfect websites and interfaces."
       >
         <Svg3 />
       </Card>

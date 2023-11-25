@@ -13,6 +13,6 @@ export const TextContainer = styled.div`
   ${(props) =>
     props.type === "width" &&
     css`
-      width: 30vw;
+      width: 40vw;
     `}
 `;

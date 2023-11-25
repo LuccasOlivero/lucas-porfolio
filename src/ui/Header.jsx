@@ -41,6 +41,7 @@ export const Header = styled.h1`
       font-size: 1.3rem;
       letter-spacing: 8px;
       text-transform: uppercase;
+      margin-top: 1.5rem;
     `}
 
     ${(props) =>

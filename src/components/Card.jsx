@@ -7,6 +7,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 0rem 6rem;
+
   ${(props) =>
     props.type === "borderRight" &&
     css`
@@ -14,10 +15,15 @@ const Container = styled.div`
     `}
 `;
 
+const Test = styled.div`
+  width: 150px;
+  height: 150px;
+`;
+
 function Card({ children, title, text, type = "" }) {
   return (
     <Container type={type}>
-      {children}
+      <Test>{children}</Test>
       <Header as="h3" type="min2">
         {title}
       </Header>

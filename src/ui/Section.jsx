@@ -23,7 +23,8 @@ export const Section = styled.div`
       height: 65vh;
       display: flex;
       padding: 0 6rem;
-      outline: 1px solid white;
+      border-left: 1px solid white;
+      border-right: 1px solid white;
       display: flex;
       align-items: center;
       flex-direction: column;
