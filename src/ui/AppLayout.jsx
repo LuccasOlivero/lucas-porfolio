@@ -16,9 +16,9 @@ import { Span } from "./Span";
 import { Row } from "./Row";
 import { Main } from "./Main";
 import AboutMe1 from "../components/AboutMe1";
-import WorkLinks from "../components/WorkLinks";
 import Skils from "../components/Skils";
 import Cards from "../components/Cards";
+import Work from "../components/Work";
 
 const StyledAppLayout = styled.div`
   width: 100%;
@@ -59,36 +59,7 @@ function AppLayout() {
             </Span>
           </Row>
 
-          <WorkLinks
-            name="Oslo Bank"
-            type="project"
-            techStack="React, Tailwind CSS."
-          />
-          <WorkLinks
-            name="South Studio"
-            type="work"
-            techStack="React, Styled Components, Framer Motion."
-          />
-          <WorkLinks
-            name="NewBody gym"
-            type="work"
-            techStack="React, Tailwind CSS."
-          />
-          <WorkLinks
-            name="3xBet"
-            type="project"
-            techStack="React, TypeScript, Tailwind CSS, Framer Motion."
-          />
-          <WorkLinks
-            name="test"
-            type="test"
-            techStack="test test test test test"
-          />
-          <WorkLinks
-            name="Ushuaia Visión"
-            type="work"
-            techStack="React, TypeScript, Styled Components."
-          />
+          <Work />
 
           <Row type="bigger2">
             <Circle position="bottom">
