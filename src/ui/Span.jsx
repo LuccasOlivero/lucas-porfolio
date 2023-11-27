@@ -17,6 +17,7 @@ export const Span = styled.span`
       font-size: 1.5rem;
       letter-spacing: 0.3rem;
       text-transform: uppercase;
+      font-weight: 550;
     `}
 
     

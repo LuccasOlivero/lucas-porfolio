@@ -12,7 +12,7 @@ export const Section = styled.div`
     css`
       height: 75vh;
       display: flex;
-      padding: 0 6rem;
+      padding: 0 4rem;
       align-items: center;
       justify-content: space-between;
     `}

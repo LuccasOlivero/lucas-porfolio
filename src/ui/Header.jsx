@@ -8,7 +8,7 @@ export const Header = styled.h1`
   line-height: 0.9;
   font-weight: 900;
 
-  -webkit-text-size-adjust: 100%;
+  /* -webkit-text-size-adjust: 100%; */
   color: var(--color-main);
 
   ${(props) =>

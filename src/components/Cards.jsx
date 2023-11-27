@@ -3,9 +3,11 @@ import Card from "./Card";
 
 const Container = styled.div`
   display: grid;
-  width: 100%;
-  height: 25rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  @media (max-width: 1440px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const Svg = styled.figure`

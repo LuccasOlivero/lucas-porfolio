@@ -6,18 +6,23 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0rem 6rem;
+  padding: 1.5rem 4rem;
 
   ${(props) =>
     props.type === "borderRight" &&
     css`
       border-right: 0.5px solid var(--color-main);
     `}
+
+  @media (max-width: 1440px) {
+    border-right: none;
+    border-bottom: 0.5px solid var(--color-main);
+  }
 `;
 
 const Test = styled.div`
-  width: 150px;
-  height: 150px;
+  width: 8vw;
+  height: 8vw;
 `;
 
 function Card({ children, title, text, type = "" }) {

@@ -10,9 +10,9 @@ export const Circle = styled(motion.div)`
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 10vw;
+      width: 11rem;
       border: 1px solid var(--color-secondary);
-      height: 10vw;
+      height: 11rem;
       background-color: #494f9665;
     `}
 
@@ -24,9 +24,9 @@ export const Circle = styled(motion.div)`
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 10vw;
+      width: 11rem;
       border: 1px solid var(--color-secondary);
-      height: 10vw;
+      height: 11rem;
       background-color: #494f9665;
     `}
 
@@ -35,11 +35,11 @@ export const Circle = styled(motion.div)`
     css`
       display: flex;
       justify-content: center;
-      bottom: -5vw;
+      bottom: -5rem;
       padding-top: 1rem;
-      width: 10vw;
+      width: 11rem;
       border: 1px solid var(--color-secondary);
-      height: 10vw;
+      height: 11rem;
       background-color: #494f9665;
       font-weight: 500;
       letter-spacing: 2px;

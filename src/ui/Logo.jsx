@@ -26,10 +26,11 @@ export const Logo = styled.div`
   ${(props) =>
     props.size === "bigger" &&
     css`
-      position: absolute;
+      position: relative;
       width: 9vw;
       height: 9vw;
       right: 2rem;
+      margin-left: 2rem;
       padding-right: 0;
       animation: ${test} 35s steps(25) infinite;
     `}

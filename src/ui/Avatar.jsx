@@ -4,12 +4,13 @@ export const Avatar = styled.div`
   border-radius: 50%;
   width: 20vw;
   height: 20vw;
+  max-width: 30rem;
+  max-height: 30rem;
   background-image: url(./perfil.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  /* background-color: #252627; */
   background-color: var(--color-main);
 
   &::before {

@@ -16,8 +16,7 @@ const StyledNav = styled.nav`
   padding: 0 3rem;
 
   box-shadow: 0px -10px 30px var(--color-main);
-  outline: 2px solid var(--color-main);
-  border-top: 2px solid var(--color-main);
+  border-bottom: 2px solid var(--color-main);
 `;
 
 const Header = styled.h2`

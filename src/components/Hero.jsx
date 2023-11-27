@@ -17,6 +17,7 @@ function Hero() {
           <Logo size="bigger" />
         </Header>
         <Header as="h2">WebDev</Header>
+        
         <Circle
           position="top"
           whileHover={{ scale: 1.1 }}

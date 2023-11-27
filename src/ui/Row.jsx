@@ -4,7 +4,7 @@ export const Row = styled.div`
   color: var(--color-main);
   width: 100%;
   height: 5rem;
-  padding: 0 6rem;
+  padding: 0 4rem;
   font-size: 1.5rem;
   font-weight: 550;
   letter-spacing: 0.3rem;
@@ -89,9 +89,14 @@ export const Row = styled.div`
       height: 20rem;
       font-size: 4.4rem;
       font-weight: 700;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      font-size: 1rem;
       gap: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+      @media (max-width: 1440px) {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 1rem 4rem;
+      }
     `}
 `;
