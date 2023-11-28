@@ -12,6 +12,7 @@ export const Avatar = styled.div`
   background-repeat: no-repeat;
   position: relative;
   background-color: var(--color-main);
+  outline: 3px solid var(--color-secondary);
 
   &::before {
     content: "";

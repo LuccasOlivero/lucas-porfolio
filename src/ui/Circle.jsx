@@ -52,7 +52,7 @@ export const Circle = styled(motion.div)`
       width: 800px;
       height: 800px;
       display: block;
-      background-color: var(--color-secondary);
+      background-color: var(--color-secondary-blur);
     `}
 
     ${(props) =>

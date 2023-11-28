@@ -44,7 +44,6 @@ export const Row = styled.div`
       font-size: 4.4rem;
       font-weight: 700;
       justify-content: space-between;
-      /* background-color: var(--color-background); */
       position: relative;
       transition: color 0.2s ease-in;
 
@@ -55,8 +54,7 @@ export const Row = styled.div`
         left: 0;
         height: 100%;
         width: 100%;
-        /* background-image: url(./face.png); */
-        background-color: #3077f155;
+        background-image: url(./face.png);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -64,11 +62,26 @@ export const Row = styled.div`
         transition: clip-path 0.2s ease-in;
       }
 
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-secondary-blur);
+        clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+        transition: clip-path 0.2s ease-in;
+      }
+
+      &:hover::after {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+      }
+
       &:hover::before {
         clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
       }
 
-      // BUG
       &:hover {
         color: white;
       }
