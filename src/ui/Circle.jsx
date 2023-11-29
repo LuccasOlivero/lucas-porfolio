@@ -14,6 +14,17 @@ export const Circle = styled(motion.div)`
       border: 1px solid var(--color-secondary);
       height: 11rem;
       background-color: #494f9665;
+
+      @media (max-width: 1440px) {
+        width: 8rem;
+        height: 8rem;
+      }
+
+      @media (max-width: 768px) {
+        width: 4.5rem;
+        height: 4.5rem;
+        right: -2rem;
+      }
     `}
 
   ${(props) =>
@@ -28,6 +39,16 @@ export const Circle = styled(motion.div)`
       border: 1px solid var(--color-secondary);
       height: 11rem;
       background-color: #494f9665;
+
+      @media (max-width: 1440px) {
+        width: 8rem;
+        height: 8rem;
+      }
+
+      @media (max-width: 768px) {
+        width: 4.5rem;
+        height: 4.5rem;
+      }
     `}
 
   ${(props) =>
@@ -43,6 +64,19 @@ export const Circle = styled(motion.div)`
       background-color: #494f9665;
       font-weight: 500;
       letter-spacing: 2px;
+
+      @media (max-width: 1440px) {
+        bottom: -3.5rem;
+        width: 8rem;
+        height: 8rem;
+      }
+
+      @media (max-width: 768px) {
+        bottom: -1.5rem;
+        width: 4.5rem;
+        height: 4.5rem;
+        line-height: 15px;
+      }
     `}
     
     ${(props) =>
@@ -66,8 +100,6 @@ export const Circle = styled(motion.div)`
     `}
   
   position: absolute;
-  min-width: 128px;
-  min-height: 128px;
   color: #494f96;
   font-size: 1rem;
   border-radius: 100%;
@@ -75,6 +107,10 @@ export const Circle = styled(motion.div)`
   transition: color 0.3s ease-in-out;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 
   &::before {
     content: "";

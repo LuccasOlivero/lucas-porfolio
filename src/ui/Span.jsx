@@ -29,6 +29,10 @@ export const Span = styled.span`
       text-transform: uppercase;
       letter-spacing: 3px;
       z-index: 100;
+
+      @media (max-width: 1440px) {
+        font-size: 0.7rem;
+      }
     `}
 
        
@@ -47,6 +51,10 @@ export const Span = styled.span`
       align-items: end;
       padding-left: 0.2rem;
       z-index: 100;
+
+      @media (max-width: 1440px) {
+        font-size: 0.7rem;
+      }
     `}
 
     ${(props) =>
@@ -75,5 +83,9 @@ export const Span = styled.span`
       position: relative;
       margin-left: -0.8rem;
       margin-top: 1.9rem;
+
+      @media (max-width: 768px) {
+        margin-top: 0.8rem;
+      }
     `}
 `;

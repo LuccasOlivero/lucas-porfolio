@@ -13,7 +13,7 @@ function WorkLinks({ name, techStack, type }) {
           {techStack}
         </Span>
       </Span>
-      <Span type="text2" as="div">
+      <Span type="text2" as="p">
         {type}
       </Span>
     </Row>

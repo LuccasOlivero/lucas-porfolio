@@ -15,6 +15,14 @@ export const Section = styled.div`
       padding: 0 4rem;
       align-items: center;
       justify-content: space-between;
+
+      @media (max-width: 1024px) {
+        height: 85vh;
+      }
+
+      @media (max-width: 768px) {
+        padding: 0 2rem;
+      }
     `}
 
   ${(props) =>
@@ -22,12 +30,16 @@ export const Section = styled.div`
     css`
       height: 65vh;
       display: flex;
-      padding: 0 6rem;
+      padding: 0 4rem;
       border-left: 1px solid white;
       border-right: 1px solid white;
       display: flex;
       align-items: center;
       flex-direction: column;
       justify-content: center;
+
+      @media (max-width: 768px) {
+        padding: 0 2rem;
+      }
     `}
 `;

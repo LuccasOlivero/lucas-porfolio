@@ -22,7 +22,7 @@ const Container = styled.div`
   cursor: pointer;
   z-index: 1000;
 
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;

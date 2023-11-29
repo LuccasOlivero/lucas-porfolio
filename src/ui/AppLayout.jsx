@@ -55,9 +55,9 @@ function AppLayout() {
 
         <Section>
           <Row type="borderTop">
-            <Span>
+            <Span type="text">
               <Logo />
-              Selected Work & projects
+              Work & projects
             </Span>
           </Row>
 
@@ -78,7 +78,7 @@ function AppLayout() {
         <Section>
           <Skils />
           <Row type="borderTop">
-            <Span>
+            <Span type="text">
               <Logo />
               how i can help
             </Span>

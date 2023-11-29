@@ -10,4 +10,8 @@ export const Main = styled.main`
   overflow: hidden;
 
   outline: 2px solid var(--color-main);
+
+  @media (max-width: 768px) {
+    height: 60vh;
+  }
 `;

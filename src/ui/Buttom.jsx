@@ -32,5 +32,9 @@ export const Buttom = styled.button`
       &:hover {
         background-color: var(--color-secondary);
       }
+
+      @media (max-width: 768px) {
+        font-size: 0.7rem;
+      }
     `}
 `;

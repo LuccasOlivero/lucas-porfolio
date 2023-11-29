@@ -13,6 +13,10 @@ export const Row = styled.div`
   display: flex;
   align-items: center;
 
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+  }
+
   ${(props) =>
     props.type === "borderTop" &&
     css`
@@ -34,6 +38,10 @@ export const Row = styled.div`
       color: white;
       letter-spacing: 3px;
       font-size: 1rem;
+
+      @media (max-width: 768px) {
+        font-size: 0.8rem;
+      }
     `}
 
   ${(props) =>
@@ -108,8 +116,12 @@ export const Row = styled.div`
 
       @media (max-width: 1440px) {
         grid-template-columns: 1fr;
-        gap: 0;
-        padding: 1rem 4rem;
+        height: 100%;
+        padding: 2rem 4rem;
+      }
+
+      @media (max-width: 768px) {
+        padding: 2rem 2rem;
       }
     `}
 `;

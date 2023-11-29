@@ -18,6 +18,10 @@ const Container = styled.div`
     border-right: none;
     border-bottom: 0.5px solid var(--color-main);
   }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 2rem;
+  }
 `;
 
 const Test = styled.div`

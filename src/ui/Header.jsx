@@ -23,6 +23,14 @@ export const Header = styled.h1`
       font-size: 4rem;
       z-index: 100;
       color: var(--color-secondary);
+
+      @media (max-width: 1440px) {
+        font-size: 3rem;
+      }
+
+      @media (max-width: 1024px) {
+        font-size: 2rem;
+      }
     `}
 
     ${(props) =>
@@ -50,5 +58,9 @@ export const Header = styled.h1`
       font-size: 7rem;
       color: white;
       font-weight: 600;
+
+      @media (max-width: 768px) {
+        font-size: 5rem;
+      }
     `}
 `;
