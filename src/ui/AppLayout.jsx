@@ -53,25 +53,7 @@ function AppLayout() {
         <Circle type="bigger" />
         {/* <Circle type="bigger2" /> */}
 
-        <Section>
-          <Row type="borderTop">
-            <Span>
-              <Logo />
-              Selected Work & projects
-            </Span>
-          </Row>
-
-          <Work />
-
-          <Row type="bigger2">
-            <Circle position="bottom">
-              find out <br /> more
-              <Span type="mleft">
-                <FontAwesomeIcon icon={faArrowDownLong} />
-              </Span>
-            </Circle>
-          </Row>
-        </Section>
+        <Section></Section>
 
         <TextCarousel text2="skils" type="skils" />
 
