@@ -49,7 +49,20 @@ function SpinningText({ text, children }) {
   const length = text.length;
   const deg = 360 / length;
 
-  return <Container>{children}</Container>;
+  return (
+    <Container>
+      <TextWrapper>
+        <p>
+          {text.split("").map((letter, i) => (
+            <Text key={i} style={{ transform: `rotate(${deg * i}deg)` }}>
+              {letter}
+            </Text>
+          ))}
+        </p>
+      </TextWrapper>
+      {children}
+    </Container>
+  );
 }
 
 export default SpinningText;
