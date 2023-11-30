@@ -51,7 +51,6 @@ function AppLayout() {
         </Section>
 
         <Circle type="bigger" />
-        {/* <Circle type="bigger2" /> */}
 
         <Section>
           <Row type="borderTop">
