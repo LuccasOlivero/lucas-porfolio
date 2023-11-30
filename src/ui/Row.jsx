@@ -1,13 +1,14 @@
 import styled, { css } from "styled-components";
 
 export const Row = styled.div`
-  color: var(--color-main);
   width: 100%;
   height: 5rem;
   padding: 0 4rem;
   font-size: 1.5rem;
   font-weight: 550;
   letter-spacing: 0.3rem;
+
+  color: var(--color-main);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -15,6 +16,10 @@ export const Row = styled.div`
 
   @media (max-width: 768px) {
     padding: 0 2rem;
+  }
+
+  @media (max-width: 440px) {
+    padding: 0 1rem;
   }
 
   ${(props) =>
@@ -32,7 +37,7 @@ export const Row = styled.div`
       position: absolute;
       width: 100%;
       bottom: 0;
-      border-top: 2px solid white;
+      border-top: 1px solid white;
       text-transform: uppercase;
       justify-content: space-between;
       color: white;
@@ -41,6 +46,11 @@ export const Row = styled.div`
 
       @media (max-width: 768px) {
         font-size: 0.8rem;
+      }
+
+      @media (max-width: 440px) {
+        font-size: 0.7rem;
+        text-align: center;
       }
     `}
 
@@ -122,6 +132,10 @@ export const Row = styled.div`
 
       @media (max-width: 768px) {
         padding: 2rem 2rem;
+      }
+
+      @media (max-width: 440px) {
+        padding: 2rem 1rem;
       }
     `}
 `;

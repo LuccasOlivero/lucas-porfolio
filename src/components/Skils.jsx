@@ -13,6 +13,7 @@ function Skils() {
         </Header>
         <Span type="text5">HTML5, CSS3, JavaScript, TypeScript, Java.</Span>
       </Box>
+
       <Box>
         <Header type="min" as="p">
           tecnologies
@@ -22,6 +23,7 @@ function Skils() {
           Git, Supabase, Framer Motion, Redux, TanStack Query, Next.js.
         </Span>
       </Box>
+
       <Box>
         <Header type="min" as="p">
           frameworks

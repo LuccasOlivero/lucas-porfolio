@@ -17,6 +17,11 @@ const Svg = styled.figure`
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+
+  @media (max-width: 440px) {
+    width: 60px;
+    height: 60px;
+  }
 `;
 
 const Svg2 = styled.figure`
@@ -26,6 +31,11 @@ const Svg2 = styled.figure`
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+
+  @media (max-width: 440px) {
+    width: 60px;
+    height: 60px;
+  }
 `;
 
 const Svg3 = styled.figure`
@@ -35,6 +45,11 @@ const Svg3 = styled.figure`
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+
+  @media (max-width: 440px) {
+    width: 60px;
+    height: 60px;
+  }
 `;
 
 function Cards() {

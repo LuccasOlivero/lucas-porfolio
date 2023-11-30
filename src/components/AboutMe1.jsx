@@ -1,11 +1,12 @@
+import styled from "styled-components";
+
 import { Avatar } from "../ui/Avatar";
 import { Paragraph } from "../ui/Paragraph";
 import { Logo } from "../ui/Logo";
 import { TextContainer } from "../ui/TextContainer";
 import { Span } from "../ui/Span";
-import styled from "styled-components";
 
-const Test = styled.div`
+const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,14 +16,14 @@ const Test = styled.div`
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    row-gap: 2rem;
+    row-gap: 1.4rem;
   }
 `;
 
 function AboutMe1() {
   return (
     <>
-      <Test>
+      <Container>
         <TextContainer type="width">
           <Span type="text">
             <Logo />
@@ -39,7 +40,7 @@ function AboutMe1() {
         </TextContainer>
 
         <Avatar />
-      </Test>
+      </Container>
     </>
   );
 }

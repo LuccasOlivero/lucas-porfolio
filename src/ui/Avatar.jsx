@@ -29,4 +29,9 @@ export const Avatar = styled.div`
     height: 30vw;
     width: 30vw;
   }
+
+  @media (max-width: 768px) {
+    height: 35vw;
+    width: 35vw;
+  }
 `;

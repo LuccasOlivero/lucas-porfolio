@@ -18,6 +18,10 @@ export const Span = styled.span`
       letter-spacing: 0.3rem;
       text-transform: uppercase;
       font-weight: 550;
+
+      @media (max-width: 440px) {
+        font-size: 1.2rem;
+      }
     `}
 
     
@@ -32,6 +36,10 @@ export const Span = styled.span`
 
       @media (max-width: 1440px) {
         font-size: 0.7rem;
+      }
+
+      @media (max-width: 440px) {
+        font-size: 0.6rem;
       }
     `}
 
@@ -55,6 +63,10 @@ export const Span = styled.span`
       @media (max-width: 1440px) {
         font-size: 0.7rem;
       }
+
+      @media (max-width: 440px) {
+        font-size: 0.6rem;
+      }
     `}
 
     ${(props) =>
@@ -66,6 +78,12 @@ export const Span = styled.span`
       line-height: 33px;
       font-weight: 400;
       color: var(--color-main);
+
+      @media (max-width: 440px) {
+        font-size: 0.8rem;
+        line-height: 23px;
+        letter-spacing: 2px;
+      }
     `}
 
     ${(props) =>

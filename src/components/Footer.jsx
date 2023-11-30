@@ -18,6 +18,7 @@ const StyledFooter = styled.footer`
   background-size: cover;
   background-position: center;
 `;
+
 const Background = styled.div`
   position: absolute;
   width: 100%;
@@ -28,6 +29,15 @@ const Background = styled.div`
 const LogosContact = styled.div`
   display: flex;
   justify-content: center;
+  width: 100%;
+
+  @media (max-width: 440px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    text-align: center;
+  }
 `;
 
 const Link = styled.a`
@@ -57,7 +67,7 @@ function Footer() {
         </Header>
 
         <LogosContact>
-          <Buttom type="small">lucas.dev@gmail.com</Buttom>
+          <Buttom type="large">lucas.dev@gmail.com</Buttom>
 
           <Buttom type="small">
             <Link href="https://www.linkedin.com/in/lucas-olivero-319090264/">
@@ -70,12 +80,11 @@ function Footer() {
               <FontAwesomeIcon icon={faGithub} />
             </Link>
           </Buttom>
-
-          <Row type="borderTop2">
-            &copy; Luccas Olivero. All rights reserved{" "}
-            {new Date().getFullYear()}
-          </Row>
         </LogosContact>
+
+        <Row type="borderTop2">
+          &copy; Luccas Olivero. All rights reserved {new Date().getFullYear()}
+        </Row>
       </Section>
     </StyledFooter>
   );

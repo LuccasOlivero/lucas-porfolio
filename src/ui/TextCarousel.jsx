@@ -27,6 +27,10 @@ const Slide = styled.div`
     css`
       justify-content: center;
     `}
+
+  @media(max-width: 1024px) {
+    height: 3rem;
+  }
 `;
 
 const TextSlide = styled.div`
@@ -42,6 +46,10 @@ const Text = styled.p`
   font-weight: 550;
   margin-right: 6rem;
   line-height: 1.4rem;
+
+  @media (max-width: 1024px) {
+    font-size: 1rem;
+  }
 `;
 
 function TextCarousel({ type, text1, text2 }) {

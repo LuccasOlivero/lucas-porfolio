@@ -12,9 +12,9 @@ export const Section = styled.div`
     css`
       height: 75vh;
       padding: 0 4rem;
+
       display: flex;
       align-items: center;
-      /* justify-content: space-between; */
 
       @media (max-width: 1024px) {
         height: 85vh;
@@ -22,6 +22,11 @@ export const Section = styled.div`
 
       @media (max-width: 768px) {
         padding: 0 2rem;
+      }
+
+      @media (max-width: 440px) {
+        height: 70vh;
+        padding: 1rem 1rem;
       }
     `}
 
