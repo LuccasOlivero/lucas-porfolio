@@ -7,9 +7,13 @@ export const Paragraph = styled.p`
   line-height: 2rem;
   margin-top: 1rem;
 
+  @media (max-width: 1024px) {
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+  }
+
   @media (max-width: 768px) {
-    font-size: 1.4rem;
-    line-height: 1.6rem;
+    line-height: 1.5rem;
   }
 
   @media (max-width: 440px) {

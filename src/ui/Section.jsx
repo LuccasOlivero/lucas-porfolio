@@ -18,6 +18,7 @@ export const Section = styled.div`
 
       @media (max-width: 1024px) {
         height: 85vh;
+        padding: 1rem 4rem;
       }
 
       @media (max-width: 768px) {

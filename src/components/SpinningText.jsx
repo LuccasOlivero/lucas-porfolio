@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled, { keyframes } from "styled-components";
 
 const spin = keyframes`
@@ -9,7 +10,7 @@ const spin = keyframes`
 }
 `;
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   position: fixed;
   width: 200px;
   height: 200px;
@@ -50,7 +51,11 @@ function SpinningText({ text, children }) {
   const deg = 360 / length;
 
   return (
-    <Container>
+    <Container
+      whileTap={{
+        scale: 0.95,
+      }}
+    >
       <TextWrapper>
         <p>
           {text.split("").map((letter, i) => (

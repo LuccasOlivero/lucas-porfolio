@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const Avatar = styled.div`
+export const Avatar = styled(motion.div)`
   border-radius: 50%;
   width: 20vw;
   height: 20vw;
@@ -23,6 +24,19 @@ export const Avatar = styled.div`
     width: 100%;
     height: 100%;
     background-color: #3077f125;
+  }
+
+  &:hover::before {
+    content: "go to about me";
+    font-size: 1.3rem;
+    letter-spacing: 4px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: backdrop-filter 0.2s ease-in;
   }
 
   @media (max-width: 1024px) {

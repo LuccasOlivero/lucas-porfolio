@@ -1,4 +1,15 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
+
+const reveal = keyframes`
+  from{
+    opacity: 0;
+    translate: 0 50px;
+  }
+  to{
+    opacity: 1;
+    translate: 0 0;
+  }
+`;
 
 export const Row = styled.div`
   width: 100%;
@@ -64,6 +75,10 @@ export const Row = styled.div`
       justify-content: space-between;
       position: relative;
       transition: color 0.2s ease-in;
+
+      animation: ${reveal} linear both;
+      animation-timeline: view();
+      animation-range: entry 5% cover 20%;
 
       &::before {
         content: "";

@@ -13,14 +13,15 @@ const progressGrow = keyframes`
 `;
 
 const Slide = styled.div`
-  position: relative;
-  background-image: linear-gradient(#495096, #3076f1);
   width: 100%;
   height: 5rem;
+
+  position: relative;
   display: flex;
   align-items: center;
   overflow: hidden;
   white-space: nowrap;
+  background-image: linear-gradient(#495096, #3076f1);
 
   ${(props) =>
     props.type === "skils" &&
@@ -49,6 +50,7 @@ const Text = styled.p`
 
   @media (max-width: 1024px) {
     font-size: 1rem;
+    line-height: 0.9rem;
   }
 `;
 

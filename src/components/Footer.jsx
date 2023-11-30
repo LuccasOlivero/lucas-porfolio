@@ -1,6 +1,7 @@
+import styled from "styled-components";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
-import styled from "styled-components";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 import { Section } from "../ui/Section";
@@ -61,7 +62,22 @@ function Footer() {
         <Header type="bigger">
           let&apos;s <br />
           talk
-          <Span type="text6">
+          <Span
+            type="text6"
+            initial={{
+              translateY: "-20px",
+              scale: 0.8,
+            }}
+            animate={{
+              translateY: "0",
+              scale: 1,
+            }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+          >
             <FontAwesomeIcon icon={faCaretDown} />
           </Span>
         </Header>

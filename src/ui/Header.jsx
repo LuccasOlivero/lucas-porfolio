@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
 
-export const Header = styled.h1`
+export const Header = styled(motion.h1)`
   font-size: 13vw;
   line-height: 0.9;
   font-weight: 900;

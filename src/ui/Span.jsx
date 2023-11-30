@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
+import { motion } from "framer-motion";
 
-export const Span = styled.span`
+export const Span = styled(motion.span)`
   display: flex;
 
   ${(props) =>
@@ -89,10 +90,9 @@ export const Span = styled.span`
     ${(props) =>
     props.type === "text6" &&
     css`
-      display: flex;
       flex-direction: column;
       justify-content: end;
-      margin-left: 1rem;
+      margin-left: 1.4rem;
     `}
 
     ${(props) =>
