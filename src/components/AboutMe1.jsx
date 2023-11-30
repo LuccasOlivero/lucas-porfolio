@@ -8,11 +8,12 @@ import styled from "styled-components";
 const Test = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 
   @media (max-width: 1024px) {
     flex-direction: column;
     justify-content: center;
-    width: 100%;
     height: 100%;
     row-gap: 2rem;
   }
