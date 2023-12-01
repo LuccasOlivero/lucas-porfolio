@@ -106,4 +106,18 @@ export const Span = styled(motion.span)`
         margin-top: 0.8rem;
       }
     `}
+
+    ${(props) =>
+    props.type === "mleft2" &&
+    css`
+      position: relative;
+      margin-top: 0.8rem;
+      font-weight: 400;
+      font-size: 1rem;
+      letter-spacing: 3px;
+
+      @media (max-width: 768px) {
+        margin-top: 0.8rem;
+      }
+    `}
 `;

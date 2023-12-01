@@ -37,6 +37,7 @@ export const Header = styled(motion.h1)`
       }
     `}
 
+
     ${(props) =>
     props.type === "min" &&
     css`
@@ -66,11 +67,41 @@ export const Header = styled(motion.h1)`
     `}
 
     ${(props) =>
+    props.type === "min3" &&
+    css`
+      font-size: 1.6rem;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      margin-top: 2rem;
+      display: block;
+
+      @media (max-width: 440px) {
+        font-size: 1rem;
+      }
+    `}
+
+    ${(props) =>
     props.type === "bigger" &&
     css`
       font-size: 7rem;
       color: white;
       font-weight: 600;
+
+      @media (max-width: 768px) {
+        font-size: 5rem;
+      }
+
+      @media (max-width: 440px) {
+        font-size: 4rem;
+      }
+    `}
+
+    ${(props) =>
+    props.type === "bigger2" &&
+    css`
+      font-size: 7.5rem;
+      color: white;
+      font-weight: 700;
 
       @media (max-width: 768px) {
         font-size: 5rem;

@@ -3,7 +3,6 @@ import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 
 import SpinningText from "../components/SpinningText";
-import Navbar from "../components/Navbar";
 import TextCarousel from "./TextCarousel";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
@@ -38,7 +37,6 @@ function AppLayout() {
         </SpinningText>
 
         <Main>
-          <Navbar />
           <Hero />
         </Main>
 

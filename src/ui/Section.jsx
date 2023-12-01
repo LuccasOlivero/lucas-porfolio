@@ -6,6 +6,7 @@ export const Section = styled.div`
   width: 75vw;
   margin: 0 auto;
   position: relative;
+  display: flex;
 
   ${(props) =>
     props.type === "primary" &&
@@ -37,12 +38,42 @@ export const Section = styled.div`
       height: 65vh;
       display: flex;
       padding: 0 4rem;
-      border-left: 1px solid white;
-      border-right: 1px solid white;
+      border-left: 2px solid white;
+      border-right: 2px solid white;
       display: flex;
       align-items: center;
       flex-direction: column;
       justify-content: center;
+
+      @media (max-width: 768px) {
+        padding: 0 2rem;
+      }
+    `}
+
+    ${(props) =>
+    props.type === "tertiary" &&
+    css`
+      height: 50vh;
+      margin-top: 3.6rem;
+      display: flex;
+      padding: 0 4rem;
+
+      outline: 2px solid var(--color-main);
+      background-color: var(--color-main);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+
+      @media (max-width: 768px) {
+        padding: 0 2rem;
+      }
+    `}
+
+    ${(props) =>
+    props.type === "end" &&
+    css`
+      justify-content: end;
 
       @media (max-width: 768px) {
         padding: 0 2rem;

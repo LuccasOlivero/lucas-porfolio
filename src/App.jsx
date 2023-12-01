@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
 import { createGlobalStyle } from "styled-components";
+import Navbar from "./components/Navbar";
+import AboutMe from "./Pages/AboutMe";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -23,8 +25,11 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <Navbar />
+
         <Routes>
           <Route index path="/" element={<AppLayout />} />
+          <Route index path="/about" element={<AboutMe />} />
         </Routes>
       </BrowserRouter>
       <GlobalStyle />
