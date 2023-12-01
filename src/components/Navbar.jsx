@@ -9,16 +9,6 @@ const StyledNav = styled.nav`
   height: 3.6rem;
   padding: 0 3rem;
 
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0px -10px 30px var(--color-main);
-  outline: 2px solid var(--color-main);
-  background-color: #ffffff92;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-
   @media (max-width: 768px) {
     padding: 0 2rem;
   }
