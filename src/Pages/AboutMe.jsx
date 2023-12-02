@@ -11,9 +11,9 @@ const Test = styled.div`
   position: relative;
   width: 80%;
   height: 20rem;
-  border-top: 2px solid var(--color-main);
-  border-left: 2px solid var(--color-main);
-  border-bottom: 2px solid var(--color-main);
+  border-top: 2px solid var(--color-secondary);
+  border-left: 2px solid var(--color-secondary);
+  border-bottom: 2px solid var(--color-secondary);
 `;
 
 const Test2 = styled.div`
@@ -23,7 +23,9 @@ const Test2 = styled.div`
   width: 75vw;
   margin: 0 auto;
   position: relative;
+  justify-content: end;
 `;
+
 function AboutMe() {
   return (
     <>
@@ -65,28 +67,25 @@ function AboutMe() {
         </Box>
       </Test2>
 
-      <Section type="end">
+      <Test2 type="end">
         <Test />
-      </Section>
+      </Test2>
 
-      <Section>
-        <Box size="medium">
+      <Test2>
+        <Box size="medium2">
           <Span type="text">
             <Logo />
             Education
           </Span>
         </Box>
-        <Box size="large">
-          <Span type="text">
-            <Logo />
-            kloke
-          </Span>
-          <Span type="text">
-            <Logo />
-            computacion
-          </Span>
+        <Box size="large2">
+          <Paragraph type="noMargin">
+            {/* <Logo /> */}
+            Kloketen Anexo, formacion en informatica
+            <Span type="text4">.2019</Span>
+          </Paragraph>
         </Box>
-      </Section>
+      </Test2>
 
       <Footer></Footer>
     </>

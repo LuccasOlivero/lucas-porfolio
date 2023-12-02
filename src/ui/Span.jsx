@@ -15,11 +15,10 @@ export const Span = styled(motion.span)`
     css`
       align-items: center;
       color: var(--color-main);
-      font-size: 1.5rem;
+      font-size: 2rem;
       letter-spacing: 0.3rem;
       text-transform: uppercase;
-      font-weight: 550;
-
+      font-weight: 600;
       @media (max-width: 440px) {
         font-size: 1.2rem;
       }

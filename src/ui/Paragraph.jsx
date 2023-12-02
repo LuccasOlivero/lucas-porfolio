@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Paragraph = styled.p`
   color: var(--color-main);
@@ -6,6 +6,15 @@ export const Paragraph = styled.p`
   font-size: 1.5rem;
   line-height: 2rem;
   margin-top: 1rem;
+
+  ${(props) =>
+    props.type === "noMargin" &&
+    css`
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      border-bottom: 2px solid var(--color-main);
+    `}
 
   @media (max-width: 1024px) {
     font-size: 1.3rem;

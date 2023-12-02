@@ -11,17 +11,33 @@ export const Box = styled.div`
     css`
       padding: 0 4rem;
       width: 35vw;
-      height: 25rem;
+      height: 30rem;
       border-right: 2px solid var(--color-main);
-      background-color: red;
     `}
+
+  ${(props) =>
+    props.size === "medium2" &&
+    css`
+      padding: 0 4rem;
+      width: 35vw;
+      height: 15rem;
+      border-right: 2px solid var(--color-main);
+    `}
+
 
   ${(props) =>
     props.size === "large" &&
     css`
-      background-color: green;
       padding: 0 4rem;
       width: 75vw;
-      height: 25rem;
+      height: 30rem;
+    `}
+
+    ${(props) =>
+    props.size === "large2" &&
+    css`
+      padding: 0 4rem;
+      width: 75vw;
+      height: 15rem;
     `}
 `;

@@ -67,14 +67,4 @@ export const Section = styled.div`
         padding: 0 2rem;
       }
     `}
-
-    ${(props) =>
-    props.type === "end" &&
-    css`
-      justify-content: end;
-
-      @media (max-width: 768px) {
-        padding: 0 2rem;
-      }
-    `}
 `;
