@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBurger } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 import { Logo } from "../ui/Logo";
+import { NavLink } from "react-router-dom";
 
 const StyledNav = styled.nav`
   width: 75vw;
@@ -45,7 +46,9 @@ function Navbar() {
   return (
     <Container>
       <StyledNav>
-        <Logo />
+        <NavLink to="/">
+          <Logo />
+        </NavLink>
         <Header>since 2022</Header>
         <FontAwesomeIcon icon={faBurger} size="xl" color="#3076f1" />
       </StyledNav>

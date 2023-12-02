@@ -8,6 +8,7 @@ import { Circle } from "../ui/Circle";
 import { TextContainer } from "../ui/TextContainer";
 import { Span } from "../ui/Span";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 function Hero() {
   const x = useMotionValue(0);
@@ -113,21 +114,24 @@ function Hero() {
           WebDev
         </Header>
 
-        <Circle
-          position="top"
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-          whileTap={{
-            scale: 0.95,
-          }}
-          style={{
-            rotateY,
-            rotateX,
-            transformStyle: "preserve-3d",
-          }}
-        >
-          about me
-        </Circle>
+        <NavLink to="/about">
+          <Circle
+            position="top"
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            whileTap={{
+              scale: 0.95,
+            }}
+            style={{
+              rotateY,
+              rotateX,
+              transformStyle: "preserve-3d",
+            }}
+          >
+            about me
+          </Circle>
+        </NavLink>
+
         <Circle
           position="middle"
           onMouseMove={handleMouseMove}

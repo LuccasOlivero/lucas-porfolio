@@ -6,14 +6,12 @@ export const Section = styled.div`
   width: 75vw;
   margin: 0 auto;
   position: relative;
-  display: flex;
 
   ${(props) =>
     props.type === "primary" &&
     css`
       height: 75vh;
       padding: 0 4rem;
-
       display: flex;
       align-items: center;
 

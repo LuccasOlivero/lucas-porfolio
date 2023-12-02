@@ -16,6 +16,14 @@ const Test = styled.div`
   border-bottom: 2px solid var(--color-main);
 `;
 
+const Test2 = styled.div`
+  border-left: 2px solid var(--color-main);
+  border-right: 2px solid var(--color-main);
+  display: flex;
+  width: 75vw;
+  margin: 0 auto;
+  position: relative;
+`;
 function AboutMe() {
   return (
     <>
@@ -23,7 +31,7 @@ function AboutMe() {
         <Header type="bigger2">Live a new experience every day.</Header>
       </Section>
 
-      <Section>
+      <Test2>
         <Box size="medium">
           <Header type="min3">
             email
@@ -55,7 +63,7 @@ function AboutMe() {
             committed to providing an outstanding user experience.
           </Paragraph>
         </Box>
-      </Section>
+      </Test2>
 
       <Section type="end">
         <Test />
