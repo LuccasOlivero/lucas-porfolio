@@ -20,7 +20,7 @@ export const Box = styled.div`
     css`
       padding: 0 4rem;
       width: 35vw;
-      height: 15rem;
+      height: 6rem;
       border-right: 2px solid var(--color-main);
     `}
 
@@ -38,6 +38,6 @@ export const Box = styled.div`
     css`
       padding: 0 4rem;
       width: 75vw;
-      height: 15rem;
+      height: 6rem;
     `}
 `;

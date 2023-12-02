@@ -99,7 +99,7 @@ function Footer() {
         </LogosContact>
 
         <Row type="borderTop2">
-          &copy; Luccas Olivero. All rights reserved {new Date().getFullYear()}
+          &copy; All rights reserved. Luccas Olivero {new Date().getFullYear()}.
         </Row>
       </Section>
     </StyledFooter>

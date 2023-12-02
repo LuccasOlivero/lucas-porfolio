@@ -6,14 +6,21 @@ import { Paragraph } from "../ui/Paragraph";
 import { Section } from "../ui/Section";
 import { Span } from "../ui/Span";
 import Footer from "../components/Footer";
+import { Circle } from "../ui/Circle";
+import Skils from "../components/Skils";
+import { Row } from "../ui/Row";
 
 const Test = styled.div`
   position: relative;
   width: 80%;
   height: 20rem;
-  border-top: 2px solid var(--color-secondary);
-  border-left: 2px solid var(--color-secondary);
-  border-bottom: 2px solid var(--color-secondary);
+  padding: 4rem;
+  border-top: 2px solid var(--color-main);
+  border-left: 2px solid var(--color-main);
+  border-bottom: 2px solid var(--color-main);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const Test2 = styled.div`
@@ -32,6 +39,8 @@ function AboutMe() {
       <Section type="tertiary">
         <Header type="bigger2">Live a new experience every day.</Header>
       </Section>
+
+      <Circle type="bigger" />
 
       <Test2>
         <Box size="medium">
@@ -68,26 +77,39 @@ function AboutMe() {
       </Test2>
 
       <Test2 type="end">
-        <Test />
-      </Test2>
-
-      <Test2>
-        <Box size="medium2">
+        <Test>
           <Span type="text">
             <Logo />
             Education
           </Span>
-        </Box>
-        <Box size="large2">
-          <Paragraph type="noMargin">
-            {/* <Logo /> */}
+          <Paragraph type="noMargin" as="p">
             Kloketen Anexo, formacion en informatica
-            <Span type="text4">.2019</Span>
+            <Span type="text4">- 2019</Span>
           </Paragraph>
-        </Box>
+
+          <Paragraph type="noMargin" as="p">
+            Kloketen Anexo, formacion en informatica
+            <Span type="text4"> -current</Span>
+          </Paragraph>
+        </Test>
       </Test2>
 
-      <Footer></Footer>
+      <Test2>
+        <Box size="medium2"></Box>
+        <Box size="large2"></Box>
+      </Test2>
+
+      <Section>
+        <Row type="borderTop">
+          <Span type="text">
+            <Logo />
+            skills
+          </Span>
+        </Row>
+        <Skils />
+      </Section>
+
+      <Footer />
     </>
   );
 }

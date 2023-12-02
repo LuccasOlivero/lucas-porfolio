@@ -12,8 +12,8 @@ export const Paragraph = styled.p`
     css`
       display: flex;
       justify-content: space-between;
-      margin: 0;
-      border-bottom: 2px solid var(--color-main);
+      margin-top: 0.7rem;
+      border-bottom: 2px solid var(--color-secondary);
     `}
 
   @media (max-width: 1024px) {
