@@ -59,29 +59,6 @@ function Footer() {
     <StyledFooter>
       <Background />
       <Section type="secondary">
-        <Header type="bigger">
-          let&apos;s <br />
-          talk
-          <Span
-            type="text6"
-            initial={{
-              translateY: "-20px",
-              scale: 0.8,
-            }}
-            animate={{
-              translateY: "0",
-              scale: 1,
-            }}
-            transition={{
-              duration: 1,
-              repeat: Infinity,
-              repeatType: "reverse",
-            }}
-          >
-            <FontAwesomeIcon icon={faCaretDown} />
-          </Span>
-        </Header>
-
         <LogosContact>
           <Buttom type="large">lucas.dev@gmail.com</Buttom>
 
