@@ -10,7 +10,7 @@ export const Section = styled.div`
   ${(props) =>
     props.type === "primary" &&
     css`
-      height: 75vh;
+      height: 90vh;
       padding: 0 4rem;
       display: flex;
       align-items: center;

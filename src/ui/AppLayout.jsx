@@ -74,8 +74,7 @@ function AppLayout() {
           <Skils />
           <Row type="borderTop">
             <Span type="text">
-              <Logo />
-              how i can help
+              <Logo /> i can help with
             </Span>
           </Row>
           <Cards />

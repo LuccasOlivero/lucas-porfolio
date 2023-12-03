@@ -65,7 +65,7 @@ function AboutMe() {
         </Box>
 
         <Box size="large">
-          <Header type="medium">Hi👋 I am Lucas Olivero.</Header>
+          <Header type="medium">Hi👋 I am Lucas Chorolqui.</Header>
           <Paragraph>
             Frontend Developer from Argentina with 1 year of expertise.
             Specializing in React and experienced with Angular, I&apos;m

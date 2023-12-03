@@ -39,9 +39,10 @@ export const Avatar = styled(motion.div)`
     transition: backdrop-filter 0.2s ease-in;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1440px) {
     height: 30vw;
     width: 30vw;
+    margin-top: 1.5rem;
   }
 
   @media (max-width: 768px) {

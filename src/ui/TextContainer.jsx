@@ -16,7 +16,7 @@ export const TextContainer = styled.div`
     css`
       width: 40vw;
 
-      @media (max-width: 1024px) {
+      @media (max-width: 1440px) {
         width: 100%;
       }
     `}

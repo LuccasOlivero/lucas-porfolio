@@ -3,10 +3,12 @@ import styled, { css, keyframes } from "styled-components";
 const reveal = keyframes`
   from{
     opacity: 0;
+    scale: .8;
     translate: 0 50px;
   }
   to{
     opacity: 1;
+    scale: 1;
     translate: 0 0;
   }
 `;
