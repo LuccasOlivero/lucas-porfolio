@@ -17,7 +17,7 @@ import { Main } from "./Main";
 import AboutMe1 from "../components/AboutMe1";
 import Skils from "../components/Skils";
 import Cards from "../components/Cards";
-import Work from "../components/Work";
+import Work from "../components/Work1";
 
 const StyledAppLayout = styled.div`
   width: 100%;

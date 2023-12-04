@@ -3,26 +3,27 @@ import styled from "styled-components";
 
 export const Avatar = styled(motion.div)`
   border-radius: 50%;
+  max-height: 30rem;
+  max-width: 30rem;
   width: 20vw;
   height: 20vw;
-  max-width: 30rem;
-  max-height: 30rem;
-  background-image: url(./perfil.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+
   position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(./perfil.png);
   background-color: var(--color-main);
   outline: 3px solid var(--color-secondary);
 
   &::before {
     content: "";
-    border-radius: 50%;
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    border-radius: 50%;
+    position: absolute;
     background-color: #3077f125;
   }
 
@@ -30,8 +31,9 @@ export const Avatar = styled(motion.div)`
     content: "go to about me";
     font-size: 1.3rem;
     letter-spacing: 4px;
-    color: white;
+
     display: flex;
+    color: white;
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(4px);

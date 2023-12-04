@@ -132,21 +132,23 @@ function Hero() {
           </Circle>
         </NavLink>
 
-        <Circle
-          position="middle"
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-          whileTap={{
-            scale: 0.95,
-          }}
-          style={{
-            rotateY,
-            rotateX,
-            transformStyle: "preserve-3d",
-          }}
-        >
-          work
-        </Circle>
+        <NavLink to="work">
+          <Circle
+            position="middle"
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            whileTap={{
+              scale: 0.95,
+            }}
+            style={{
+              rotateY,
+              rotateX,
+              transformStyle: "preserve-3d",
+            }}
+          >
+            work
+          </Circle>
+        </NavLink>
       </TextContainer>
 
       <Circle

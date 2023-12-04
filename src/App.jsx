@@ -3,6 +3,7 @@ import AppLayout from "./ui/AppLayout";
 import { createGlobalStyle } from "styled-components";
 import Navbar from "./components/Navbar";
 import AboutMe from "./Pages/AboutMe";
+import Work from "./Pages/Work";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -30,6 +31,7 @@ function App() {
         <Routes>
           <Route index path="/" element={<AppLayout />} />
           <Route index path="/about" element={<AboutMe />} />
+          <Route index path="/work" element={<Work />} />
         </Routes>
       </BrowserRouter>
       <GlobalStyle />

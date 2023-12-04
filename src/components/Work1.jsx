@@ -1,6 +1,6 @@
 import WorkLinks from "./WorkLinks";
 
-function Work() {
+function Work1() {
   return (
     <>
       <WorkLinks
@@ -29,4 +29,4 @@ function Work() {
   );
 }
 
-export default Work;
+export default Work1;
