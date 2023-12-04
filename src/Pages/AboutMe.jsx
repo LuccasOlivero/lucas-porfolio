@@ -1,16 +1,18 @@
 import styled from "styled-components";
+
+import Footer from "../components/Footer";
+import Skils from "../components/Skils";
+
 import { Box } from "../ui/Box";
 import { Header } from "../ui/Header";
 import { Logo } from "../ui/Logo";
 import { Paragraph } from "../ui/Paragraph";
 import { Section } from "../ui/Section";
 import { Span } from "../ui/Span";
-import Footer from "../components/Footer";
 import { Circle } from "../ui/Circle";
-import Skils from "../components/Skils";
 import { Row } from "../ui/Row";
 
-const Test = styled.div`
+const TextContainer = styled.div`
   position: relative;
   width: 80%;
   height: 20rem;
@@ -23,7 +25,7 @@ const Test = styled.div`
   justify-content: center;
 `;
 
-const Test2 = styled.div`
+const Container = styled.div`
   border-left: 2px solid var(--color-main);
   border-right: 2px solid var(--color-main);
   display: flex;
@@ -42,7 +44,7 @@ function AboutMe() {
 
       <Circle type="bigger" />
 
-      <Test2>
+      <Container>
         <Box size="medium">
           <Header type="min3">
             email
@@ -74,10 +76,10 @@ function AboutMe() {
             committed to providing an outstanding user experience.
           </Paragraph>
         </Box>
-      </Test2>
+      </Container>
 
-      <Test2 type="end">
-        <Test>
+      <Container type="end">
+        <TextContainer>
           <Span type="text">
             <Logo />
             Education
@@ -91,13 +93,13 @@ function AboutMe() {
             Kloketen Anexo, formacion en informatica
             <Span type="text4"> -current</Span>
           </Paragraph>
-        </Test>
-      </Test2>
+        </TextContainer>
+      </Container>
 
-      <Test2>
+      <Container>
         <Box size="medium2"></Box>
         <Box size="large2"></Box>
-      </Test2>
+      </Container>
 
       <Section>
         <Row type="borderTop">
