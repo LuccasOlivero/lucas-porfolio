@@ -69,7 +69,7 @@ function AboutMe1() {
             about me
           </Span>
           <Paragraph>
-            👋 Hi, I&apos;m Lucas Chorolqui, a Frontend Developer from Argentina
+            👋 Hi, I&apos;m Lucas Olivero, a Frontend Developer from Argentina
             with 1 year of expertise. Specializing in React and experienced with
             Angular, I&apos;m dedicated to delivering high-quality solutions.
             Passionate about crafting exceptional websites that exceed client
