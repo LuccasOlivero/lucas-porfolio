@@ -1,14 +1,14 @@
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
 
-import { ContainerColumn } from "../ui/ContainerColumn";
-import { Header } from "../ui/Header";
 import { Logo } from "../ui/Logo";
-import { Circle } from "../ui/Circle";
-import { TextContainer } from "../ui/TextContainer";
 import { Span } from "../ui/Span";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { NavLink } from "react-router-dom";
+import { Header } from "../ui/Header";
+import { Circle } from "../ui/Circle";
+import { ContainerColumn } from "../ui/ContainerColumn";
+import { TextContainer } from "../ui/TextContainer";
 
 function Hero() {
   const x = useMotionValue(0);
