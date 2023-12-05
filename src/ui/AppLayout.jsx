@@ -14,10 +14,11 @@ import { Section } from "./Section";
 import { Span } from "./Span";
 import { Row } from "./Row";
 import { Main } from "./Main";
+
 import AboutMe1 from "../components/AboutMe1";
 import Skils from "../components/Skils";
 import Cards from "../components/Cards";
-import Work from "../components/Work1";
+import Work1 from "../components/Work1";
 
 const StyledAppLayout = styled.div`
   width: 100%;
@@ -56,7 +57,7 @@ function AppLayout() {
             </Span>
           </Row>
 
-          <Work />
+          <Work1 />
 
           <Row type="bigger2">
             <Circle position="bottom">
