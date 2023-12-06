@@ -19,6 +19,7 @@ export const Span = styled(motion.span)`
       letter-spacing: 0.3rem;
       text-transform: uppercase;
       font-weight: 600;
+
       @media (max-width: 440px) {
         font-size: 1.2rem;
       }
