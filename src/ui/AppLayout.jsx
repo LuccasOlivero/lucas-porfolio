@@ -49,25 +49,7 @@ function AppLayout() {
 
         <Circle type="bigger" />
 
-        <Section>
-          <Row type="borderTop">
-            <Span type="text">
-              <Logo />
-              Work & projects
-            </Span>
-          </Row>
-
-          <Work1 />
-
-          <Row type="bigger2">
-            <Circle position="bottom">
-              find out <br /> more
-              <Span type="mleft">
-                <FontAwesomeIcon icon={faArrowDownLong} />
-              </Span>
-            </Circle>
-          </Row>
-        </Section>
+        <Section></Section>
 
         <TextCarousel text2="skils" type="skils" />
 

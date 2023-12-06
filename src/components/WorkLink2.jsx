@@ -3,6 +3,7 @@ import { Span } from "../ui/Span";
 import { Header } from "../ui/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { Section } from "../ui/Section";
 
 function WorkLink2({ type = "", name, techStack }) {
   const Container = styled.div`
@@ -60,6 +61,7 @@ function WorkLink2({ type = "", name, techStack }) {
     position: absolute;
     right: 0;
     color: var(--color-main);
+    padding: 3rem 4rem;
 
     ${(props) =>
       props.position === "absolute" &&
@@ -73,27 +75,30 @@ function WorkLink2({ type = "", name, techStack }) {
       props.position === "absolute2" &&
       css`
         bottom: 0;
-        padding: 3rem 4rem;
       `}
   `;
 
   return (
-    <Container type={type}>
-      <Span type="text3" as="div">
-        <Header as="h2" type="medium">
-          {name}
-        </Header>
-        <Span type="text4" as="p">
-          {techStack}
+    <>
+      <Container type={type}>
+        <Span type="text3" as="div">
+          <Header as="h2" type="medium">
+            {name}
+          </Header>
+          <Span type="text4" as="p">
+            {techStack}
+          </Span>
         </Span>
-      </Span>
 
-      <Absolute position="absolute">{type}</Absolute>
+        <Absolute position="absolute">{type}</Absolute>
 
-      <Absolute position="absolute2">
-        <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-      </Absolute>
-    </Container>
+        <Absolute position="absolute2">
+          <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+        </Absolute>
+      </Container>
+
+      <Section type="primary"></Section>
+    </>
   );
 }
 
