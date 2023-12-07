@@ -70,12 +70,6 @@ function WorkLink2({ type = "", name, techStack }) {
         padding: 3rem;
         rotate: 90deg;
       `}
-
-    ${(props) =>
-      props.position === "absolute2" &&
-      css`
-        bottom: 0;
-      `}
   `;
 
   return (
