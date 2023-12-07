@@ -31,6 +31,30 @@ export const Section = styled.div`
     `}
 
   ${(props) =>
+    props.type === "primary2" &&
+    css`
+      height: 90vh;
+      padding: 0 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 1024px) {
+        height: 85vh;
+        padding: 1rem 4rem;
+      }
+
+      @media (max-width: 768px) {
+        padding: 0 2rem;
+      }
+
+      @media (max-width: 440px) {
+        height: 70vh;
+        padding: 1rem 1rem;
+      }
+    `}
+
+  ${(props) =>
     props.type === "secondary" &&
     css`
       height: 65vh;
