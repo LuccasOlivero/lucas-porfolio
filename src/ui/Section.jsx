@@ -33,7 +33,7 @@ export const Section = styled.div`
   ${(props) =>
     props.type === "primary2" &&
     css`
-      height: 90vh;
+      height: 100%;
       padding: 0 4rem;
       display: flex;
       align-items: center;

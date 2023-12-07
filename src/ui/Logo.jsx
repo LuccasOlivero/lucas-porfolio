@@ -1,14 +1,5 @@
 import { motion } from "framer-motion";
-import styled, { css, keyframes } from "styled-components";
-
-const test = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(370deg);
-  }
-`;
+import styled, { css } from "styled-components";
 
 export const Logo = styled(motion.div)`
   background-image: url("/logo.svg");
@@ -33,6 +24,5 @@ export const Logo = styled(motion.div)`
       right: 2rem;
       margin-left: 2rem;
       padding-right: 0;
-      /* animation: ${test} 35s steps(25) infinite; */
     `}
 `;
