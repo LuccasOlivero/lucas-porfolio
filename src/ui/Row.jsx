@@ -70,14 +70,13 @@ export const Row = styled.div`
   ${(props) =>
     props.type === "bigger" &&
     css`
-      border-bottom: 2px solid var(--color-main);
       height: 7rem;
       font-size: 4.4rem;
       font-weight: 700;
       justify-content: space-between;
       position: relative;
       transition: color 0.2s ease-in;
-
+      border-bottom: 2px solid var(--color-main);
       animation: ${reveal} linear both;
       animation-timeline: view();
       animation-range: entry 5% cover 20%;

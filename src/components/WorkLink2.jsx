@@ -3,9 +3,14 @@ import { Span } from "../ui/Span";
 import { Header } from "../ui/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-import { Section } from "../ui/Section";
 
-function WorkLink2({ type = "", name, techStack }) {
+function WorkLink2({
+  type = "",
+  name = "",
+  techStack = "",
+  border = "",
+  border2 = "",
+}) {
   const Container = styled.div`
     display: flex;
     align-items: center;
@@ -13,9 +18,19 @@ function WorkLink2({ type = "", name, techStack }) {
     padding: 0 4rem;
     height: 16rem;
     width: 100%;
-    border-bottom: 2px solid var(--color-main);
-    border-right: 2px solid var(--color-main);
     color: var(--color-main);
+
+    ${(props) =>
+      props.border === "borderRigth" &&
+      css`
+        border-right: 2px solid var(--color-main);
+      `}
+
+    ${(props) =>
+      props.border2 === "borderBottom" &&
+      css`
+        border-bottom: 2px solid var(--color-main);
+      `}
 
     &::before {
       content: "";
@@ -54,6 +69,7 @@ function WorkLink2({ type = "", name, techStack }) {
 
     &:hover {
       color: white;
+      transition: color 0.2s ease-in;
     }
   `;
 
@@ -67,31 +83,34 @@ function WorkLink2({ type = "", name, techStack }) {
       props.position === "absolute" &&
       css`
         top: 0;
-        padding: 3rem;
-        rotate: 90deg;
+      `}
+
+    ${(props) =>
+      props.position === "absolute2" &&
+      css`
+        bottom: 0;
       `}
   `;
 
   return (
     <>
-      <Container type={type}>
-        <Span type="text3" as="div">
+      <Container type={type} border={border} border2={border2}>
+        <Span type="text3">
           <Header as="h2" type="medium">
             {name}
           </Header>
           <Span type="text4" as="p">
             {techStack}
           </Span>
+          <Span type="text2" as="p">
+            {type}
+          </Span>
+
+          <Span type="text2" as="p">
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          </Span>
         </Span>
-
-        <Absolute position="absolute">{type}</Absolute>
-
-        <Absolute position="absolute2">
-          <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-        </Absolute>
       </Container>
-
-      <Section type="primary"></Section>
     </>
   );
 }

@@ -79,6 +79,7 @@ export const Span = styled(motion.span)`
       line-height: 33px;
       font-weight: 400;
       color: var(--color-main);
+      z-index: 100;
 
       @media (max-width: 440px) {
         font-size: 0.8rem;
