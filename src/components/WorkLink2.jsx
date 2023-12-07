@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { Span } from "../ui/Span";
 import { Header } from "../ui/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
@@ -73,43 +72,93 @@ function WorkLink2({
     }
   `;
 
-  const Absolute = styled.p`
-    position: absolute;
-    right: 0;
-    color: var(--color-main);
-    padding: 3rem 4rem;
-
+  const Span = styled.div`
     ${(props) =>
-      props.position === "absolute" &&
+      props.type === "text" &&
       css`
-        top: 0;
+        position: relative;
+        font-size: 1.3rem;
+        font-weight: 600;
+        align-items: end;
+        padding-left: 0.2rem;
+        letter-spacing: 3px;
+        padding-top: 0.5rem;
+        z-index: 999;
+
+        @media (max-width: 1440px) {
+          font-size: 0.7rem;
+        }
+
+        @media (max-width: 440px) {
+          font-size: 0.6rem;
+        }
       `}
 
     ${(props) =>
-      props.position === "absolute2" &&
+      props.type === "text2" &&
       css`
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 3rem 4rem;
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        z-index: 100;
+
+        @media (max-width: 1440px) {
+          font-size: 0.7rem;
+        }
+
+        @media (max-width: 440px) {
+          font-size: 0.6rem;
+        }
+      `}
+
+      ${(props) =>
+      props.type === "text3" &&
+      css`
+        position: absolute;
+        right: 0;
         bottom: 0;
+        padding: 3rem 4rem;
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        z-index: 100;
+
+        @media (max-width: 1440px) {
+          font-size: 0.7rem;
+        }
+
+        @media (max-width: 440px) {
+          font-size: 0.6rem;
+        }
       `}
   `;
 
   return (
     <>
       <Container type={type} border={border} border2={border2}>
-        <Span type="text3">
+        <div>
           <Header as="h2" type="medium">
             {name}
           </Header>
-          <Span type="text4" as="p">
+
+          <Span type="text" as="p">
             {techStack}
           </Span>
+
           <Span type="text2" as="p">
             {type}
           </Span>
 
-          <Span type="text2" as="p">
+          <Span type="text3" as="p">
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
           </Span>
-        </Span>
+        </div>
       </Container>
     </>
   );

@@ -1,9 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
 import Navbar from "./components/Navbar";
-import AboutMe from "./Pages/AboutMe";
+import About from "./Pages/About";
 import Work from "./Pages/Work";
 import { GlobalStyle } from "./Styles/GlobalStyles";
+import SpinningText from "./components/SpinningText";
+import { ContatMe } from "./ui/ContactMe";
+import Contact from "./Pages/Contact";
 
 function App() {
   return (
@@ -13,9 +16,14 @@ function App() {
 
         <Routes>
           <Route index path="/" element={<AppLayout />} />
-          <Route index path="/about" element={<AboutMe />} />
+          <Route index path="/about" element={<About />} />
           <Route index path="/work" element={<Work />} />
+          <Route index path="/contact" element={<Contact />} />
         </Routes>
+
+        <SpinningText text="✈️ contact me ✈️ contact me ✈️ contact me ">
+          <ContatMe />
+        </SpinningText>
       </BrowserRouter>
       <GlobalStyle />
     </>

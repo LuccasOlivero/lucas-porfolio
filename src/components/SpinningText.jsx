@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 
 const spin = keyframes`
@@ -51,22 +52,24 @@ function SpinningText({ text, children }) {
   const deg = 360 / length;
 
   return (
-    <Container
-      whileTap={{
-        scale: 0.95,
-      }}
-    >
-      <TextWrapper>
-        <p>
-          {text.split("").map((letter, i) => (
-            <Text key={i} style={{ transform: `rotate(${deg * i}deg)` }}>
-              {letter}
-            </Text>
-          ))}
-        </p>
-      </TextWrapper>
-      {children}
-    </Container>
+    <NavLink to="contact">
+      <Container
+        whileTap={{
+          scale: 0.95,
+        }}
+      >
+        <TextWrapper>
+          <p>
+            {text.split("").map((letter, i) => (
+              <Text key={i} style={{ transform: `rotate(${deg * i}deg)` }}>
+                {letter}
+              </Text>
+            ))}
+          </p>
+        </TextWrapper>
+        {children}
+      </Container>
+    </NavLink>
   );
 }
 

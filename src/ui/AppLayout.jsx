@@ -33,10 +33,6 @@ function AppLayout() {
   return (
     <>
       <StyledAppLayout>
-        <SpinningText text="✈️ contact me ✈️ contact me ✈️ contact me ">
-          <ContatMe />
-        </SpinningText>
-
         <Main>
           <Hero />
         </Main>
