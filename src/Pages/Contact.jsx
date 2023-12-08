@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import { Header } from "../ui/Header";
 import { Section } from "../ui/Section";
 import { Logo } from "../ui/Logo";
+import { motion } from "framer-motion";
 
 const Input = styled.input`
   width: 100%;
@@ -14,7 +15,7 @@ const Input = styled.input`
   border-bottom: 2px solid var(--color-secondary-blur);
 `;
 
-const Container = styled.div`
+const Form = styled.form`
   width: 44rem;
   height: 100%;
   display: flex;
@@ -23,7 +24,7 @@ const Container = styled.div`
   margin: 2rem 0;
 `;
 
-const Circle = styled.div`
+const Button = styled(motion.button)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,6 +33,31 @@ const Circle = styled.div`
   height: 11rem;
   background-color: #494f9665;
   border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    clip-path: circle(0% at 49% 0);
+    transition: clip-path 0.3s ease-in;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    clip-path: circle(100.4% at 51% 0);
+  }
+
+  &:hover {
+    color: white;
+    transition: color 0.3s ease-in;
+  }
 
   @media (max-width: 1440px) {
     width: 8rem;
@@ -60,6 +86,9 @@ const Span = styled.span`
 `;
 
 function Contact() {
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
   return (
     <>
       <Section type="tertiary">
@@ -67,7 +96,7 @@ function Contact() {
       </Section>
 
       <Section type="primary2">
-        <Container>
+        <Form onSubmit={handleSubmit}>
           <Label>
             <Logo /> what is your name?
           </Label>
@@ -77,7 +106,7 @@ function Contact() {
           </Label>
           <Input type="email" placeholder="type your email" />
           <Label>
-            <Logo /> what service are you looking for
+            <Logo /> what service are you looking for?
           </Label>
           <Input
             type="text"
@@ -89,9 +118,16 @@ function Contact() {
           <Input type="text" placeholder="I want to have a amazing website" />
 
           <Span>
-            <Circle position="bottom">Submit</Circle>
+            <Button
+              position="bottom"
+              whileTap={{
+                scale: 0.95,
+              }}
+            >
+              Submit
+            </Button>
           </Span>
-        </Container>
+        </Form>
       </Section>
       <Footer />
     </>

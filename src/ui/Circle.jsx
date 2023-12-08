@@ -33,11 +33,11 @@ export const Circle = styled(motion.div)`
       bottom: -4rem;
       right: 6rem;
       display: flex;
+      width: 13rem;
+      height: 13rem;
+      border: 1px solid var(--color-secondary);
       align-items: center;
       justify-content: center;
-      width: 13rem;
-      border: 1px solid var(--color-secondary);
-      height: 13rem;
       background-color: #494f9665;
 
       @media (max-width: 1440px) {

@@ -25,4 +25,10 @@ export const Logo = styled(motion.div)`
       margin-left: 2rem;
       padding-right: 0;
     `}
+
+  ${(props) =>
+    props.size === "white" &&
+    css`
+      background-image: url("/logoWhite.svg");
+    `}
 `;
