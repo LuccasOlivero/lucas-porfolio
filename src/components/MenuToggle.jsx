@@ -4,6 +4,9 @@ import { Logo } from "../ui/Logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBurger } from "@fortawesome/free-solid-svg-icons";
 import ContactInfo from "./ContactInfo";
+import { useToggleMenu } from "../Context/ToggleMenuContext";
+import { motion } from "framer-motion";
+import { createPortal } from "react-dom";
 
 const StyledNav = styled.nav`
   width: 75vw;
@@ -29,6 +32,7 @@ const StyledNav = styled.nav`
 `;
 
 const Header = styled.h2`
+  text-transform: uppercase;
   font-size: 1rem;
   font-weight: 900;
   color: white;
@@ -47,18 +51,18 @@ const Header = styled.h2`
     `}
 `;
 
-const Container = styled.div`
+const ContainerNav = styled.div`
   display: flex;
   width: 100%;
   height: 3.6rem;
   justify-content: center;
 `;
 
-const Test = styled.div`
-  top: 0;
-  left: 0;
+const Container = styled(motion.div)`
+  /* top: 0; */
+  /* left: 0; */
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 1000;
   position: absolute;
   background-color: #3077f1d2;
@@ -106,17 +110,41 @@ const Span = styled.span`
 `;
 
 function MenuToggle() {
-  return (
-    <Test>
-      <Container>
+  const { isOpenMenuToggle, setIsOpenMenuToggle } = useToggleMenu();
+
+  return createPortal(
+    <Container
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+      }}
+      exit={{
+        opacity: 0,
+      }}
+      transition={{
+        duration: 0.3,
+      }}
+    >
+      <ContainerNav>
         <StyledNav>
           <NavLink to="/">
             <Logo size="white" />
           </NavLink>
           <Header>since 2022</Header>
-          <FontAwesomeIcon icon={faBurger} size="xl" color="white" />
+
+          <FontAwesomeIcon
+            icon={faBurger}
+            size="xl"
+            color="white"
+            onClick={() => setIsOpenMenuToggle(!isOpenMenuToggle)}
+            style={{
+              cursor: "pointer",
+            }}
+          />
         </StyledNav>
-      </Container>
+      </ContainerNav>
 
       <Section>
         <Column>
@@ -133,7 +161,8 @@ function MenuToggle() {
           <Span type="text2">.03</Span>Contact
         </Header>
       </Section>
-    </Test>
+    </Container>,
+    document.body
   );
 }
 

@@ -7,23 +7,26 @@ import { GlobalStyle } from "./Styles/GlobalStyles";
 import SpinningText from "./components/SpinningText";
 import { ContatMe } from "./ui/ContactMe";
 import Contact from "./Pages/Contact";
+import { ToggleMenuProvider } from "./Context/ToggleMenuContext";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
+        <ToggleMenuProvider>
+          <Navbar />
 
-        <Routes>
-          <Route index path="/" element={<AppLayout />} />
-          <Route index path="/about" element={<About />} />
-          <Route index path="/work" element={<Work />} />
-          <Route index path="/contact" element={<Contact />} />
-        </Routes>
+          <Routes>
+            <Route index path="/" element={<AppLayout />} />
+            <Route index path="/about" element={<About />} />
+            <Route index path="/work" element={<Work />} />
+            <Route index path="/contact" element={<Contact />} />
+          </Routes>
 
-        <SpinningText text="✈️ contact me ✈️ contact me ✈️ contact me ">
-          <ContatMe />
-        </SpinningText>
+          <SpinningText text="✈️ contact me ✈️ contact me ✈️ contact me ">
+            <ContatMe />
+          </SpinningText>
+        </ToggleMenuProvider>
       </BrowserRouter>
       <GlobalStyle />
     </>

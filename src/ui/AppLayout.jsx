@@ -20,20 +20,23 @@ import Skils from "../components/Skils";
 import Cards from "../components/Cards";
 import Work1 from "../components/Work1";
 import MenuToggle from "../components/MenuToggle";
+import { useToggleMenu } from "../Context/ToggleMenuContext";
+import { AnimatePresence } from "framer-motion";
 
 const StyledAppLayout = styled.div`
   width: 100%;
   height: 100vh;
   position: relative;
   margin: 0 auto;
-
   background-color: var(--color-background);
 `;
 
 function AppLayout() {
+  const { isOpenMenuToggle } = useToggleMenu();
+
   return (
     <>
-      <MenuToggle />
+      <AnimatePresence>{isOpenMenuToggle && <MenuToggle />}</AnimatePresence>
 
       <StyledAppLayout>
         <Main>
