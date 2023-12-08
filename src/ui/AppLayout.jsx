@@ -34,6 +34,7 @@ function AppLayout() {
   return (
     <>
       <MenuToggle />
+
       <StyledAppLayout>
         <Main>
           <Hero />

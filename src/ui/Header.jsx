@@ -9,12 +9,13 @@ export const Header = styled(motion.h1)`
   position: relative;
   display: flex;
   justify-content: space-between;
-  color: var(--color-main);
+  color: white;
 
   ${(props) =>
     props.type === "margin" &&
     css`
       left: -0.6rem;
+      color: var(--color-main);
     `}
 
   ${(props) =>
@@ -46,6 +47,7 @@ export const Header = styled(motion.h1)`
       padding-bottom: 0.5rem;
       text-transform: uppercase;
       border-bottom: 1px solid var(--color-main);
+      color: var(--color-main);
 
       @media (max-width: 440px) {
         font-size: 1rem;
@@ -60,6 +62,7 @@ export const Header = styled(motion.h1)`
       letter-spacing: 8px;
       text-transform: uppercase;
       margin-top: 1.5rem;
+      color: var(--color-main);
 
       @media (max-width: 440px) {
         font-size: 1rem;
@@ -74,11 +77,28 @@ export const Header = styled(motion.h1)`
       text-transform: uppercase;
       margin-top: 2rem;
       display: block;
+      color: var(--color-main);
 
       @media (max-width: 440px) {
         font-size: 1rem;
       }
     `}
+
+    ${(props) =>
+    props.type === "min3white" &&
+    css`
+      font-size: 1.6rem;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      margin-top: 2rem;
+      display: block;
+      color: var(--color-third);
+
+      @media (max-width: 440px) {
+        font-size: 1rem;
+      }
+    `}
+
 
     ${(props) =>
     props.type === "bigger" &&

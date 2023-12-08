@@ -11,6 +11,7 @@ import { Section } from "../ui/Section";
 import { Span } from "../ui/Span";
 import { Circle } from "../ui/Circle";
 import { Row } from "../ui/Row";
+import ContactInfo from "../components/ContactInfo";
 
 const TextContainer = styled.div`
   position: relative;
@@ -46,24 +47,7 @@ function AboutMe() {
 
       <Container>
         <Box size="medium">
-          <Header type="min3">
-            email
-            <Span type="mleft2">lucas.dev@gmail.com</Span>
-          </Header>
-
-          <Header type="min3">
-            linkedin
-            <Span type="mleft2">linkedin.com/in/lucas-olivero</Span>
-          </Header>
-
-          <Header type="min3">
-            twitter / x<Span type="mleft2">@luccasOlivero</Span>
-          </Header>
-
-          <Header type="min3">
-            github
-            <Span type="mleft2">github.com/LuccasOlivero</Span>
-          </Header>
+          <ContactInfo />
         </Box>
 
         <Box size="large">

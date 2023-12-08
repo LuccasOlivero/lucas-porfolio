@@ -97,6 +97,7 @@ function Hero() {
         </Header>
 
         <Header
+          type="margin"
           initial={{
             translateY: "200%",
             scale: 0,

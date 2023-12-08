@@ -1,8 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { NavLink } from "react-router-dom";
 import { Logo } from "../ui/Logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBurger } from "@fortawesome/free-solid-svg-icons";
+import ContactInfo from "./ContactInfo";
 
 const StyledNav = styled.nav`
   width: 75vw;
@@ -28,10 +29,22 @@ const StyledNav = styled.nav`
 `;
 
 const Header = styled.h2`
-  text-transform: uppercase;
   font-size: 1rem;
   font-weight: 900;
   color: white;
+  position: relative;
+
+  ${(props) =>
+    props.type === "text-black" &&
+    css`
+      display: flex;
+      align-items: end;
+      color: var(--color-third);
+      font-size: 8rem;
+      letter-spacing: 10px;
+      padding-left: 2rem;
+      border-bottom: 2px solid var(--color-third);
+    `}
 `;
 
 const Container = styled.div`
@@ -48,7 +61,8 @@ const Test = styled.div`
   height: 100vh;
   z-index: 1000;
   position: absolute;
-  background-color: rgba(45, 45, 153, 0.664);
+  background-color: #3077f1d2;
+  backdrop-filter: blur(10px);
 `;
 
 const Section = styled.div`
@@ -58,7 +72,8 @@ const Section = styled.div`
   border-left: 2px solid white;
   border-right: 2px solid white;
   display: flex;
-  align-items: center;
+  gap: 2rem;
+  align-items: end;
   flex-direction: column;
   justify-content: center;
   width: 75vw;
@@ -71,14 +86,23 @@ const Section = styled.div`
 `;
 
 const Column = styled.div`
-  position: absolute;
   left: 0;
-  display: flex;
-  width: 23rem;
+  top: 0;
+  width: 26rem;
   height: 100%;
-  flex-direction: column;
-  align-items: center;
+  padding: 4rem;
+  margin: 0 auto;
   border-right: 2px solid white;
+
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`;
+
+const Span = styled.span`
+  font-size: 1.5rem;
+  padding-bottom: 2.55rem;
 `;
 
 function MenuToggle() {
@@ -95,7 +119,19 @@ function MenuToggle() {
       </Container>
 
       <Section>
-        <Column></Column>
+        <Column>
+          <ContactInfo />
+        </Column>
+        <Header type="text-black">
+          <Span type="text2">.01</Span>
+          Work
+        </Header>
+        <Header type="text-black">
+          <Span type="text2">.02</Span>About me
+        </Header>
+        <Header type="text-black">
+          <Span type="text2">.03</Span>Contact
+        </Header>
       </Section>
     </Test>
   );
