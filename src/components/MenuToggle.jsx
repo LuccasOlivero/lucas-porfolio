@@ -59,14 +59,16 @@ const ContainerNav = styled.div`
 `;
 
 const Container = styled(motion.div)`
-  /* top: 0; */
-  /* left: 0; */
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 1000;
-  position: absolute;
+
+  position: fixed;
   background-color: #3077f1d2;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 `;
 
 const Section = styled.div`
@@ -107,6 +109,11 @@ const Column = styled.div`
 const Span = styled.span`
   font-size: 1.5rem;
   padding-bottom: 2.55rem;
+`;
+
+const StyledNavLink = styled(NavLink)`
+  color: inherit;
+  text-decoration: none;
 `;
 
 function MenuToggle() {
@@ -150,16 +157,25 @@ function MenuToggle() {
         <Column>
           <ContactInfo />
         </Column>
-        <Header type="text-black">
-          <Span type="text2">.01</Span>
-          Work
-        </Header>
-        <Header type="text-black">
-          <Span type="text2">.02</Span>About me
-        </Header>
-        <Header type="text-black">
-          <Span type="text2">.03</Span>Contact
-        </Header>
+
+        <StyledNavLink to="work">
+          <Header type="text-black">
+            <Span type="text2">.01</Span>
+            Work
+          </Header>
+        </StyledNavLink>
+
+        <StyledNavLink to="about">
+          <Header type="text-black">
+            <Span type="text2">.02</Span>About me
+          </Header>
+        </StyledNavLink>
+
+        <StyledNavLink to="contact">
+          <Header type="text-black">
+            <Span type="text2">.03</Span>Contact
+          </Header>
+        </StyledNavLink>
       </Section>
     </Container>,
     document.body

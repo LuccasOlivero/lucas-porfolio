@@ -12,6 +12,7 @@ import { Span } from "../ui/Span";
 import { Circle } from "../ui/Circle";
 import { Row } from "../ui/Row";
 import ContactInfo from "../components/ContactInfo";
+import MenuModal from "../components/MenuModal";
 
 const TextContainer = styled.div`
   position: relative;
@@ -39,6 +40,7 @@ const Container = styled.div`
 function AboutMe() {
   return (
     <>
+      <MenuModal />
       <Section type="tertiary">
         <Header type="bigger2">Live a new experience every day.</Header>
       </Section>

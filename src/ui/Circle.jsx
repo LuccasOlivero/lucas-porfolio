@@ -103,9 +103,9 @@ export const Circle = styled(motion.div)`
   color: #494f96;
   font-size: 1rem;
   border-radius: 100%;
-
   transition: color 0.3s ease-in-out;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   @media (max-width: 768px) {
     font-size: 0.8rem;

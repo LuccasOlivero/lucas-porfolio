@@ -3,7 +3,6 @@ import { faBurger } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 import { Logo } from "../ui/Logo";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
 import { useToggleMenu } from "../Context/ToggleMenuContext";
 
 const StyledNav = styled.nav`
@@ -42,6 +41,7 @@ const Container = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
+  z-index: 999;
 `;
 
 function Navbar() {

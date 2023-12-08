@@ -3,13 +3,13 @@ import styled from "styled-components";
 import WorkLink2 from "../components/WorkLink2";
 import { Row } from "../ui/Row";
 import { Span } from "../ui/Span";
-import { Logo } from "../ui/Logo";
 import Work1 from "../components/Work1";
 import TextCarousel from "../ui/TextCarousel";
 import Footer from "../components/Footer";
 import { Circle } from "../ui/Circle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
+import MenuModal from "../components/MenuModal";
 
 const Container = styled.div`
   display: grid;
@@ -24,6 +24,7 @@ const Container = styled.div`
 function Work() {
   return (
     <>
+      <MenuModal />
       <Section>
         <Container>
           <WorkLink2

@@ -4,6 +4,7 @@ import { Header } from "../ui/Header";
 import { Section } from "../ui/Section";
 import { Logo } from "../ui/Logo";
 import { motion } from "framer-motion";
+import MenuModal from "../components/MenuModal";
 
 const Input = styled.input`
   width: 100%;
@@ -91,6 +92,7 @@ function Contact() {
   }
   return (
     <>
+      <MenuModal />
       <Section type="tertiary">
         <Header type="bigger2">Ready to do something cool?</Header>
       </Section>

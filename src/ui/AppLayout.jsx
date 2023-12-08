@@ -19,9 +19,7 @@ import AboutMe1 from "../components/AboutMe1";
 import Skils from "../components/Skils";
 import Cards from "../components/Cards";
 import Work1 from "../components/Work1";
-import MenuToggle from "../components/MenuToggle";
-import { useToggleMenu } from "../Context/ToggleMenuContext";
-import { AnimatePresence } from "framer-motion";
+import MenuModal from "../components/MenuModal";
 
 const StyledAppLayout = styled.div`
   width: 100%;
@@ -32,11 +30,9 @@ const StyledAppLayout = styled.div`
 `;
 
 function AppLayout() {
-  const { isOpenMenuToggle } = useToggleMenu();
-
   return (
     <>
-      <AnimatePresence>{isOpenMenuToggle && <MenuToggle />}</AnimatePresence>
+      <MenuModal />
 
       <StyledAppLayout>
         <Main>
