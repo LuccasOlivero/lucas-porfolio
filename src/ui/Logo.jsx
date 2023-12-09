@@ -18,12 +18,15 @@ export const Logo = styled(motion.div)`
   ${(props) =>
     props.size === "bigger" &&
     css`
-      position: relative;
+      position: absolute;
       width: 9vw;
       height: 9vw;
       right: 2rem;
+      top: 1.5rem;
+      right: 4rem;
       margin-left: 2rem;
       padding-right: 0;
+      z-index: -1;
     `}
 
   ${(props) =>

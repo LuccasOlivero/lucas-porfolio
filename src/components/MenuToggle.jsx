@@ -1,12 +1,13 @@
 import styled, { css } from "styled-components";
-import { NavLink } from "react-router-dom";
-import { Logo } from "../ui/Logo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBurger } from "@fortawesome/free-solid-svg-icons";
+
 import ContactInfo from "./ContactInfo";
+import { Logo } from "../ui/Logo";
 import { useToggleMenu } from "../Context/ToggleMenuContext";
 import { motion } from "framer-motion";
 import { createPortal } from "react-dom";
+import { StyledNavLink } from "../ui/StyledNavLink";
 
 const StyledNav = styled.nav`
   width: 75vw;
@@ -111,11 +112,6 @@ const Span = styled.span`
   padding-bottom: 2.55rem;
 `;
 
-const StyledNavLink = styled(NavLink)`
-  color: inherit;
-  text-decoration: none;
-`;
-
 function MenuToggle() {
   const { isOpenMenuToggle, setIsOpenMenuToggle } = useToggleMenu();
 
@@ -136,9 +132,9 @@ function MenuToggle() {
     >
       <ContainerNav>
         <StyledNav>
-          <NavLink to="/">
+          <StyledNavLink to="/">
             <Logo size="white" />
-          </NavLink>
+          </StyledNavLink>
           <Header>since 2022</Header>
 
           <FontAwesomeIcon

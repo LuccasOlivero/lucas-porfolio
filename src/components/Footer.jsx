@@ -9,6 +9,7 @@ import { Header } from "../ui/Header";
 import { Buttom } from "../ui/Buttom";
 import { Span } from "../ui/Span";
 import { Row } from "../ui/Row";
+import FramerMagnetic from "./FramerMagnetic";
 
 const StyledFooter = styled.footer`
   position: absolute;
@@ -83,19 +84,25 @@ function Footer() {
         </Header>
 
         <LogosContact>
-          <Buttom type="large">lucas.dev@gmail.com</Buttom>
+          <FramerMagnetic>
+            <Buttom type="large">lucas.dev@gmail.com</Buttom>
+          </FramerMagnetic>
 
-          <Buttom type="small">
-            <Link href="https://www.linkedin.com/in/lucas-olivero-319090264/">
-              <FontAwesomeIcon icon={faLinkedinIn} />
-            </Link>
-          </Buttom>
+          <FramerMagnetic>
+            <Buttom type="small">
+              <Link href="https://www.linkedin.com/in/lucas-olivero-319090264/">
+                <FontAwesomeIcon icon={faLinkedinIn} />
+              </Link>
+            </Buttom>
+          </FramerMagnetic>
 
-          <Buttom type="small">
-            <Link href="https://github.com/LuccasOlivero">
-              <FontAwesomeIcon icon={faGithub} />
-            </Link>
-          </Buttom>
+          <FramerMagnetic>
+            <Buttom type="small">
+              <Link href="https://github.com/LuccasOlivero">
+                <FontAwesomeIcon icon={faGithub} />
+              </Link>
+            </Buttom>
+          </FramerMagnetic>
         </LogosContact>
 
         <Row type="borderTop2">

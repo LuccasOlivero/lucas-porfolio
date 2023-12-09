@@ -6,6 +6,8 @@ import { Logo } from "../ui/Logo";
 import { TextContainer } from "../ui/TextContainer";
 import { Span } from "../ui/Span";
 import { useMotionValue, useSpring, useTransform } from "framer-motion";
+import { Fragment } from "react";
+import FramerMagnetic from "./FramerMagnetic";
 
 const Container = styled.div`
   display: flex;
@@ -78,18 +80,13 @@ function AboutMe1() {
           </Paragraph>
         </TextContainer>
 
-        <Avatar
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-          whileTap={{
-            scale: 0.98,
-          }}
-          style={{
-            rotateY,
-            rotateX,
-            transformStyle: "preserve-3d",
-          }}
-        />
+        <FramerMagnetic>
+          <Avatar
+            whileTap={{
+              scale: 0.98,
+            }}
+          />
+        </FramerMagnetic>
       </Container>
     </>
   );

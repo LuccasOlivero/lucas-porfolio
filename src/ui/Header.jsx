@@ -12,9 +12,8 @@ export const Header = styled(motion.h1)`
   color: white;
 
   ${(props) =>
-    props.type === "margin" &&
+    props.type === "color-white" &&
     css`
-      left: -0.6rem;
       color: var(--color-main);
     `}
 

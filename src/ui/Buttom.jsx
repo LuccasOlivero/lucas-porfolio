@@ -21,7 +21,7 @@ export const Buttom = styled.button`
     props.type === "small" &&
     css`
       width: auto;
-      height: auto;
+      height: 3rem;
       padding: 0.5rem 1.5rem;
       margin-right: 1rem;
       font-size: 1rem;
@@ -50,7 +50,7 @@ export const Buttom = styled.button`
     props.type === "large" &&
     css`
       width: auto;
-      height: auto;
+      height: 3rem;
       padding: 0.5rem 1.5rem;
       margin-right: 1rem;
       font-size: 1rem;
