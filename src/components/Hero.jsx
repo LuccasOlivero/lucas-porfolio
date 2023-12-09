@@ -1,19 +1,20 @@
+import styled from "styled-components";
 import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
+import FramerMagnetic from "./FramerMagnetic";
 
 import { Logo } from "../ui/Logo";
 import { Header } from "../ui/Header";
 import { Circle } from "../ui/Circle";
 import { ContainerColumn } from "../ui/ContainerColumn";
 import { TextContainer } from "../ui/TextContainer";
-import FramerMagnetic from "./FramerMagnetic";
 import { StyledNavLink } from "../ui/StyledNavLink";
-import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
 
 const Span = styled.span`
   position: absolute;
+  right: 3.5rem;
+  bottom: 7rem;
   padding-left: 0.5rem;
 `;
 
@@ -51,22 +52,25 @@ function Hero() {
           >
             <FramerMagnetic>
               <StyledNavLink to="/about">
-                <Circle position="top">about me</Circle>
+                <Circle
+                  position="top"
+                  initial={{
+                    opacity: 0,
+                    scale: 0,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    scale: 1,
+                  }}
+                  transition={{
+                    delay: 1.3,
+                  }}
+                >
+                  about me
+                </Circle>
               </StyledNavLink>
             </FramerMagnetic>
-            <Logo
-              size="bigger"
-              initial={{
-                rotate: "0deg",
-              }}
-              animate={{
-                rotate: "10deg",
-              }}
-              transition={{
-                duration: 1,
-                repeat: Infinity,
-              }}
-            />
+            <Logo size="bigger" />
           </motion.span>
         </Header>
 
@@ -89,23 +93,49 @@ function Hero() {
           <Span>WebDev</Span>
           <FramerMagnetic>
             <StyledNavLink to="work">
-              <Circle position="middle">work</Circle>
+              <Circle
+                position="middle"
+                initial={{
+                  opacity: 0,
+                  scale: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                }}
+                transition={{
+                  delay: 1.3,
+                }}
+              >
+                work
+              </Circle>
             </StyledNavLink>
           </FramerMagnetic>
         </Header>
       </TextContainer>
 
-      {/* <Circle
+      <Circle
         position="bottom"
         whileTap={{
           scale: 0.95,
+        }}
+        initial={{
+          opacity: 0,
+          scale: 0,
+        }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          delay: 1.3,
         }}
       >
         find out <br /> more
         <Span type="mleft">
           <FontAwesomeIcon icon={faArrowDownLong} />
         </Span>
-      </Circle> */}
+      </Circle>
     </ContainerColumn>
   );
 }

@@ -1,20 +1,22 @@
+import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
 
-export const Circle = styled.div`
+export const Circle = styled(motion.div)`
   position: relative;
   color: #494f96;
   border-radius: 50%;
-  transition: color 0.3s ease-in-out;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  transition: color 0.3s ease-in-out;
+  font-size: 1rem;
+  font-weight: 600;
 
   ${(props) =>
     props.position === "top" &&
     css`
+      top: -2rem;
       width: 13rem;
       height: 13rem;
-      font-size: 1.3rem;
-      font-weight: 600;
 
       display: flex;
       align-items: center;
@@ -37,10 +39,9 @@ export const Circle = styled.div`
   ${(props) =>
     props.position === "middle" &&
     css`
+      margin-top: 7rem;
       width: 13rem;
       height: 13rem;
-      font-size: 1.3rem;
-      font-weight: 600;
 
       display: flex;
       align-items: center;
@@ -62,6 +63,7 @@ export const Circle = styled.div`
   ${(props) =>
     props.position === "bottom" &&
     css`
+      position: absolute;
       bottom: -6rem;
       padding-top: 1rem;
       width: 11.5rem;

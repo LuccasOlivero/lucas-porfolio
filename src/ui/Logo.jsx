@@ -1,5 +1,32 @@
 import { motion } from "framer-motion";
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
+
+const hover = keyframes`
+ from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(15deg);
+  }
+`;
+
+const test = keyframes`
+ from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+const smoothRotation = keyframes`
+ 0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(+=15deg);
+  }
+`;
 
 export const Logo = styled(motion.div)`
   background-image: url("/logo.svg");
@@ -9,10 +36,10 @@ export const Logo = styled(motion.div)`
   width: 2rem;
   height: 2rem;
   margin-right: 1rem;
-  transition: rotate 0.1s ease-in;
+  transition: rotate 0.2s ease-in;
 
   &:hover {
-    rotate: 24.5deg;
+    rotate: 61deg;
   }
 
   ${(props) =>
@@ -27,6 +54,8 @@ export const Logo = styled(motion.div)`
       margin-left: 2rem;
       padding-right: 0;
       z-index: -1;
+      animation: ${test} 15s linear infinite,
+        ${smoothRotation} 1.5s cubic-bezier(0.4, 2.2, 0.3, 1) infinite;
     `}
 
   ${(props) =>

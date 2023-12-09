@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Main = styled.main`
-  height: 98vh;
+  height: 90vh;
   width: 75vw;
   margin: 0 auto;
   position: relative;
