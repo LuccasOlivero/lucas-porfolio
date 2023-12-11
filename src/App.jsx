@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar";
 
 import AppLayout from "./ui/AppLayout";
 import { ContatMe } from "./ui/ContactMe";
+import { TEXT_SPINNING } from "./Constants/constant";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
             <Route index path="/contact" element={<Contact />} />
           </Routes>
 
-          <SpinningText text="✈️ contact me ✈️ contact me ✈️ contact me ">
+          <SpinningText text={TEXT_SPINNING}>
             <ContatMe />
           </SpinningText>
         </ToggleMenuProvider>

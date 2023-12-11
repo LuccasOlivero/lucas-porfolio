@@ -115,6 +115,11 @@ const Span = styled.span`
 function MenuToggle() {
   const { isOpenMenuToggle, setIsOpenMenuToggle } = useToggleMenu();
 
+  function handleClickMenu() {
+    window.scroll(0, 0);
+    setIsOpenMenuToggle(!isOpenMenuToggle);
+  }
+
   return createPortal(
     <Container
       initial={{
@@ -135,6 +140,7 @@ function MenuToggle() {
           <StyledNavLink to="/">
             <Logo size="white" />
           </StyledNavLink>
+
           <Header>since 2022</Header>
 
           <FontAwesomeIcon
@@ -154,20 +160,20 @@ function MenuToggle() {
           <ContactInfo />
         </Column>
 
-        <StyledNavLink to="work">
+        <StyledNavLink to="work" onClick={handleClickMenu}>
           <Header type="text-black">
             <Span type="text2">.01</Span>
             Work
           </Header>
         </StyledNavLink>
 
-        <StyledNavLink to="about">
+        <StyledNavLink to="about" onClick={handleClickMenu}>
           <Header type="text-black">
             <Span type="text2">.02</Span>About me
           </Header>
         </StyledNavLink>
 
-        <StyledNavLink to="contact">
+        <StyledNavLink to="contact" onClick={handleClickMenu}>
           <Header type="text-black">
             <Span type="text2">.03</Span>Contact
           </Header>

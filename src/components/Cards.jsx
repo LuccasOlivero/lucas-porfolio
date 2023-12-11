@@ -11,8 +11,8 @@ const Container = styled.div`
 `;
 
 const Svg = styled.figure`
-  width: 100%;
-  height: 100%;
+  width: 7vw;
+  height: 7vw;
 
   background-image: url(./proto.svg);
   background-position: center;
@@ -26,8 +26,8 @@ const Svg = styled.figure`
 `;
 
 const Svg2 = styled.figure`
-  width: 100%;
-  height: 100%;
+  width: 7vw;
+  height: 7vw;
 
   background-image: url(./pc.svg);
   background-position: center;
@@ -41,8 +41,8 @@ const Svg2 = styled.figure`
 `;
 
 const Svg3 = styled.figure`
-  width: 100%;
-  height: 100%;
+  width: 7vw;
+  height: 7vw;
 
   background-image: url(./web.svg);
   background-position: center;
