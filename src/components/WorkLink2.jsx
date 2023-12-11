@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components";
-import { Header } from "../ui/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+
+import { Header } from "../ui/Header";
 
 function WorkLink2({
   type = "",

@@ -7,10 +7,6 @@ const Container = styled.div`
   height: 100%;
   padding: 1.5rem 4rem;
 
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
-
   ${(props) =>
     props.type === "borderRight" &&
     css`

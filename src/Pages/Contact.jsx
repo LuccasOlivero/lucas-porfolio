@@ -1,10 +1,12 @@
 import styled from "styled-components";
+
 import Footer from "../components/Footer";
+import MenuModal from "../components/MenuModal";
+
 import { Header } from "../ui/Header";
 import { Section } from "../ui/Section";
 import { Logo } from "../ui/Logo";
 import { motion } from "framer-motion";
-import MenuModal from "../components/MenuModal";
 
 const Input = styled.input`
   width: 100%;
@@ -19,36 +21,39 @@ const Input = styled.input`
 const Form = styled.form`
   width: 44rem;
   height: 100%;
+  margin: 2rem 0;
+
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 2rem 0;
 `;
 
 const Button = styled(motion.button)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--color-secondary);
   width: 11rem;
   height: 11rem;
-  background-color: #494f9665;
   border-radius: 50%;
+  border: 1px solid var(--color-secondary);
+
+  display: flex;
   cursor: pointer;
   position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: #494f9665;
 
   &::before {
     content: "";
-    position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: var(--color-secondary);
+
+    position: absolute;
     clip-path: circle(0% at 49% 0);
     transition: clip-path 0.3s ease-in;
-    z-index: -1;
+    background-color: var(--color-secondary);
   }
 
   &:hover::before {
@@ -72,13 +77,14 @@ const Button = styled(motion.button)`
 `;
 
 const Label = styled.label`
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
   letter-spacing: 3px;
   padding-top: 4rem;
   font-size: 1.5rem;
+
+  display: flex;
+  align-items: center;
   color: var(--color-main);
+  text-transform: uppercase;
 `;
 
 const Span = styled.span`

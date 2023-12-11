@@ -1,13 +1,13 @@
+import { useMotionValue, useSpring, useTransform } from "framer-motion";
 import styled from "styled-components";
+
+import FramerMagnetic from "./FramerMagnetic";
 
 import { Avatar } from "../ui/Avatar";
 import { Paragraph } from "../ui/Paragraph";
 import { Logo } from "../ui/Logo";
 import { TextContainer } from "../ui/TextContainer";
 import { Span } from "../ui/Span";
-import { useMotionValue, useSpring, useTransform } from "framer-motion";
-import { Fragment } from "react";
-import FramerMagnetic from "./FramerMagnetic";
 
 const Container = styled.div`
   display: flex;

@@ -1,15 +1,17 @@
-import { Section } from "../ui/Section";
-import styled from "styled-components";
-import WorkLink2 from "../components/WorkLink2";
-import { Row } from "../ui/Row";
-import { Span } from "../ui/Span";
-import Work1 from "../components/Work1";
-import TextCarousel from "../ui/TextCarousel";
-import Footer from "../components/Footer";
-import { Circle } from "../ui/Circle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
+import styled from "styled-components";
+
+import WorkLink2 from "../components/WorkLink2";
+import Work1 from "../components/Work1";
+import Footer from "../components/Footer";
 import MenuModal from "../components/MenuModal";
+
+import { Section } from "../ui/Section";
+import { Row } from "../ui/Row";
+import { Span } from "../ui/Span";
+import TextCarousel from "../ui/TextCarousel";
+import { Circle } from "../ui/Circle";
 
 const Container = styled.div`
   display: grid;

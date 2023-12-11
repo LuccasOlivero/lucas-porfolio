@@ -1,9 +1,12 @@
+import styled from "styled-components";
+
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBurger } from "@fortawesome/free-solid-svg-icons";
-import styled from "styled-components";
-import { Logo } from "../ui/Logo";
-import { NavLink } from "react-router-dom";
+
 import { useToggleMenu } from "../Context/ToggleMenuContext";
+
+import { Logo } from "../ui/Logo";
 
 const StyledNav = styled.nav`
   width: 75vw;

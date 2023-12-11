@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 import Footer from "../components/Footer";
 import Skils from "../components/Skils";
+import ContactInfo from "../components/ContactInfo";
+import MenuModal from "../components/MenuModal";
 
 import { Box } from "../ui/Box";
 import { Header } from "../ui/Header";
@@ -11,30 +13,30 @@ import { Section } from "../ui/Section";
 import { Span } from "../ui/Span";
 import { Circle } from "../ui/Circle";
 import { Row } from "../ui/Row";
-import ContactInfo from "../components/ContactInfo";
-import MenuModal from "../components/MenuModal";
 
 const TextContainer = styled.div`
-  position: relative;
   width: 80%;
   height: 20rem;
   padding: 4rem;
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
   border-top: 2px solid var(--color-main);
   border-left: 2px solid var(--color-main);
   border-bottom: 2px solid var(--color-main);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 `;
 
 const Container = styled.div`
-  border-left: 2px solid var(--color-main);
-  border-right: 2px solid var(--color-main);
-  display: flex;
   width: 75vw;
   margin: 0 auto;
+
+  display: flex;
   position: relative;
   justify-content: end;
+  border-left: 2px solid var(--color-main);
+  border-right: 2px solid var(--color-main);
 `;
 
 function AboutMe() {
