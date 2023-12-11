@@ -13,12 +13,13 @@ export const Span = styled(motion.span)`
   ${(props) =>
     props.type === "text" &&
     css`
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.3rem;
+
       align-items: center;
       color: var(--color-main);
-      font-size: 2rem;
-      letter-spacing: 0.3rem;
       text-transform: uppercase;
-      font-weight: 600;
 
       @media (max-width: 440px) {
         font-size: 1.2rem;
@@ -29,11 +30,12 @@ export const Span = styled(motion.span)`
   ${(props) =>
     props.type === "text2" &&
     css`
+      z-index: 100;
       font-size: 1rem;
       font-weight: 600;
-      text-transform: uppercase;
       letter-spacing: 3px;
-      z-index: 100;
+
+      text-transform: uppercase;
 
       @media (max-width: 1440px) {
         font-size: 0.7rem;
@@ -55,11 +57,11 @@ export const Span = styled(motion.span)`
     ${(props) =>
     props.type === "text4" &&
     css`
+      z-index: 100;
       font-size: 1rem;
       font-weight: 600;
-      align-items: end;
       padding-left: 0.2rem;
-      z-index: 100;
+      align-items: end;
 
       @media (max-width: 1440px) {
         font-size: 0.7rem;
@@ -78,8 +80,8 @@ export const Span = styled(motion.span)`
       letter-spacing: 3px;
       line-height: 33px;
       font-weight: 400;
-      color: var(--color-main);
       z-index: 100;
+      color: var(--color-main);
 
       @media (max-width: 440px) {
         font-size: 0.8rem;
@@ -91,17 +93,17 @@ export const Span = styled(motion.span)`
     ${(props) =>
     props.type === "text6" &&
     css`
+      margin-left: 1.4rem;
       flex-direction: column;
       justify-content: end;
-      margin-left: 1.4rem;
     `}
 
     ${(props) =>
     props.type === "mleft" &&
     css`
-      position: relative;
       margin-left: -0.8rem;
       margin-top: 1.9rem;
+      position: relative;
 
       @media (max-width: 768px) {
         margin-top: 0.8rem;
@@ -111,11 +113,11 @@ export const Span = styled(motion.span)`
     ${(props) =>
     props.type === "mleft2" &&
     css`
-      position: relative;
       margin-top: 0.8rem;
       font-weight: 400;
       font-size: 1rem;
       letter-spacing: 3px;
+      position: relative;
 
       @media (max-width: 768px) {
         margin-top: 0.8rem;

@@ -40,6 +40,7 @@ export const Row = styled.div`
     css`
       border-top: 2px solid var(--color-main);
       border-bottom: 2px solid var(--color-main);
+
       text-transform: uppercase;
       justify-content: space-between;
     `}
@@ -47,15 +48,16 @@ export const Row = styled.div`
   ${(props) =>
     props.type === "borderTop2" &&
     css`
-      position: absolute;
-      width: 100%;
       bottom: 0;
+      width: 100%;
+      color: white;
+      font-size: 1rem;
+      letter-spacing: 3px;
       border-top: 1px solid white;
+
+      position: absolute;
       text-transform: uppercase;
       justify-content: space-between;
-      color: white;
-      letter-spacing: 3px;
-      font-size: 1rem;
 
       @media (max-width: 768px) {
         font-size: 0.8rem;
@@ -73,10 +75,13 @@ export const Row = styled.div`
       height: 7rem;
       font-size: 4.4rem;
       font-weight: 700;
-      justify-content: space-between;
-      position: relative;
       transition: color 0.2s ease-in;
       border-bottom: 2px solid var(--color-main);
+
+      position: relative;
+      justify-content: space-between;
+
+      // scroll animation only with css!
       animation: ${reveal} linear both;
       animation-timeline: view();
       animation-range: entry 5% cover 20%;
@@ -98,14 +103,15 @@ export const Row = styled.div`
 
       &:after {
         content: "";
-        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: var(--color-secondary-blur);
-        clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+
+        position: absolute;
         transition: clip-path 0.2s ease-in;
+        clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+        background-color: var(--color-secondary-blur);
       }
 
       &:hover::after {
@@ -133,10 +139,11 @@ export const Row = styled.div`
     ${(props) =>
     props.type === "bigger3" &&
     css`
+      gap: 2rem;
       height: 20rem;
       font-size: 4.4rem;
       font-weight: 700;
-      gap: 2rem;
+
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 

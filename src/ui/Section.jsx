@@ -62,6 +62,7 @@ export const Section = styled.div`
       padding: 0 4rem;
       border-left: 2px solid white;
       border-right: 2px solid white;
+
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -76,9 +77,9 @@ export const Section = styled.div`
     props.type === "tertiary" &&
     css`
       height: 50vh;
-      margin-top: 3.6rem;
       display: flex;
       padding: 0 4rem;
+      margin-top: 3.6rem;
 
       outline: 2px solid var(--color-main);
       background-color: var(--color-main);
