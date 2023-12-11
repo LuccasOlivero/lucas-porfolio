@@ -10,15 +10,6 @@ const hover = keyframes`
   }
 `;
 
-const test = keyframes`
- from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
 export const Logo = styled(motion.div)`
   background-image: url("/logo.svg");
   background-size: contain;
@@ -27,7 +18,7 @@ export const Logo = styled(motion.div)`
   width: 2rem;
   height: 2rem;
   margin-right: 1rem;
-  transition: rotate 0.2s ease-in;
+  transition: ${hover} 0.2s ease-in;
 
   &:hover {
     rotate: 61deg;
@@ -45,7 +36,6 @@ export const Logo = styled(motion.div)`
       margin-left: 2rem;
       padding-right: 0;
       z-index: -1;
-      animation: ${test} 15s linear infinite;
     `}
 
   ${(props) =>
