@@ -1,15 +1,15 @@
 import styled, { css } from "styled-components";
 
 export const TextContainer = styled.div`
-  width: 55vw;
   font-size: 1rem;
   line-height: 1.3rem;
-  max-width: 1600px;
-
+  padding: 0 4rem;
+  max-width: 3500px;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+  @media (max-width: 1440px) {
+    padding: 0 2rem;
+  }
 
   ${(props) =>
     props.type === "width" &&

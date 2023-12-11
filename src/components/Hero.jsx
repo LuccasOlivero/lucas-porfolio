@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { motion } from "framer-motion";
 import FramerMagnetic from "./FramerMagnetic";
+import { motion } from "framer-motion";
 
 import { Logo } from "../ui/Logo";
 import { Header } from "../ui/Header";
@@ -11,32 +11,25 @@ import { StyledNavLink } from "../ui/StyledNavLink";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
 
-const Span = styled.span`
-  position: absolute;
-  right: 3.5rem;
-  bottom: 7rem;
-  padding-left: 0.5rem;
-`;
-
 function Hero() {
   return (
     <ContainerColumn>
       <TextContainer>
         <Header
-          type="color-white"
-          initial={{
-            translateX: "-100%",
-            scale: 0,
-          }}
-          animate={{
-            translateX: "0",
-            scale: 1,
-          }}
-          transition={{
-            duration: 0.3,
-            ease: "backInOut",
-            delay: 0.15,
-          }}
+          type="color-main"
+          // initial={{
+          //   translateX: "-100%",
+          //   scale: 0,
+          // }}
+          // animate={{
+          //   translateX: "0",
+          //   scale: 1,
+          // }}
+          // transition={{
+          //   duration: 0.3,
+          //   ease: "backInOut",
+          //   delay: 0.15,
+          // }}
         >
           Lucas
           <motion.span
@@ -75,20 +68,20 @@ function Hero() {
         </Header>
 
         <Header
-          type="color-white"
-          initial={{
-            translateY: "200%",
-            scale: 0,
-          }}
-          animate={{
-            translateY: "0",
-            scale: 1,
-          }}
-          transition={{
-            duration: 0.3,
-            ease: "backInOut",
-            delay: 0.5,
-          }}
+          type="test"
+          // initial={{
+          //   translateY: "200%",
+          //   scale: 0,
+          // }}
+          // animate={{
+          //   translateY: "0",
+          //   scale: 1,
+          // }}
+          // transition={{
+          //   duration: 0.3,
+          //   ease: "backInOut",
+          //   delay: 0.5,
+          // }}
         >
           <Span>WebDev</Span>
           <FramerMagnetic>
@@ -132,9 +125,7 @@ function Hero() {
         }}
       >
         find out <br /> more
-        <Span type="mleft">
-          <FontAwesomeIcon icon={faArrowDownLong} />
-        </Span>
+        <FontAwesomeIcon icon={faArrowDownLong} />
       </Circle>
     </ContainerColumn>
   );

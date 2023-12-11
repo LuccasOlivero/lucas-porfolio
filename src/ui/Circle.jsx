@@ -8,15 +8,16 @@ export const Circle = styled(motion.div)`
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: color 0.3s ease-in-out;
-  font-size: 1rem;
+  font-size: 0.7vw;
   font-weight: 600;
+  overflow: hidden;
 
   ${(props) =>
     props.position === "top" &&
     css`
       top: -2rem;
-      width: 13rem;
-      height: 13rem;
+      width: 9vw;
+      height: 9vw;
 
       display: flex;
       align-items: center;
@@ -39,9 +40,10 @@ export const Circle = styled(motion.div)`
   ${(props) =>
     props.position === "middle" &&
     css`
-      margin-top: 7rem;
-      width: 13rem;
-      height: 13rem;
+      margin-top: 8rem;
+      right: -2rem;
+      width: 9vw;
+      height: 9vw;
 
       display: flex;
       align-items: center;
@@ -63,18 +65,19 @@ export const Circle = styled(motion.div)`
   ${(props) =>
     props.position === "bottom" &&
     css`
-      position: absolute;
-      bottom: -6rem;
-      padding-top: 1rem;
-      width: 11.5rem;
-      height: 11.5rem;
+      bottom: 0;
+      width: 9vw;
+      height: 4.5vw;
+      border-radius: 4.5vw 4.5vw 0 0;
       font-weight: 500;
       letter-spacing: 2px;
+      padding-top: 1rem;
 
-      display: flex;
-      justify-content: center;
+      text-align: center;
+      position: absolute;
       background-color: #494f9665;
-      border: 1px solid var(--color-secondary);
+      border-bottom: none;
+      outline: 1px solid var(--color-secondary);
 
       @media (max-width: 1440px) {
         bottom: -3.5rem;
@@ -112,17 +115,17 @@ export const Circle = styled(motion.div)`
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    position: absolute;
 
     z-index: -1;
     position: absolute;
     background-color: var(--color-secondary);
-    clip-path: circle(0% at 49% 0);
+    clip-path: circle(0% at 50% 0);
     transition: clip-path 0.3s ease-in;
   }
 
   &:hover::before {
-    clip-path: circle(100.4% at 51% 0);
+    clip-path: circle(100% at 50% 0);
   }
 
   &:hover {

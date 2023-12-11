@@ -2,19 +2,28 @@ import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
 
 export const Header = styled(motion.h1)`
-  font-size: 13vw;
-  line-height: 0.9;
-  font-weight: 900;
+  font-size: 16vw;
+  line-height: 0.8;
+  font-weight: 600;
 
   position: relative;
   display: flex;
-  justify-content: space-between;
   color: white;
 
   ${(props) =>
-    props.type === "color-white" &&
+    props.type === "color-main" &&
     css`
       color: var(--color-main);
+    `}
+
+  ${(props) =>
+    props.type === "test" &&
+    css`
+      font-size: 13.5vw;
+      font-weight: 700;
+      color: var(--color-main);
+      justify-content: end;
+      right: -1rem;
     `}
 
   ${(props) =>
@@ -59,9 +68,10 @@ export const Header = styled(motion.h1)`
     css`
       font-size: 1.3rem;
       letter-spacing: 8px;
-      text-transform: uppercase;
       margin-top: 1.5rem;
+
       color: var(--color-main);
+      text-transform: uppercase;
 
       @media (max-width: 440px) {
         font-size: 1rem;
@@ -73,9 +83,10 @@ export const Header = styled(motion.h1)`
     css`
       font-size: 1.6rem;
       letter-spacing: 8px;
-      text-transform: uppercase;
       margin-top: 2rem;
+
       display: block;
+      text-transform: uppercase;
       color: var(--color-main);
 
       @media (max-width: 440px) {

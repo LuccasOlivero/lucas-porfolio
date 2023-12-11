@@ -28,12 +28,11 @@ export const Logo = styled(motion.div)`
     props.size === "bigger" &&
     css`
       position: absolute;
+
       width: 9vw;
       height: 9vw;
-      right: 2rem;
       top: 1.5rem;
-      right: 4rem;
-      margin-left: 2rem;
+      margin-left: 4vw;
       padding-right: 0;
       z-index: -1;
     `}

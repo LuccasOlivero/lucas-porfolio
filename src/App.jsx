@@ -1,13 +1,16 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import AppLayout from "./ui/AppLayout";
-import Navbar from "./components/Navbar";
+import { ToggleMenuProvider } from "./Context/ToggleMenuContext";
+import { GlobalStyle } from "./Styles/GlobalStyles";
+
 import About from "./Pages/About";
 import Work from "./Pages/Work";
-import { GlobalStyle } from "./Styles/GlobalStyles";
-import SpinningText from "./components/SpinningText";
-import { ContatMe } from "./ui/ContactMe";
 import Contact from "./Pages/Contact";
-import { ToggleMenuProvider } from "./Context/ToggleMenuContext";
+
+import SpinningText from "./components/SpinningText";
+import Navbar from "./components/Navbar";
+
+import AppLayout from "./ui/AppLayout";
+import { ContatMe } from "./ui/ContactMe";
 
 function App() {
   return (
