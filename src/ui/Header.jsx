@@ -14,16 +14,16 @@ export const Header = styled(motion.h1)`
     props.type === "color-main" &&
     css`
       color: var(--color-main);
+      left: -1rem;
     `}
 
   ${(props) =>
     props.type === "test" &&
     css`
-      font-size: 13.5vw;
+      font-size: 13vw;
       font-weight: 700;
       color: var(--color-main);
       justify-content: end;
-      right: -1rem;
     `}
 
   ${(props) =>

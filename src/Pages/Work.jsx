@@ -76,9 +76,7 @@ function Work() {
         <Row type="bigger2">
           <Circle position="bottom">
             find out <br /> more
-            <Span type="mleft">
-              <FontAwesomeIcon icon={faArrowDownLong} />
-            </Span>
+            <FontAwesomeIcon icon={faArrowDownLong} />
           </Circle>
         </Row>
       </Section>

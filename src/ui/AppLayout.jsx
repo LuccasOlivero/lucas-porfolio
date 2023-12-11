@@ -2,14 +2,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 
-import SpinningText from "../components/SpinningText";
 import TextCarousel from "./TextCarousel";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 
 import { Logo } from "./Logo";
 import { Circle } from "./Circle";
-import { ContatMe } from "./ContactMe";
 import { Section } from "./Section";
 import { Span } from "./Span";
 import { Row } from "./Row";
@@ -60,9 +58,7 @@ function AppLayout() {
           <Row type="bigger2">
             <Circle position="bottom">
               find out <br /> more
-              <Span type="mleft">
-                <FontAwesomeIcon icon={faArrowDownLong} />
-              </Span>
+              <FontAwesomeIcon icon={faArrowDownLong} />
             </Circle>
           </Row>
         </Section>

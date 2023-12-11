@@ -41,7 +41,6 @@ export const Circle = styled(motion.div)`
     props.position === "middle" &&
     css`
       margin-top: 8rem;
-      right: -2rem;
       width: 9vw;
       height: 9vw;
 

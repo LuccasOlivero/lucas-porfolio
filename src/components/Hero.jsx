@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import FramerMagnetic from "./FramerMagnetic";
 import { motion } from "framer-motion";
 
@@ -10,6 +9,21 @@ import { TextContainer } from "../ui/TextContainer";
 import { StyledNavLink } from "../ui/StyledNavLink";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
+import styled from "styled-components";
+
+const Span = styled.span`
+  position: absolute;
+`;
+
+const ContainerRigth = styled.div`
+  top: -1rem;
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  position: relative;
+  justify-content: center;
+`;
 
 function Hero() {
   return (
@@ -17,19 +31,19 @@ function Hero() {
       <TextContainer>
         <Header
           type="color-main"
-          // initial={{
-          //   translateX: "-100%",
-          //   scale: 0,
-          // }}
-          // animate={{
-          //   translateX: "0",
-          //   scale: 1,
-          // }}
-          // transition={{
-          //   duration: 0.3,
-          //   ease: "backInOut",
-          //   delay: 0.15,
-          // }}
+          initial={{
+            translateX: "-100%",
+            scale: 0,
+          }}
+          animate={{
+            translateX: "0",
+            scale: 1,
+          }}
+          transition={{
+            duration: 0.3,
+            ease: "backInOut",
+            delay: 0.15,
+          }}
         >
           Lucas
           <motion.span
@@ -69,41 +83,43 @@ function Hero() {
 
         <Header
           type="test"
-          // initial={{
-          //   translateY: "200%",
-          //   scale: 0,
-          // }}
-          // animate={{
-          //   translateY: "0",
-          //   scale: 1,
-          // }}
-          // transition={{
-          //   duration: 0.3,
-          //   ease: "backInOut",
-          //   delay: 0.5,
-          // }}
+          initial={{
+            translateY: "200%",
+            scale: 0,
+          }}
+          animate={{
+            translateY: "0",
+            scale: 1,
+          }}
+          transition={{
+            duration: 0.3,
+            ease: "backInOut",
+            delay: 0.5,
+          }}
         >
           <Span>WebDev</Span>
-          <FramerMagnetic>
-            <StyledNavLink to="work">
-              <Circle
-                position="middle"
-                initial={{
-                  opacity: 0,
-                  scale: 0,
-                }}
-                animate={{
-                  opacity: 1,
-                  scale: 1,
-                }}
-                transition={{
-                  delay: 1.3,
-                }}
-              >
-                work
-              </Circle>
-            </StyledNavLink>
-          </FramerMagnetic>
+          <ContainerRigth>
+            <FramerMagnetic>
+              <StyledNavLink to="work">
+                <Circle
+                  position="middle"
+                  initial={{
+                    opacity: 0,
+                    scale: 0,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    scale: 1,
+                  }}
+                  transition={{
+                    delay: 1.3,
+                  }}
+                >
+                  work
+                </Circle>
+              </StyledNavLink>
+            </FramerMagnetic>
+          </ContainerRigth>
         </Header>
       </TextContainer>
 

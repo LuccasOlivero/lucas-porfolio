@@ -99,18 +99,6 @@ export const Span = styled(motion.span)`
     `}
 
     ${(props) =>
-    props.type === "mleft" &&
-    css`
-      margin-left: -0.8rem;
-      margin-top: 1.9rem;
-      position: relative;
-
-      @media (max-width: 768px) {
-        margin-top: 0.8rem;
-      }
-    `}
-
-    ${(props) =>
     props.type === "mleft2" &&
     css`
       margin-top: 0.8rem;
