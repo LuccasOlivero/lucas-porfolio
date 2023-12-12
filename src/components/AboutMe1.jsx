@@ -7,6 +7,7 @@ import { Paragraph } from "../ui/Paragraph";
 import { Logo } from "../ui/Logo";
 import { TextContainer } from "../ui/TextContainer";
 import { Span } from "../ui/Span";
+import { NavLink } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -42,13 +43,15 @@ function AboutMe1() {
           </Paragraph>
         </TextContainer>
 
-        <FramerMagnetic>
-          <Avatar
-            whileTap={{
-              scale: 0.98,
-            }}
-          />
-        </FramerMagnetic>
+        <NavLink to="about" onClick={() => window.scroll(0, 0)}>
+          <FramerMagnetic>
+            <Avatar
+              whileTap={{
+                scale: 0.98,
+              }}
+            />
+          </FramerMagnetic>
+        </NavLink>
       </Container>
     </>
   );

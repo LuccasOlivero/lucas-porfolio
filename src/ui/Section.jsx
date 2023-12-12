@@ -34,10 +34,11 @@ export const Section = styled.div`
     props.type === "primary2" &&
     css`
       height: 100%;
-      padding: 0 4rem;
+      padding: 2rem 4rem;
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
 
       @media (max-width: 1024px) {
         height: 85vh;

@@ -7,6 +7,7 @@ import { Header } from "../ui/Header";
 import { Section } from "../ui/Section";
 import { Logo } from "../ui/Logo";
 import { motion } from "framer-motion";
+import FramerMagnetic from "../components/FramerMagnetic";
 
 const Input = styled.input`
   width: 100%;
@@ -21,7 +22,7 @@ const Input = styled.input`
 const Form = styled.form`
   width: 44rem;
   height: 100%;
-  margin: 2rem 0;
+  margin-bottom: 3rem;
 
   display: flex;
   flex-direction: column;
@@ -32,6 +33,7 @@ const Button = styled(motion.button)`
   width: 11rem;
   height: 11rem;
   border-radius: 50%;
+  color: var(--color-secondary);
   border: 1px solid var(--color-secondary);
 
   display: flex;
@@ -87,11 +89,6 @@ const Label = styled.label`
   text-transform: uppercase;
 `;
 
-const Span = styled.span`
-  margin: auto;
-  padding-top: 2rem;
-`;
-
 function Contact() {
   function handleSubmit(e) {
     e.preventDefault();
@@ -124,18 +121,18 @@ function Contact() {
             <Logo /> you message
           </Label>
           <Input type="text" placeholder="I want to have a amazing website" />
-
-          <Span>
-            <Button
-              position="bottom"
-              whileTap={{
-                scale: 0.95,
-              }}
-            >
-              Submit
-            </Button>
-          </Span>
         </Form>
+
+        <FramerMagnetic>
+          <Button
+            position="bottom"
+            whileTap={{
+              scale: 0.95,
+            }}
+          >
+            Submit
+          </Button>
+        </FramerMagnetic>
       </Section>
       <Footer />
     </>

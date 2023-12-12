@@ -51,7 +51,7 @@ function SpinningText({ text, children }) {
   const deg = 360 / length;
 
   return (
-    <NavLink to="contact">
+    <NavLink to="contact" onClick={() => window.scroll(0, 0)}>
       <Container
         whileTap={{
           scale: 0.95,

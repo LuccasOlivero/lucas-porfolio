@@ -61,7 +61,7 @@ export const Span = styled(motion.span)`
       font-size: 1rem;
       font-weight: 600;
       padding-left: 0.2rem;
-      align-items: end;
+      align-items: center;
 
       @media (max-width: 1440px) {
         font-size: 0.7rem;

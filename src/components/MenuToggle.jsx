@@ -157,7 +157,7 @@ function MenuToggle() {
 
       <Section>
         <Column>
-          <ContactInfo />
+          <ContactInfo color="third" />
         </Column>
 
         <StyledNavLink to="work" onClick={handleClickMenu}>

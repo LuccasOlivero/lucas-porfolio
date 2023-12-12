@@ -13,7 +13,7 @@ export const Paragraph = styled.p`
       display: flex;
       justify-content: space-between;
       margin-top: 0.7rem;
-      border-bottom: 2px solid var(--color-secondary);
+      border-bottom: 1px solid var(--color-secondary-blur);
     `}
 
   @media (max-width: 1024px) {

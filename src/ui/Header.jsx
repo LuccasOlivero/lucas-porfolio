@@ -53,9 +53,12 @@ export const Header = styled(motion.h1)`
       font-size: 1.3rem;
       letter-spacing: 8px;
       padding-bottom: 0.5rem;
-      text-transform: uppercase;
-      border-bottom: 1px solid var(--color-main);
+
+      display: flex;
       color: var(--color-main);
+      text-transform: uppercase;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--color-main);
 
       @media (max-width: 440px) {
         font-size: 1rem;
@@ -95,7 +98,23 @@ export const Header = styled(motion.h1)`
     `}
 
     ${(props) =>
-    props.type === "min3white" &&
+    props.color === "main" &&
+    css`
+      font-size: 1.6rem;
+      letter-spacing: 8px;
+      margin-top: 2rem;
+
+      display: block;
+      text-transform: uppercase;
+      color: var(--color-main);
+
+      @media (max-width: 440px) {
+        font-size: 1rem;
+      }
+    `}
+
+    ${(props) =>
+    props.color === "third" &&
     css`
       font-size: 1.6rem;
       letter-spacing: 8px;

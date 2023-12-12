@@ -1,21 +1,21 @@
 import { Header } from "../ui/Header";
 import { Span } from "../ui/Span";
 
-function ContactInfo() {
+function ContactInfo({ color }) {
   return (
     <>
-      <Header type="min3white">
+      <Header color={color}>
         email
         <Span type="mleft2">lucas.dev@gmail.com</Span>
       </Header>
-      <Header type="min3white">
+      <Header color={color}>
         linkedin
         <Span type="mleft2">linkedin.com/in/lucas-olivero</Span>
       </Header>
-      <Header type="min3white">
+      <Header color={color}>
         twitter / x<Span type="mleft2">@luccasOlivero</Span>
       </Header>
-      <Header type="min3white">
+      <Header color={color}>
         github
         <Span type="mleft2">github.com/LuccasOlivero</Span>
       </Header>

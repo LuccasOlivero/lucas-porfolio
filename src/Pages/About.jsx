@@ -13,6 +13,8 @@ import { Section } from "../ui/Section";
 import { Span } from "../ui/Span";
 import { Circle } from "../ui/Circle";
 import { Row } from "../ui/Row";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInfinity } from "@fortawesome/free-solid-svg-icons";
 
 const TextContainer = styled.div`
   width: 80%;
@@ -51,7 +53,7 @@ function AboutMe() {
 
       <Container>
         <Box size="medium">
-          <ContactInfo />
+          <ContactInfo color="main" />
         </Box>
 
         <Box size="large">
@@ -73,13 +75,22 @@ function AboutMe() {
             Education
           </Span>
           <Paragraph type="noMargin" as="p">
-            Kloketen Anexo, formacion en informatica
-            <Span type="text4">- 2019</Span>
+            Kloketen Anexo, education in computer science (JavaScript, Java).
+            <Span type="text4">2016 - 2019</Span>
           </Paragraph>
 
+          {/* <Paragraph type="noMargin" as="p">
+            I completed three years of a psychology degree at the National
+            University of Córdoba.
+            <Span type="text4">2020 - 2022</Span>
+          </Paragraph> */}
+
           <Paragraph type="noMargin" as="p">
-            Kloketen Anexo, formacion en informatica
-            <Span type="text4"> -current</Span>
+            Self-Taught Learning.
+            <Span type="text4">
+              - <Span type="mt" />
+              <FontAwesomeIcon icon={faInfinity} size="xl" />
+            </Span>
           </Paragraph>
         </TextContainer>
       </Container>
