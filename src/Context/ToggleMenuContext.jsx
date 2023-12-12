@@ -1,20 +1,9 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 const ToggleMenuContext = createContext();
 
 function ToggleMenuProvider({ children }) {
   const [isOpenMenuToggle, setIsOpenMenuToggle] = useState(false);
-
-  useEffect(() => {
-    if (isOpenMenuToggle) {
-      // window.scrollTo(0, 0);
-      document.body.style.overflow = "hidden";
-    }
-
-    return () => {
-      document.body.style.overflow = "visible";
-    };
-  }, [isOpenMenuToggle]);
 
   return (
     <ToggleMenuContext.Provider

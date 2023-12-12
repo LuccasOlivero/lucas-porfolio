@@ -10,6 +10,7 @@ import { Header } from "../ui/Header";
 import { Buttom } from "../ui/Buttom";
 import { Span } from "../ui/Span";
 import { Row } from "../ui/Row";
+import { StyledNavLink } from "../ui/StyledNavLink";
 
 const StyledFooter = styled.footer`
   position: absolute;
@@ -85,7 +86,9 @@ function Footer() {
 
         <LogosContact>
           <FramerMagnetic>
-            <Buttom type="large">lucas.dev@gmail.com</Buttom>
+            <StyledNavLink to="/contact" onClick={() => window.scroll(0, 0)}>
+              <Buttom type="large">lucas.dev@gmail.com</Buttom>
+            </StyledNavLink>
           </FramerMagnetic>
 
           <FramerMagnetic>
@@ -106,7 +109,7 @@ function Footer() {
         </LogosContact>
 
         <Row type="borderTop2">
-          &copy; All rights reserved. Luccas Olivero {new Date().getFullYear()}.
+          &copy; All rights reserved. Lucas Olivero {new Date().getFullYear()}.
         </Row>
       </Section>
     </StyledFooter>

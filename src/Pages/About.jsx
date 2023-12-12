@@ -87,10 +87,8 @@ function AboutMe() {
 
           <Paragraph type="noMargin" as="p">
             Self-Taught Learning.
-            <Span type="text4">
-              - <Span type="mt" />
-              <FontAwesomeIcon icon={faInfinity} size="xl" />
-            </Span>
+            <Span type="mt" />
+            <FontAwesomeIcon icon={faInfinity} />
           </Paragraph>
         </TextContainer>
       </Container>

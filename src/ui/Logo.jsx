@@ -1,24 +1,16 @@
 import { motion } from "framer-motion";
-import styled, { css, keyframes } from "styled-components";
-
-const hover = keyframes`
- from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(15deg);
-  }
-`;
+import styled, { css } from "styled-components";
 
 export const Logo = styled(motion.div)`
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  transition: rotate 0.2s ease-in;
+
   background-image: url("/logo.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  width: 2rem;
-  height: 2rem;
-  margin-right: 1rem;
-  transition: ${hover} 0.2s ease-in;
 
   &:hover {
     rotate: 61deg;

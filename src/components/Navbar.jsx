@@ -50,10 +50,14 @@ const Container = styled.div`
 function Navbar() {
   const { isOpenMenuToggle, setIsOpenMenuToggle } = useToggleMenu();
 
+  function handleClickToggle() {
+    window.scroll(0, 0);
+  }
+
   return (
     <Container>
       <StyledNav>
-        <NavLink to="/">
+        <NavLink to="/" onClick={handleClickToggle}>
           <Logo />
         </NavLink>
         <Header>since 2022</Header>

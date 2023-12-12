@@ -59,13 +59,12 @@ function Cards() {
   return (
     <Container>
       <Card
-        title="PROTOTYPING"
-        text="I use high-fidelity prototypes to get the best experience for your site."
+        title="WEB DESIGN "
+        text="My main focus is designing pixel perfect websites and interfaces."
         type="borderRight"
       >
-        <Svg />
+        <Svg3 />
       </Card>
-
       <Card
         title="WEB DEVELOPMENT"
         text="I build websites from scratch that clients can manage in the way they want."
@@ -73,12 +72,11 @@ function Cards() {
       >
         <Svg2 />
       </Card>
-
       <Card
-        title="WEB DESIGN "
-        text="My main focus is designing pixel perfect websites and interfaces."
+        title="PROTOTYPING"
+        text="I use high-fidelity prototypes to get the best experience for your site."
       >
-        <Svg3 />
+        <Svg />
       </Card>
     </Container>
   );

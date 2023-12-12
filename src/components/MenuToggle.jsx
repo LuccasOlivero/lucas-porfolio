@@ -42,13 +42,36 @@ const Header = styled.h2`
   ${(props) =>
     props.type === "text-black" &&
     css`
+      font-size: 8rem;
+      padding-left: 2rem;
+      letter-spacing: 10px;
+
       display: flex;
       align-items: end;
       color: var(--color-third);
-      font-size: 8rem;
-      letter-spacing: 10px;
-      padding-left: 2rem;
       border-bottom: 2px solid var(--color-third);
+      transition: color 0.2s ease-in;
+
+      &:hover {
+        color: white;
+      }
+
+      &::after {
+        content: "";
+        left: 0;
+        width: 0;
+        bottom: -2px;
+        height: 2px;
+        width: 0%;
+        position: absolute;
+        background-color: white;
+        transition: width 0.2s ease-in;
+      }
+
+      &:hover::after {
+        content: "";
+        width: 100%;
+      }
     `}
 `;
 
@@ -67,25 +90,25 @@ const Container = styled(motion.div)`
   z-index: 1000;
 
   position: fixed;
-  background-color: #3077f1d2;
+  background-color: #3077f1b6;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 `;
 
 const Section = styled.div`
-  display: flex;
-  height: 100%;
-  padding: 0 4rem;
-  border-left: 2px solid white;
-  border-right: 2px solid white;
-  display: flex;
   gap: 2rem;
+  width: 75vw;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 4rem;
+
+  display: flex;
   align-items: end;
+  position: relative;
   flex-direction: column;
   justify-content: center;
-  width: 75vw;
-  margin: 0 auto;
-  position: relative;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
 
   @media (max-width: 768px) {
     padding: 0 2rem;
@@ -138,7 +161,13 @@ function MenuToggle() {
       <ContainerNav>
         <StyledNav>
           <StyledNavLink to="/">
-            <Logo size="white" />
+            <Logo
+              size="white"
+              onClick={() => {
+                setIsOpenMenuToggle(!isOpenMenuToggle);
+                window.scroll(0, 0);
+              }}
+            />
           </StyledNavLink>
 
           <Header>since 2022</Header>
@@ -160,20 +189,20 @@ function MenuToggle() {
           <ContactInfo color="third" />
         </Column>
 
-        <StyledNavLink to="work" onClick={handleClickMenu}>
+        <StyledNavLink to="/work" onClick={handleClickMenu}>
           <Header type="text-black">
             <Span type="text2">.01</Span>
             Work
           </Header>
         </StyledNavLink>
 
-        <StyledNavLink to="about" onClick={handleClickMenu}>
+        <StyledNavLink to="/about" onClick={handleClickMenu}>
           <Header type="text-black">
             <Span type="text2">.02</Span>About me
           </Header>
         </StyledNavLink>
 
-        <StyledNavLink to="contact" onClick={handleClickMenu}>
+        <StyledNavLink to="/contact" onClick={handleClickMenu}>
           <Header type="text-black">
             <Span type="text2">.03</Span>Contact
           </Header>
