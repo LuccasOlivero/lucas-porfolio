@@ -99,9 +99,10 @@ export const Header = styled(motion.h1)`
     css`
       font-size: 1.6rem;
       letter-spacing: 8px;
-      text-transform: uppercase;
       margin-top: 2rem;
+
       display: block;
+      text-transform: uppercase;
       color: var(--color-third);
 
       @media (max-width: 440px) {
