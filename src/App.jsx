@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ToggleMenuProvider } from "./Context/ToggleMenuContext";
 import { GlobalStyle } from "./Styles/GlobalStyles";
+import { Toaster } from "react-hot-toast";
 
 import About from "./Pages/About";
 import Work from "./Pages/Work";
@@ -11,8 +12,8 @@ import Navbar from "./components/Navbar";
 
 import AppLayout from "./ui/AppLayout";
 import { ContatMe } from "./ui/ContactMe";
+
 import { TEXT_SPINNING } from "./Constants/constant";
-import { Toaster } from "react-hot-toast";
 
 function App() {
   return (

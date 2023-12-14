@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { NavLink } from "react-router-dom";
 import FramerMagnetic from "./FramerMagnetic";
 
 import { Avatar } from "../ui/Avatar";
@@ -7,7 +7,7 @@ import { Paragraph } from "../ui/Paragraph";
 import { Logo } from "../ui/Logo";
 import { TextContainer } from "../ui/TextContainer";
 import { Span } from "../ui/Span";
-import { NavLink } from "react-router-dom";
+import { ABOUT_ME_TEXT } from "../Constants/constant";
 
 const Container = styled.div`
   display: flex;
@@ -32,17 +32,8 @@ function AboutMe1() {
             <Logo />
             about me
           </Span>
-
-          <Paragraph>
-            👋 Hi, I&apos;m Lucas Olivero, a Frontend Developer from Argentina
-            with 1 year of expertise. Specializing in React and experienced with
-            Angular, I&apos;m dedicated to delivering high-quality solutions.
-            Passionate about crafting exceptional websites that exceed client
-            expectations, I am committed to providing an outstanding user
-            experience.
-          </Paragraph>
+          <Paragraph>{ABOUT_ME_TEXT}</Paragraph>
         </TextContainer>
-
         <NavLink to="about" onClick={() => window.scroll(0, 0)}>
           <FramerMagnetic>
             <Avatar

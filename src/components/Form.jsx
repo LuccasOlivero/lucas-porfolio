@@ -1,12 +1,22 @@
-import { useRef, useState } from "react";
+import toast from "react-hot-toast";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 
-import { Logo } from "../ui/Logo";
-import toast from "react-hot-toast";
-import { useForm } from "react-hook-form";
-import FramerMagnetic from "./FramerMagnetic";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
+
+import { Logo } from "../ui/Logo";
+
+import FramerMagnetic from "./FramerMagnetic";
+
+import {
+  EMAIL_TEMPLATE,
+  ERROR_MESSAGE,
+  ID_SERVICE,
+  PUBLIC_KEY,
+  SUCCES_MESSAGE,
+} from "../Constants/constant";
 
 const StyledForm = styled.form`
   width: 44rem;
@@ -97,18 +107,13 @@ function Form() {
     try {
       setIsLoading(true);
       await emailjs
-        .sendForm(
-          "service_tig1875",
-          "template_dy7lqtk",
-          form.current,
-          "aJJGUNBmIZNi_LrLb"
-        )
+        .sendForm(ID_SERVICE, EMAIL_TEMPLATE, form.current, PUBLIC_KEY)
         .then(() => {
-          toast.success("your message has been send correctly");
+          toast.success(SUCCES_MESSAGE);
           reset();
         });
     } catch (err) {
-      toast.error(`something went wrong, please try again`);
+      toast.error(ERROR_MESSAGE);
     } finally {
       setIsLoading(false);
     }
@@ -165,7 +170,7 @@ function Form() {
               scale: 0.95,
             }}
           >
-            {isLoading ? "Sending..." : "Submit"}
+            {!isLoading ? "Submit" : "Sending..."}
           </Button>
         </FramerMagnetic>
       </StyledForm>

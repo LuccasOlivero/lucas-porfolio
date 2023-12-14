@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
 import Card from "./Card";
 
 const Container = styled.div`
@@ -11,40 +12,26 @@ const Container = styled.div`
 `;
 
 const Svg = styled.figure`
+  ${(props) =>
+    props.file === "web" &&
+    css`
+      background-image: url(./web.svg);
+    `}
+  ${(props) =>
+    props.file === "pc" &&
+    css`
+      background-image: url(./pc.svg);
+    `}
+
+  ${(props) =>
+    props.file === "proto" &&
+    css`
+      background-image: url(./proto.svg);
+    `}
+
   width: 7vw;
   height: 7vw;
 
-  background-image: url(./proto.svg);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  @media (max-width: 440px) {
-    width: 60px;
-    height: 60px;
-  }
-`;
-
-const Svg2 = styled.figure`
-  width: 7vw;
-  height: 7vw;
-
-  background-image: url(./pc.svg);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  @media (max-width: 440px) {
-    width: 60px;
-    height: 60px;
-  }
-`;
-
-const Svg3 = styled.figure`
-  width: 7vw;
-  height: 7vw;
-
-  background-image: url(./web.svg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -63,20 +50,20 @@ function Cards() {
         text="My main focus is designing pixel perfect websites and interfaces."
         type="borderRight"
       >
-        <Svg3 />
+        <Svg file="web" />
       </Card>
       <Card
         title="WEB DEVELOPMENT"
         text="I build websites from scratch that clients can manage in the way they want."
         type="borderRight"
       >
-        <Svg2 />
+        <Svg file="pc" />
       </Card>
       <Card
         title="PROTOTYPING"
         text="I use high-fidelity prototypes to get the best experience for your site."
       >
-        <Svg />
+        <Svg file="proto" />
       </Card>
     </Container>
   );
