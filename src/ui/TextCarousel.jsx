@@ -16,11 +16,11 @@ const Slide = styled.div`
   width: 100%;
   height: 5rem;
 
-  position: relative;
   display: flex;
-  align-items: center;
   overflow: hidden;
+  position: relative;
   white-space: nowrap;
+  align-items: center;
   background-image: linear-gradient(#495096, #3076f1);
 
   ${(props) =>
@@ -43,8 +43,8 @@ const TextSlide = styled.div`
 
 const Text = styled.p`
   color: white;
-  font-size: 1.5rem;
   font-weight: 550;
+  font-size: 1.5rem;
   margin-right: 6rem;
   line-height: 1.4rem;
 
@@ -65,7 +65,6 @@ function TextCarousel({ type, text1, text2 }) {
             <Span type="mt">{text2}</Span>
           </Span>
         </Text>
-
         <Text>
           {text1}
           <Span>
@@ -73,7 +72,6 @@ function TextCarousel({ type, text1, text2 }) {
             <Span type="mt">{text2}</Span>
           </Span>
         </Text>
-
         <Text>
           {text1}
           <Span>
@@ -81,7 +79,6 @@ function TextCarousel({ type, text1, text2 }) {
             <Span type="mt">{text2}</Span>
           </Span>
         </Text>
-
         <Text>
           {text1}
           <Span>
@@ -89,7 +86,6 @@ function TextCarousel({ type, text1, text2 }) {
             <Span type="mt">{text2}</Span>
           </Span>
         </Text>
-
         <Text>
           {text1}
           <Span>
@@ -97,7 +93,6 @@ function TextCarousel({ type, text1, text2 }) {
             <Span type="mt">{text2}</Span>
           </Span>
         </Text>
-
         <Text>
           {text1}
           <Span>
@@ -105,7 +100,6 @@ function TextCarousel({ type, text1, text2 }) {
             <Span type="mt">{text2}</Span>
           </Span>
         </Text>
-
         <Text>
           {text1}
           <Span>
@@ -113,7 +107,6 @@ function TextCarousel({ type, text1, text2 }) {
             <Span type="mt">{text2}</Span>
           </Span>
         </Text>
-
         <Text>
           {text1}
           <Span>
@@ -121,7 +114,6 @@ function TextCarousel({ type, text1, text2 }) {
             <Span type="mt">{text2}</Span>
           </Span>
         </Text>
-
         <Text>
           {text1}
           <Span>
@@ -129,7 +121,6 @@ function TextCarousel({ type, text1, text2 }) {
             <Span type="mt">{text2}</Span>
           </Span>
         </Text>
-
         <Text>
           {text1}
           <Span>
@@ -137,7 +128,6 @@ function TextCarousel({ type, text1, text2 }) {
             <Span type="mt">{text2}</Span>
           </Span>
         </Text>
-
         <Text>
           {text1}
           <Span>
@@ -145,7 +135,6 @@ function TextCarousel({ type, text1, text2 }) {
             <Span type="mt">{text2}</Span>
           </Span>
         </Text>
-
         <Text>
           {text1}
           <Span>
@@ -153,7 +142,6 @@ function TextCarousel({ type, text1, text2 }) {
             <Span type="mt">{text2}</Span>
           </Span>
         </Text>
-
         <Text>
           {text1}
           <Span>
@@ -161,7 +149,6 @@ function TextCarousel({ type, text1, text2 }) {
             <Span type="mt">{text2}</Span>
           </Span>
         </Text>
-
         <Text>
           {text1}
           <Span>

@@ -70,13 +70,12 @@ function AboutMe() {
             Education
           </Span>
           <Paragraph type="noMargin" as="p">
-            Kloketen Anexo, education in computer science (JavaScript, Java).
+            Education in computer science, Kloketen Anexo (JavaScript, Java).
             <Span type="text4">2016 - 2019</Span>
           </Paragraph>
 
           <Paragraph type="noMargin" as="p">
-            Three years of a psychology degree at the National University of
-            Córdoba.
+            Three-year psychology degree at the National University of Córdoba.
             <Span type="text4">2019 - 2022</Span>
           </Paragraph>
 

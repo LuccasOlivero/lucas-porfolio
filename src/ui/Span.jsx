@@ -61,6 +61,7 @@ export const Span = styled(motion.span)`
       font-size: 1rem;
       font-weight: 600;
       padding-left: 0.2rem;
+
       align-items: center;
 
       @media (max-width: 1440px) {
@@ -75,12 +76,12 @@ export const Span = styled(motion.span)`
     ${(props) =>
     props.type === "text5" &&
     css`
+      z-index: 100;
+      font-weight: 400;
+      line-height: 33px;
       font-size: 1.2rem;
       padding-top: 0.5rem;
       letter-spacing: 3px;
-      line-height: 33px;
-      font-weight: 400;
-      z-index: 100;
       color: var(--color-main);
 
       @media (max-width: 440px) {
@@ -94,6 +95,7 @@ export const Span = styled(motion.span)`
     props.type === "text6" &&
     css`
       margin-left: 1.4rem;
+
       flex-direction: column;
       justify-content: end;
     `}

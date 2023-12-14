@@ -6,8 +6,8 @@ export const Header = styled(motion.h1)`
   line-height: 0.8;
   font-weight: 600;
 
-  color: white;
   display: flex;
+  color: white;
   position: relative;
 
   ${(props) =>
