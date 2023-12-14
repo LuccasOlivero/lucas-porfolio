@@ -1,7 +1,9 @@
-import styled from "styled-components";
-import { Logo } from "../ui/Logo";
 import { useRef, useState } from "react";
+import styled from "styled-components";
 import emailjs from "@emailjs/browser";
+
+import { Logo } from "../ui/Logo";
+import toast from "react-hot-toast";
 
 const StyledForm = styled.form`
   width: 44rem;
@@ -48,17 +50,14 @@ function Form() {
           form.current,
           "aJJGUNBmIZNi_LrLb"
         )
-        .then(() => console.log("envia2"));
+        .then(() => toast("nice, your message has been send"));
       setIsLoading(false);
     } catch (err) {
-      console.error(err);
+      toast(`something went wrong ${err}`);
+    } finally {
       setIsLoading(false);
     }
   }
-
-  // function handleSubmit(e) {
-  //   e.preventDefault();
-  // }
 
   return (
     <StyledForm onSubmit={submit} ref={form}>
