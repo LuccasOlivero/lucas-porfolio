@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar";
 import AppLayout from "./ui/AppLayout";
 import { ContatMe } from "./ui/ContactMe";
 import { TEXT_SPINNING } from "./Constants/constant";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -33,6 +34,24 @@ function App() {
         </ToggleMenuProvider>
       </BrowserRouter>
       <GlobalStyle />
+      <Toaster
+        position="bottom-right"
+        gutter={12}
+        containerStyle={{ margin: "8px" }}
+        toastOptions={{
+          success: {
+            duration: 3000,
+          },
+          error: {
+            duration: 5000,
+          },
+          style: {
+            fontSize: "16px",
+            maxWidth: "600px",
+            padding: "16px 24px",
+          },
+        }}
+      ></Toaster>
     </>
   );
 }
