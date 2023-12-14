@@ -18,32 +18,33 @@ export const Avatar = styled(motion.div)`
 
   &::after {
     content: "";
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 50%;
-    background-color: #3077f11f;
     z-index: 200;
+    border-radius: 50%;
+
+    background-color: #3077f11f;
+    position: absolute;
   }
 
   &::before {
     content: "go to about me";
-    color: white;
-    font-size: 1.7rem;
-    font-weight: 500;
-    letter-spacing: 4px;
-    opacity: 0;
-    visibility: hidden;
-
     top: 0;
     left: 0;
+    opacity: 0;
     width: 100%;
     height: 100%;
+    font-weight: 500;
+    font-size: 1.7rem;
+    letter-spacing: 4px;
     border-radius: 50%;
-    position: absolute;
+
     display: flex;
+    color: white;
+    position: absolute;
+    visibility: hidden;
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(4px);

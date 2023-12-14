@@ -6,8 +6,6 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 
-import { Logo } from "../ui/Logo";
-
 import FramerMagnetic from "./FramerMagnetic";
 
 import {
@@ -17,6 +15,8 @@ import {
   PUBLIC_KEY,
   SUCCES_MESSAGE,
 } from "../Constants/constant";
+
+import { Logo } from "../ui/Logo";
 
 const StyledForm = styled.form`
   width: 44rem;

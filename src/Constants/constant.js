@@ -10,3 +10,11 @@ Angular, I&apos;m dedicated to delivering high-quality solutions.
 Passionate about crafting exceptional websites that exceed client
 expectations, I am committed to providing an outstanding user
 experience.`;
+export const EMAIL = "lucas.dev@gmail.com";
+export const LINKEDIN = "linkedin.com/in/lucas-olivero";
+export const TWITTER = "@luccasOlivero";
+export const GITHUB = "github.com/LuccasOlivero";
+export const LANGUAGES = "HTML5, CSS3, JavaScript, TypeScript, Java.";
+export const FRAMEWORKS = "React, Angular, Spring, Tailwind CSS, Node.js.";
+export const TECNOLOGIES =
+  "Git, Supabase, Framer Motion, Redux, TanStack Query, Next.js.";

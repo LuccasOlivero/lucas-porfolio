@@ -7,10 +7,10 @@ export const Logo = styled(motion.div)`
   margin-right: 1rem;
   transition: rotate 0.2s ease-in;
 
-  background-image: url("/logo.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  background-image: url("/logo.svg");
 
   &:hover {
     rotate: 61deg;
@@ -24,9 +24,9 @@ export const Logo = styled(motion.div)`
       width: 9vw;
       height: 9vw;
       top: 1.5rem;
-      margin-left: 4vw;
-      padding-right: 0;
       z-index: -1;
+      padding-right: 0;
+      margin-left: 4vw;
     `}
 
   ${(props) =>

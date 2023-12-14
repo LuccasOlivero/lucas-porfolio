@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
+import { motion } from "framer-motion";
 
 const spin = keyframes`
 0% {
@@ -12,17 +12,18 @@ const spin = keyframes`
 `;
 
 const Container = styled(motion.div)`
-  position: fixed;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   left: 4vw;
   bottom: 4rem;
-  cursor: pointer;
+  width: 250px;
+  height: 250px;
   z-index: 1000;
+  border-radius: 50%;
+
+  display: flex;
+  cursor: pointer;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
 
   @media (max-width: 768px) {
     display: none;
@@ -32,17 +33,19 @@ const Container = styled(motion.div)`
 const TextWrapper = styled.div`
   width: 100%;
   height: 100%;
-  position: absolute;
-  animation: ${spin} 45s linear infinite;
+
   color: black;
-  text-transform: uppercase;
   border-radius: 50%;
+  position: absolute;
+  text-transform: uppercase;
+  animation: ${spin} 45s linear infinite;
 `;
 
 const Text = styled.span`
   position: absolute;
-  font-size: 1rem;
+
   left: 50%;
+  font-size: 1rem;
   transform-origin: 0 125px;
 `;
 
@@ -51,7 +54,7 @@ function SpinningText({ text, children }) {
   const deg = 360 / length;
 
   return (
-    <NavLink to="contact" onClick={() => window.scroll(0, 0)}>
+    <NavLink to="/contact" onClick={() => window.scroll(0, 0)}>
       <Container
         whileTap={{
           scale: 0.95,

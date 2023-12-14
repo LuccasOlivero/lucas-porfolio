@@ -1,5 +1,10 @@
-import FramerMagnetic from "./FramerMagnetic";
+import styled from "styled-components";
 import { motion } from "framer-motion";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
+
+import FramerMagnetic from "./FramerMagnetic";
 
 import { Logo } from "../ui/Logo";
 import { Header } from "../ui/Header";
@@ -7,9 +12,6 @@ import { Circle } from "../ui/Circle";
 import { ContainerColumn } from "../ui/ContainerColumn";
 import { TextContainer } from "../ui/TextContainer";
 import { StyledNavLink } from "../ui/StyledNavLink";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
-import styled from "styled-components";
 
 const Span = styled.span`
   position: absolute;
@@ -77,6 +79,7 @@ function Hero() {
                 </Circle>
               </StyledNavLink>
             </FramerMagnetic>
+
             <Logo size="bigger" />
           </motion.span>
         </Header>

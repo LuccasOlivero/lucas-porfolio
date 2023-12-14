@@ -2,13 +2,13 @@ import styled, { css, keyframes } from "styled-components";
 
 const reveal = keyframes`
   from{
-    opacity: 0;
     scale: .8;
+    opacity: 0;
     translate: 0 50px;
   }
   to{
-    opacity: 1;
     scale: 1;
+    opacity: 1;
     translate: 0 0;
   }
 `;
@@ -17,15 +17,15 @@ export const Row = styled.div`
   width: 100%;
   height: 5rem;
   padding: 0 4rem;
-  font-size: 1.5rem;
   font-weight: 550;
+  font-size: 1.5rem;
   letter-spacing: 0.3rem;
 
-  color: var(--color-main);
-  position: relative;
-  overflow: hidden;
   display: flex;
+  overflow: hidden;
+  position: relative;
   align-items: center;
+  color: var(--color-main);
 
   @media (max-width: 768px) {
     padding: 0 2rem;
@@ -50,11 +50,11 @@ export const Row = styled.div`
     css`
       bottom: 0;
       width: 100%;
-      color: white;
       font-size: 1rem;
       letter-spacing: 3px;
       border-top: 1px solid white;
 
+      color: white;
       position: absolute;
       text-transform: uppercase;
       justify-content: space-between;
@@ -73,32 +73,33 @@ export const Row = styled.div`
     props.type === "bigger" &&
     css`
       height: 7rem;
-      font-size: 4.4rem;
       font-weight: 700;
+      font-size: 4.4rem;
       transition: color 0.2s ease-in;
       border-bottom: 2px solid var(--color-main);
 
       position: relative;
       justify-content: space-between;
 
-      // scroll animation only with css!
+      // scroll animation only with css!!
       animation: ${reveal} linear both;
       animation-timeline: view();
       animation-range: entry 5% cover 20%;
 
       &::before {
         content: "";
-        position: absolute;
         top: 0;
         left: 0;
-        height: 100%;
         width: 100%;
-        background-image: url(./face.png);
-        background-position: center;
+        height: 100%;
+
+        position: absolute;
         background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
-        clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+        background-image: url(./face.png);
         transition: clip-path 0.2s ease-in;
+        clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
       }
 
       &:after {
@@ -131,8 +132,8 @@ export const Row = styled.div`
     props.type === "bigger2" &&
     css`
       height: 7rem;
-      font-size: 4.4rem;
       font-weight: 700;
+      font-size: 4.4rem;
       justify-content: center;
     `}
 
@@ -141,8 +142,8 @@ export const Row = styled.div`
     css`
       gap: 2rem;
       height: 20rem;
-      font-size: 4.4rem;
       font-weight: 700;
+      font-size: 4.4rem;
 
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

@@ -1,3 +1,4 @@
+import { FRAMEWORKS, LANGUAGES, TECNOLOGIES } from "../Constants/constant";
 import { Box } from "../ui/Box";
 import { Header } from "../ui/Header";
 import { Row } from "../ui/Row";
@@ -11,7 +12,7 @@ function Skils() {
           languages
           <Span type="text4">.01</Span>
         </Header>
-        <Span type="text5">HTML5, CSS3, JavaScript, TypeScript, Java.</Span>
+        <Span type="text5">{LANGUAGES}</Span>
       </Box>
 
       <Box>
@@ -19,9 +20,7 @@ function Skils() {
           tecnologies
           <Span type="text4">.02</Span>
         </Header>
-        <Span type="text5">
-          Git, Supabase, Framer Motion, Redux, TanStack Query, Next.js.
-        </Span>
+        <Span type="text5">{TECNOLOGIES}</Span>
       </Box>
 
       <Box>
@@ -29,7 +28,7 @@ function Skils() {
           frameworks
           <Span type="text4">.03</Span>
         </Header>
-        <Span type="text5">React, Angular, Spring, Tailwind CSS, Node.js.</Span>
+        <Span type="text5">{FRAMEWORKS}</Span>
       </Box>
     </Row>
   );

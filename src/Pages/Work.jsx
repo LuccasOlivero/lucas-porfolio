@@ -9,7 +9,6 @@ import MenuModal from "../components/MenuModal";
 
 import { Section } from "../ui/Section";
 import { Row } from "../ui/Row";
-import { Span } from "../ui/Span";
 import TextCarousel from "../ui/TextCarousel";
 import { Circle } from "../ui/Circle";
 

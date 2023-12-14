@@ -15,13 +15,13 @@ const StyledNav = styled.nav`
   height: 3.6rem;
   padding: 0 3rem;
 
-  border-bottom: 2px solid white;
-  border-right: 2px solid white;
-  border-left: 2px solid white;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
 
   @media (max-width: 768px) {
     padding: 0 2rem;
@@ -33,11 +33,12 @@ const StyledNav = styled.nav`
 `;
 
 const Header = styled.h2`
-  text-transform: uppercase;
   font-size: 1rem;
   font-weight: 900;
+
   color: white;
   position: relative;
+  text-transform: uppercase;
 
   ${(props) =>
     props.type === "text-black" &&

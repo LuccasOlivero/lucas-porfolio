@@ -18,11 +18,12 @@ const StyledNav = styled.nav`
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0px -10px 30px var(--color-main);
   outline: 2px solid var(--color-main);
-  background-color: #ffffff92;
+
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
+  align-items: center;
+  background-color: #ffffff92;
+  justify-content: space-between;
 
   @media (max-width: 768px) {
     padding: 0 2rem;
@@ -34,17 +35,19 @@ const StyledNav = styled.nav`
 `;
 
 const Header = styled.h2`
-  text-transform: uppercase;
   font-size: 1rem;
   font-weight: 900;
+
+  text-transform: uppercase;
   color: var(--color-main);
 `;
 
 const Container = styled.div`
-  display: flex;
   width: 100%;
-  justify-content: center;
   z-index: 999;
+
+  display: flex;
+  justify-content: center;
 `;
 
 function Navbar() {

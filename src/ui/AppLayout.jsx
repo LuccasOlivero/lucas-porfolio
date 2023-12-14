@@ -1,10 +1,8 @@
+import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDownLong } from "@fortawesome/free-solid-svg-icons";
-import styled from "styled-components";
 
 import TextCarousel from "./TextCarousel";
-import Hero from "../components/Hero";
-import Footer from "../components/Footer";
 
 import { Logo } from "./Logo";
 import { Circle } from "./Circle";
@@ -13,6 +11,8 @@ import { Span } from "./Span";
 import { Row } from "./Row";
 import { Main } from "./Main";
 
+import Hero from "../components/Hero";
+import Footer from "../components/Footer";
 import AboutMe1 from "../components/AboutMe1";
 import Skils from "../components/Skils";
 import Cards from "../components/Cards";
@@ -22,8 +22,9 @@ import MenuModal from "../components/MenuModal";
 const StyledAppLayout = styled.div`
   width: 100%;
   height: 100vh;
-  position: relative;
   margin: 0 auto;
+
+  position: relative;
   background-color: var(--color-background);
 `;
 

@@ -12,12 +12,13 @@ function WorkLink2({
   border2 = "",
 }) {
   const Container = styled.div`
-    display: flex;
-    align-items: center;
-    position: relative;
     padding: 0 4rem;
     height: 16rem;
     width: 100%;
+
+    display: flex;
+    position: relative;
+    align-items: center;
     color: var(--color-main);
 
     ${(props) =>
@@ -34,29 +35,31 @@ function WorkLink2({
 
     &::before {
       content: "";
-      position: absolute;
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
-      background-image: url(./face.png);
-      background-position: center;
+
+      position: absolute;
       background-size: cover;
+      background-position: center;
       background-repeat: no-repeat;
-      clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+      background-image: url(./face.png);
       transition: clip-path 0.2s ease-in;
+      clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
     }
 
     &:after {
       content: "";
-      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: var(--color-secondary-blur);
-      clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+
+      position: absolute;
       transition: clip-path 0.2s ease-in;
+      clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+      background-color: var(--color-secondary-blur);
     }
 
     &:hover::after {
@@ -77,14 +80,15 @@ function WorkLink2({
     ${(props) =>
       props.type === "text" &&
       css`
-        position: relative;
-        font-size: 1.3rem;
-        font-weight: 600;
-        align-items: end;
-        padding-left: 0.2rem;
-        letter-spacing: 3px;
-        padding-top: 0.5rem;
         z-index: 999;
+        font-weight: 600;
+        font-size: 1.3rem;
+        padding-top: 0.5rem;
+        letter-spacing: 3px;
+        padding-left: 0.2rem;
+
+        align-items: end;
+        position: relative;
 
         @media (max-width: 1440px) {
           font-size: 0.7rem;
@@ -98,15 +102,16 @@ function WorkLink2({
     ${(props) =>
       props.type === "text2" &&
       css`
-        position: absolute;
         right: 0;
         top: 0;
-        padding: 3rem 4rem;
+        z-index: 100;
         font-size: 1rem;
         font-weight: 600;
-        text-transform: uppercase;
+        padding: 3rem 4rem;
         letter-spacing: 3px;
-        z-index: 100;
+
+        position: absolute;
+        text-transform: uppercase;
 
         @media (max-width: 1440px) {
           font-size: 0.7rem;
@@ -120,15 +125,16 @@ function WorkLink2({
       ${(props) =>
       props.type === "text3" &&
       css`
-        position: absolute;
         right: 0;
         bottom: 0;
-        padding: 3rem 4rem;
+        z-index: 100;
         font-size: 1rem;
         font-weight: 600;
-        text-transform: uppercase;
+        padding: 3rem 4rem;
         letter-spacing: 3px;
-        z-index: 100;
+
+        position: absolute;
+        text-transform: uppercase;
 
         @media (max-width: 1440px) {
           font-size: 0.7rem;
@@ -143,23 +149,20 @@ function WorkLink2({
   return (
     <>
       <Container type={type} border={border} border2={border2}>
-        <div>
+        <>
           <Header as="h2" type="medium">
             {name}
           </Header>
-
           <Span type="text" as="p">
             {techStack}
           </Span>
-
           <Span type="text2" as="p">
             {type}
           </Span>
-
           <Span type="text3" as="p">
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
           </Span>
-        </div>
+        </>
       </Container>
     </>
   );

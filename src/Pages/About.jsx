@@ -15,6 +15,7 @@ import { Circle } from "../ui/Circle";
 import { Row } from "../ui/Row";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfinity } from "@fortawesome/free-solid-svg-icons";
+import { ABOUT_ME_TEXT } from "../Constants/constant";
 
 const TextContainer = styled.div`
   width: 80%;
@@ -58,13 +59,7 @@ function AboutMe() {
 
         <Box size="large">
           <Header type="medium">Hi👋 I am Lucas Olivero.</Header>
-          <Paragraph>
-            Frontend Developer from Argentina with 1 year of expertise.
-            Specializing in React and experienced with Angular, I&apos;m
-            dedicated to delivering high-quality solutions. Passionate about
-            crafting exceptional websites that exceed client expectations, I am
-            committed to providing an outstanding user experience.
-          </Paragraph>
+          <Paragraph>{ABOUT_ME_TEXT}</Paragraph>
         </Box>
       </Container>
 
@@ -79,11 +74,11 @@ function AboutMe() {
             <Span type="text4">2016 - 2019</Span>
           </Paragraph>
 
-          {/* <Paragraph type="noMargin" as="p">
-            I completed three years of a psychology degree at the National
-            University of Córdoba.
-            <Span type="text4">2020 - 2022</Span>
-          </Paragraph> */}
+          <Paragraph type="noMargin" as="p">
+            Three years of a psychology degree at the National University of
+            Córdoba.
+            <Span type="text4">2019 - 2022</Span>
+          </Paragraph>
 
           <Paragraph type="noMargin" as="p">
             Self-Taught Learning.

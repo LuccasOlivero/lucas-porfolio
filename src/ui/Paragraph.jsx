@@ -1,18 +1,20 @@
 import styled, { css } from "styled-components";
 
 export const Paragraph = styled.p`
-  color: var(--color-main);
-  text-wrap: balance;
   font-size: 1.5rem;
-  line-height: 2rem;
   margin-top: 1rem;
+  line-height: 2rem;
+
+  text-wrap: balance;
+  color: var(--color-main);
 
   ${(props) =>
     props.type === "noMargin" &&
     css`
+      margin-top: 0.7rem;
+
       display: flex;
       justify-content: space-between;
-      margin-top: 0.7rem;
       border-bottom: 1px solid var(--color-secondary-blur);
     `}
 

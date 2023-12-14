@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
@@ -11,11 +12,13 @@ import { Buttom } from "../ui/Buttom";
 import { Span } from "../ui/Span";
 import { Row } from "../ui/Row";
 import { StyledNavLink } from "../ui/StyledNavLink";
+import { EMAIL } from "../Constants/constant";
 
 const StyledFooter = styled.footer`
-  position: absolute;
   width: 100%;
   height: 65vh;
+
+  position: absolute;
   background-color: var(--color-main);
   background-image: url(./background.jpg);
   background-size: cover;
@@ -23,16 +26,18 @@ const StyledFooter = styled.footer`
 `;
 
 const Background = styled.div`
-  position: absolute;
   width: 100%;
   height: 100%;
+
+  position: absolute;
   background-color: #3077f1c5;
 `;
 
 const LogosContact = styled.div`
+  width: 100%;
+
   display: flex;
   justify-content: center;
-  width: 100%;
 
   @media (max-width: 440px) {
     flex-direction: column;
@@ -44,16 +49,17 @@ const LogosContact = styled.div`
 `;
 
 const Link = styled.a`
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   color: white;
+
+  display: flex;
   cursor: pointer;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
 `;
 
 function Footer() {
@@ -87,7 +93,7 @@ function Footer() {
         <LogosContact>
           <FramerMagnetic>
             <StyledNavLink to="/contact" onClick={() => window.scroll(0, 0)}>
-              <Buttom type="large">lucas.dev@gmail.com</Buttom>
+              <Buttom type="large">{EMAIL}</Buttom>
             </StyledNavLink>
           </FramerMagnetic>
 

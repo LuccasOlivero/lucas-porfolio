@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const Main = styled.main`
-  height: 90vh;
   width: 75vw;
+  height: 90vh;
   margin: 0 auto;
-  position: relative;
+
   display: flex;
-  flex-direction: column;
   overflow: hidden;
+  position: relative;
+  flex-direction: column;
 
   outline: 2px solid var(--color-main);
 

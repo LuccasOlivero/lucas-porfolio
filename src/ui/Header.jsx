@@ -6,15 +6,15 @@ export const Header = styled(motion.h1)`
   line-height: 0.8;
   font-weight: 600;
 
-  position: relative;
-  display: flex;
   color: white;
+  display: flex;
+  position: relative;
 
   ${(props) =>
     props.type === "color-main" &&
     css`
-      color: var(--color-main);
       left: -1rem;
+      color: var(--color-main);
     `}
 
   ${(props) =>
@@ -22,15 +22,15 @@ export const Header = styled(motion.h1)`
     css`
       font-size: 13vw;
       font-weight: 700;
-      color: var(--color-main);
       justify-content: end;
+      color: var(--color-main);
     `}
 
   ${(props) =>
     props.type === "medium" &&
     css`
-      font-size: 4rem;
       z-index: 100;
+      font-size: 4rem;
       color: var(--color-secondary);
 
       @media (max-width: 1440px) {
@@ -70,8 +70,8 @@ export const Header = styled(motion.h1)`
     props.type === "min2" &&
     css`
       font-size: 1.3rem;
-      letter-spacing: 8px;
       margin-top: 1.5rem;
+      letter-spacing: 8px;
 
       color: var(--color-main);
       text-transform: uppercase;
@@ -85,12 +85,12 @@ export const Header = styled(motion.h1)`
     props.type === "min3" &&
     css`
       font-size: 1.6rem;
-      letter-spacing: 8px;
       margin-top: 2rem;
+      letter-spacing: 8px;
 
       display: block;
-      text-transform: uppercase;
       color: var(--color-main);
+      text-transform: uppercase;
 
       @media (max-width: 440px) {
         font-size: 1rem;
@@ -101,12 +101,12 @@ export const Header = styled(motion.h1)`
     props.color === "main" &&
     css`
       font-size: 1.6rem;
-      letter-spacing: 8px;
       margin-top: 2rem;
+      letter-spacing: 8px;
 
       display: block;
-      text-transform: uppercase;
       color: var(--color-main);
+      text-transform: uppercase;
 
       @media (max-width: 440px) {
         font-size: 1rem;
@@ -116,9 +116,9 @@ export const Header = styled(motion.h1)`
     ${(props) =>
     props.color === "third" &&
     css`
+      margin-top: 2rem;
       font-size: 1.6rem;
       letter-spacing: 8px;
-      margin-top: 2rem;
 
       display: block;
       text-transform: uppercase;
@@ -133,8 +133,8 @@ export const Header = styled(motion.h1)`
     ${(props) =>
     props.type === "bigger" &&
     css`
-      font-size: 7rem;
       color: white;
+      font-size: 7rem;
       font-weight: 600;
 
       @media (max-width: 768px) {
@@ -149,8 +149,8 @@ export const Header = styled(motion.h1)`
     ${(props) =>
     props.type === "bigger2" &&
     css`
-      font-size: 7.5rem;
       color: white;
+      font-size: 7.5rem;
       font-weight: 700;
 
       @media (max-width: 768px) {
