@@ -21,7 +21,6 @@ function App() {
       <BrowserRouter>
         <ToggleMenuProvider>
           <Navbar />
-
           <Routes>
             <Route index path="/" element={<AppLayout />} />
             <Route index path="/about" element={<About />} />

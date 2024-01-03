@@ -1,12 +1,13 @@
 import styled, { css } from "styled-components";
+import { createPortal } from "react-dom";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBurger } from "@fortawesome/free-solid-svg-icons";
 
+import { useToggleMenu } from "../Context/ToggleMenuContext";
+
 import ContactInfo from "./ContactInfo";
 import { Logo } from "../ui/Logo";
-import { useToggleMenu } from "../Context/ToggleMenuContext";
-import { motion } from "framer-motion";
-import { createPortal } from "react-dom";
 import { StyledNavLink } from "../ui/StyledNavLink";
 
 const StyledNav = styled.nav`
@@ -43,12 +44,14 @@ const Header = styled.h2`
   ${(props) =>
     props.type === "text-black" &&
     css`
-      font-size: 8rem;
+      font-size: 5.5vw;
       padding-left: 2rem;
       letter-spacing: 10px;
+      width: 40vw;
 
       display: flex;
       align-items: end;
+      justify-content: space-between;
       color: var(--color-third);
       border-bottom: 2px solid var(--color-third);
       transition: color 0.2s ease-in;
@@ -170,9 +173,7 @@ function MenuToggle() {
               }}
             />
           </StyledNavLink>
-
           <Header>since 2022</Header>
-
           <FontAwesomeIcon
             icon={faBurger}
             size="xl"

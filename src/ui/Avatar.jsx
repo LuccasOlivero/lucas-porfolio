@@ -14,7 +14,7 @@ export const Avatar = styled(motion.div)`
   background-repeat: no-repeat;
   background-image: url(./perfil.png);
   background-color: var(--color-main);
-  outline: 3px solid var(--color-secondary);
+  border: 2px solid var(--color-secondary);
 
   &::after {
     content: "";

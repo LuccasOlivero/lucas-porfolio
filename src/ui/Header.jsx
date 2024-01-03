@@ -124,9 +124,9 @@ export const Header = styled(motion.h1)`
       text-transform: uppercase;
       color: var(--color-third);
 
-      @media (max-width: 440px) {
+      /* @media (max-width: 440px) {
         font-size: 1rem;
-      }
+      } */
     `}
 
 

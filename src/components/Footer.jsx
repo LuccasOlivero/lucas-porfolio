@@ -5,13 +5,13 @@ import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 import FramerMagnetic from "./FramerMagnetic";
-
 import { Section } from "../ui/Section";
 import { Header } from "../ui/Header";
 import { Buttom } from "../ui/Buttom";
 import { Span } from "../ui/Span";
 import { Row } from "../ui/Row";
 import { StyledNavLink } from "../ui/StyledNavLink";
+
 import { EMAIL } from "../Constants/constant";
 
 const StyledFooter = styled.footer`

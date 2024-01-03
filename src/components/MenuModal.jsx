@@ -5,6 +5,7 @@ import MenuToggle from "./MenuToggle";
 // my favorite component <3
 function MenuModal() {
   const { isOpenMenuToggle } = useToggleMenu();
+  
   return (
     <AnimatePresence>{isOpenMenuToggle && <MenuToggle />}</AnimatePresence>
   );
